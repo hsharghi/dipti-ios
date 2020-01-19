@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9GG-l7-Gaf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro Main Page View Controller-->
+        <scene sceneID="py1-01-H32">
+            <objects>
+                <viewController storyboardIdentifier="IntroMainPageViewController" id="9GG-l7-Gaf" customClass="IntroMainPageViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ga8-gK-Vhp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="umq-oJ-bZG">
+                                <rect key="frame" x="154" y="770" width="106" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="WAD-ll-sm0"/>
+                    </view>
+                    <connections>
+                        <segue destination="JHN-HX-prB" kind="show" identifier="mine" id="R5m-dQ-UQl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvO-aD-ade" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-642.02898550724638" y="-153.34821428571428"/>
+        </scene>
+        <!--Simple Intro Page View Controller-->
+        <scene sceneID="BSr-1j-csD">
+            <objects>
+                <viewController storyboardIdentifier="SimpleIntroPageViewController" id="qSK-zk-eoF" customClass="SimpleIntroPageViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5s-Xv-fw0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intro-bg-01" translatesAutoresizingMaskIntoConstraints="NO" id="L3e-QC-Siy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D8r-Jd-EYW">
+                                <rect key="frame" x="119.5" y="235.5" width="175" height="125"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dipti-logo-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="PUg-Ho-n7Q">
+                                        <rect key="frame" x="53.5" y="0.0" width="68" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="68" id="GIb-lL-hUo"/>
+                                            <constraint firstAttribute="height" constant="78" id="j30-Q2-Psu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dipti-text-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="0k7-DW-caz">
+                                        <rect key="frame" x="0.0" y="86" width="175" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="UGg-OQ-EXX"/>
+                                            <constraint firstAttribute="width" constant="175" id="XXW-Ge-sOk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U9-ey-PhZ">
+                                <rect key="frame" x="60" y="723.5" width="294" height="38.5"/>
+                                <string key="text">فروش آنلاین کارهای تکدوز و محدود
+ طراح ها و هنرمندهای ایرانی</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8U9-ey-PhZ" firstAttribute="centerX" secondItem="y5s-Xv-fw0" secondAttribute="centerX" id="IVz-Th-nMS"/>
+                            <constraint firstItem="2Mo-B8-h0h" firstAttribute="trailing" secondItem="8U9-ey-PhZ" secondAttribute="trailing" constant="60" id="OtI-Ui-I7T"/>
+                            <constraint firstItem="D8r-Jd-EYW" firstAttribute="centerY" secondItem="y5s-Xv-fw0" secondAttribute="centerY" constant="-150" id="SGZ-aB-WMA"/>
+                            <constraint firstItem="D8r-Jd-EYW" firstAttribute="centerX" secondItem="y5s-Xv-fw0" secondAttribute="centerX" id="Xlh-x8-KG0"/>
+                            <constraint firstItem="2Mo-B8-h0h" firstAttribute="bottom" secondItem="8U9-ey-PhZ" secondAttribute="bottom" constant="100" id="YFZ-YA-1RY"/>
+                            <constraint firstItem="8U9-ey-PhZ" firstAttribute="leading" secondItem="2Mo-B8-h0h" secondAttribute="leading" constant="60" id="eL7-lQ-09Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Mo-B8-h0h"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="L3e-QC-Siy" id="1ER-JY-Knl"/>
+                        <outlet property="logoImageView" destination="PUg-Ho-n7Q" id="pv2-O3-ZvE"/>
+                        <outlet property="messageLabel" destination="8U9-ey-PhZ" id="pU7-lY-vNS"/>
+                        <outlet property="textImageView" destination="0k7-DW-caz" id="XUd-Ob-tDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4M4-ZM-PnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="-291"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="7tE-VS-1pR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="JHN-HX-prB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mec-AJ-xkh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I96-nV-e0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dipti-logo-yellow" width="68" height="78"/>
+        <image name="dipti-text-yellow" width="175" height="38"/>
+        <image name="intro-bg-01" width="375" height="812"/>
+    </resources>
+</document>

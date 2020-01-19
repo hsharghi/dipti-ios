@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F460E1723D45DF40052434F /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 0F460E1623D45DF40052434F /* SideMenu */; };
+		0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F460E7923D4778F0052434F /* SideMenu.storyboard */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
 		0F65DC8623D0A99B001E1CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8523D0A99B001E1CA9 /* SceneDelegate.swift */; };
 		0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8723D0A99B001E1CA9 /* ViewController.swift */; };
 		0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8923D0A99B001E1CA9 /* Main.storyboard */; };
-		0F65DC8D23D0A99D001E1CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */; };
 		0F65DC9023D0A99D001E1CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8E23D0A99D001E1CA9 /* LaunchScreen.storyboard */; };
+		0F65DC9A23D0A9BF001E1CA9 /* IntroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */; };
+		0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */; };
+		0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */; };
+		0F65DCA923D0B89F001E1CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */; };
+		0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F460E7923D4778F0052434F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F65DC8523D0A99B001E1CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,13 @@
 		0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F65DC8F23D0A99D001E1CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F65DC9123D0A99D001E1CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroStoryboard.storyboard; sourceTree = "<group>"; };
+		0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSimplePageViewController.swift; sourceTree = "<group>"; };
+		0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroMainPageViewController.swift; sourceTree = "<group>"; };
+		0F65DCA223D0A9F6001E1CA9 /* iranian_sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans.ttf; sourceTree = "<group>"; };
+		0F65DCA323D0A9F6001E1CA9 /* iranian_sans_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans_bold.ttf; sourceTree = "<group>"; };
+		0F65DCA423D0A9F6001E1CA9 /* iranian_sans_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans_light.ttf; sourceTree = "<group>"; };
+		0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F460E1723D45DF40052434F /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +71,39 @@
 		0F65DC8223D0A99B001E1CA9 /* Dipti */ = {
 			isa = PBXGroup;
 			children = (
+				0F65DCA023D0A9E5001E1CA9 /* Assets */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
 				0F65DC8523D0A99B001E1CA9 /* SceneDelegate.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
+				0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */,
+				0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */,
+				0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */,
+				0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */,
 				0F65DC8923D0A99B001E1CA9 /* Main.storyboard */,
+				0F460E7923D4778F0052434F /* SideMenu.storyboard */,
 				0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */,
 				0F65DC8E23D0A99D001E1CA9 /* LaunchScreen.storyboard */,
 				0F65DC9123D0A99D001E1CA9 /* Info.plist */,
 			);
 			path = Dipti;
+			sourceTree = "<group>";
+		};
+		0F65DCA023D0A9E5001E1CA9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0F65DCA123D0A9EB001E1CA9 /* Fonts */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0F65DCA123D0A9EB001E1CA9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F65DCA323D0A9F6001E1CA9 /* iranian_sans_bold.ttf */,
+				0F65DCA423D0A9F6001E1CA9 /* iranian_sans_light.ttf */,
+				0F65DCA223D0A9F6001E1CA9 /* iranian_sans.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +122,9 @@
 			dependencies = (
 			);
 			name = Dipti;
+			packageProductDependencies = (
+				0F460E1623D45DF40052434F /* SideMenu */,
+			);
 			productName = Dipti;
 			productReference = 0F65DC8023D0A99B001E1CA9 /* Dipti.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +153,9 @@
 				Base,
 			);
 			mainGroup = 0F65DC7723D0A99B001E1CA9;
+			packageReferences = (
+				0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 0F65DC8123D0A99B001E1CA9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F65DC9023D0A99D001E1CA9 /* LaunchScreen.storyboard in Resources */,
-				0F65DC8D23D0A99D001E1CA9 /* Assets.xcassets in Resources */,
+				0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */,
 				0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */,
+				0F65DC9A23D0A9BF001E1CA9 /* IntroStoryboard.storyboard in Resources */,
+				0F65DCA923D0B89F001E1CA9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
 				0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */,
+				0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */,
 				0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */,
 				0F65DC8623D0A99B001E1CA9 /* SceneDelegate.swift in Sources */,
+				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +341,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.softworks.Dipti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,10 +360,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.softworks.Dipti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -338,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.4.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F460E1623D45DF40052434F /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F65DC7823D0A99B001E1CA9 /* Project object */;
 }

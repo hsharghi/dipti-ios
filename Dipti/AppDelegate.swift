@@ -11,27 +11,92 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let window = window {
+            
+            
+            let showIntro = UserDefaults.standard.value(forKey: "showIntro") as? Bool
+            var viewController: UIViewController
+            
+            if showIntro ?? true {
+                viewController = makeIntroVC()
+            } else {
+                viewController = makeMainViewController()
+            }
+            
+            window.rootViewController = viewController
+            
+            self.window = window
+            self.window?.makeKeyAndVisible()
+            
+            
+        }
+        
+        
         return true
-    }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
 
 }
 
+
+extension AppDelegate: IntroPageDelegate {
+    
+    func skipButtonTapped() {
+        
+        UserDefaults.standard.set(false, forKey: "showIntro")
+        
+        if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController() {
+            
+            if let snapshot = (UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.snapshotView(afterScreenUpdates: true)) {
+                vc.view.addSubview(snapshot)
+                window?.rootViewController = vc
+                UIView.transition(with: snapshot,
+                                  duration: 1,
+                                  options: .transitionCrossDissolve,
+                                  animations: {
+                                    snapshot.layer.opacity = 0
+                },
+                                  completion: { status in
+                                    snapshot.removeFromSuperview()
+                })
+                
+            }
+            
+            //
+            //            UIView.transition(with: window!, duration: duration, options: options, animations: {}, completion:
+            //            { completed in
+            //                // maybe do something on completion here
+            //            })
+            
+        }
+        
+    }
+    
+    
+    
+    func makeIntroVC() -> UIViewController {
+        
+        
+        let viewController = IntroMainPageViewController(viewControllers: [
+            IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "فروش آنلاین کارهای تکدوز و محدود طراح ها و هنرمندهای ایرانی"),
+            IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "صفحه دوم سلام. خوش آمدید"),
+            //                IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "یک صفحه دیگه نمیدونم دیگه صفحه چندمه"),
+            //                IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "بازم صفحه بعدی. دیگه به نظر همه چی درسته"),
+            //                IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "صفحه آخر رسیدیم"),
+        ])
+        
+        viewController.introDelegate = self
+        
+        return viewController
+    }
+    
+    func makeMainViewController() -> UIViewController {
+        return UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()!
+    }
+}
