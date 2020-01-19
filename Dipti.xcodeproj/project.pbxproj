@@ -26,6 +26,9 @@
 		0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */; };
 		0F65DCA923D0B89F001E1CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */; };
 		0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */; };
+		0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */; };
+		0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */; };
+		0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		0F65DCA323D0A9F6001E1CA9 /* iranian_sans_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans_bold.ttf; sourceTree = "<group>"; };
 		0F65DCA423D0A9F6001E1CA9 /* iranian_sans_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans_light.ttf; sourceTree = "<group>"; };
 		0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingPageViewController.swift; sourceTree = "<group>"; };
+		0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		0F65DC8223D0A99B001E1CA9 /* Dipti */ = {
 			isa = PBXGroup;
 			children = (
+				0FEF90B023D4AC8100D98060 /* Extensions */,
 				0F65DCA023D0A9E5001E1CA9 /* Assets */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
@@ -100,6 +107,7 @@
 				0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */,
 				0F460E8023D4818C0052434F /* SideMenuFactory.swift */,
 				0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */,
+				0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */,
 				0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */,
 				0F460E8323D48E730052434F /* RightSideMenuViewController.swift */,
 				0F65DC8923D0A99B001E1CA9 /* Main.storyboard */,
@@ -127,6 +135,15 @@
 				0F65DCA223D0A9F6001E1CA9 /* iranian_sans.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0FEF90B023D4AC8100D98060 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */,
+				0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,12 +231,15 @@
 			files = (
 				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
+				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F460E7F23D481690052434F /* SideMenuData.swift in Sources */,
 				0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */,
 				0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */,
 				0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */,
 				0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */,
+				0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
+				0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */,
 				0F460E7D23D481090052434F /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
