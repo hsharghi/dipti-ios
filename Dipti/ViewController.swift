@@ -26,10 +26,8 @@ class ViewController: UIViewController {
 
     private func setupSideMenu() {
         
-        SideMenuManager.default.leftMenuNavigationController = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(identifier: "SideMenuNavigationController") as? SideMenuNavigationController
-
-        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
-
+        SideMenuFactory.shared.setLeftMenu()
+        
     }
     
     

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>loggedInItems</key>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>orders</string>
+			<key>selector</key>
+			<string>orders</string>
+			<key>sortOrder</key>
+			<integer>10</integer>
+			<key>title</key>
+			<string>سفارش‌های من</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>pending-delivery</string>
+			<key>selector</key>
+			<string>pendingDelivery</string>
+			<key>sortOrder</key>
+			<integer>10</integer>
+			<key>title</key>
+			<string>در حال تحویل</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>pending-payment</string>
+			<key>selector</key>
+			<string>pendingPayment</string>
+			<key>sortOrder</key>
+			<integer>20</integer>
+			<key>title</key>
+			<string>در انتظار پرداخت</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>address</string>
+			<key>selector</key>
+			<string>address</string>
+			<key>sortOrder</key>
+			<integer>30</integer>
+			<key>title</key>
+			<string>آدرس‌های پستی</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>payment-method</string>
+			<key>selector</key>
+			<string>paymentMethod</string>
+			<key>sortOrder</key>
+			<integer>30</integer>
+			<key>title</key>
+			<string>انتخاب روش پرداخت</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>currency</string>
+			<key>selector</key>
+			<string>currency</string>
+			<key>sortOrder</key>
+			<integer>40</integer>
+			<key>title</key>
+			<string>واحد پول</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>language</string>
+			<key>selector</key>
+			<string>language</string>
+			<key>sortOrder</key>
+			<integer>40</integer>
+			<key>title</key>
+			<string>تنظیمات زبان</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>notification</string>
+			<key>selector</key>
+			<string>notification</string>
+			<key>sortOrder</key>
+			<integer>50</integer>
+			<key>title</key>
+			<string>تنظیمات نوتیفیکیشن</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>privacy-policy</string>
+			<key>selector</key>
+			<string>privacyPolicy</string>
+			<key>sortOrder</key>
+			<integer>70</integer>
+			<key>title</key>
+			<string>سياست حفظ حريم خصوصی</string>
+		</dict>
+        <dict>
+            <key>icon</key>
+            <string>faq</string>
+            <key>selector</key>
+            <string>faq</string>
+            <key>sortOrder</key>
+            <integer>80</integer>
+            <key>title</key>
+            <string>سوالات معمول</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>liability-removal</string>
+            <key>selector</key>
+            <string>liabilityRemoval</string>
+            <key>sortOrder</key>
+            <integer>90</integer>
+            <key>title</key>
+            <string>رفع مسئولیت</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>about</string>
+            <key>selector</key>
+            <string>aboutUs</string>
+            <key>sortOrder</key>
+            <integer>50</integer>
+            <key>title</key>
+            <string>درباره ما</string>
+        </dict>
+	</array>
+	<key>notLoggedInItems</key>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>login</string>
+			<key>selector</key>
+			<string>login</string>
+			<key>sortOrder</key>
+			<integer>10</integer>
+			<key>title</key>
+			<string>ورود | عضویت</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>currency</string>
+            <key>selector</key>
+            <string>currency</string>
+            <key>sortOrder</key>
+            <integer>40</integer>
+            <key>title</key>
+            <string>واحد پول</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>language</string>
+            <key>selector</key>
+            <string>language</string>
+            <key>sortOrder</key>
+            <integer>40</integer>
+            <key>title</key>
+            <string>تنظیمات زبان</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>notification</string>
+            <key>selector</key>
+            <string>notification</string>
+            <key>sortOrder</key>
+            <integer>50</integer>
+            <key>title</key>
+            <string>تنظیمات نوتیفیکیشن</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>privacy-policy</string>
+            <key>selector</key>
+            <string>privacyPolicy</string>
+            <key>sortOrder</key>
+            <integer>70</integer>
+            <key>title</key>
+            <string>سياست حفظ حريم خصوصی</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>faq</string>
+            <key>selector</key>
+            <string>faq</string>
+            <key>sortOrder</key>
+            <integer>80</integer>
+            <key>title</key>
+            <string>سوالات معمول</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>liability-removal</string>
+            <key>selector</key>
+            <string>liabilityRemoval</string>
+            <key>sortOrder</key>
+            <integer>90</integer>
+            <key>title</key>
+            <string>رفع مسئولیت</string>
+        </dict>
+        <dict>
+            <key>icon</key>
+            <string>about</string>
+            <key>selector</key>
+            <string>aboutUs</string>
+            <key>sortOrder</key>
+            <integer>50</integer>
+            <key>title</key>
+            <string>درباره ما</string>
+        </dict>
+	</array>
+</dict>
+</plist>

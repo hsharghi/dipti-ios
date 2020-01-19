@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		0F460E1723D45DF40052434F /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 0F460E1623D45DF40052434F /* SideMenu */; };
 		0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F460E7923D4778F0052434F /* SideMenu.storyboard */; };
+		0F460E7D23D481090052434F /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F460E7C23D481090052434F /* AppData.swift */; };
+		0F460E7F23D481690052434F /* SideMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F460E7E23D481690052434F /* SideMenuData.swift */; };
+		0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F460E8023D4818C0052434F /* SideMenuFactory.swift */; };
+		0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F460E8323D48E730052434F /* RightSideMenuViewController.swift */; };
+		0F460E8523D4935F0052434F /* sideMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F460E8223D488290052434F /* sideMenu.plist */; };
+		0F460E8623D4A3A60052434F /* iranian_sans_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DCA323D0A9F6001E1CA9 /* iranian_sans_bold.ttf */; };
+		0F460E8723D4A3A90052434F /* iranian_sans_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DCA423D0A9F6001E1CA9 /* iranian_sans_light.ttf */; };
+		0F460E8823D4A3AC0052434F /* iranian_sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DCA223D0A9F6001E1CA9 /* iranian_sans.ttf */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
 		0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8723D0A99B001E1CA9 /* ViewController.swift */; };
 		0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8923D0A99B001E1CA9 /* Main.storyboard */; };
@@ -22,6 +30,11 @@
 
 /* Begin PBXFileReference section */
 		0F460E7923D4778F0052434F /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		0F460E7C23D481090052434F /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		0F460E7E23D481690052434F /* SideMenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuData.swift; sourceTree = "<group>"; };
+		0F460E8023D4818C0052434F /* SideMenuFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFactory.swift; sourceTree = "<group>"; };
+		0F460E8223D488290052434F /* sideMenu.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = sideMenu.plist; sourceTree = "<group>"; };
+		0F460E8323D48E730052434F /* RightSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSideMenuViewController.swift; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F65DC8723D0A99B001E1CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F460E7B23D480EA0052434F /* SettingsData */ = {
+			isa = PBXGroup;
+			children = (
+				0F460E7C23D481090052434F /* AppData.swift */,
+				0F460E8223D488290052434F /* sideMenu.plist */,
+				0F460E7E23D481690052434F /* SideMenuData.swift */,
+			);
+			path = SettingsData;
+			sourceTree = "<group>";
+		};
 		0F65DC7723D0A99B001E1CA9 = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +95,13 @@
 				0F65DCA023D0A9E5001E1CA9 /* Assets */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
+				0F460E7B23D480EA0052434F /* SettingsData */,
 				0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */,
 				0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */,
+				0F460E8023D4818C0052434F /* SideMenuFactory.swift */,
 				0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */,
 				0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */,
+				0F460E8323D48E730052434F /* RightSideMenuViewController.swift */,
 				0F65DC8923D0A99B001E1CA9 /* Main.storyboard */,
 				0F460E7923D4778F0052434F /* SideMenu.storyboard */,
 				0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */,
@@ -170,8 +196,12 @@
 				0F65DC9023D0A99D001E1CA9 /* LaunchScreen.storyboard in Resources */,
 				0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */,
 				0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */,
+				0F460E8623D4A3A60052434F /* iranian_sans_bold.ttf in Resources */,
 				0F65DC9A23D0A9BF001E1CA9 /* IntroStoryboard.storyboard in Resources */,
+				0F460E8523D4935F0052434F /* sideMenu.plist in Resources */,
 				0F65DCA923D0B89F001E1CA9 /* Assets.xcassets in Resources */,
+				0F460E8823D4A3AC0052434F /* iranian_sans.ttf in Resources */,
+				0F460E8723D4A3A90052434F /* iranian_sans_light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
+				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
+				0F460E7F23D481690052434F /* SideMenuData.swift in Sources */,
+				0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */,
 				0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */,
 				0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */,
 				0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
+				0F460E7D23D481090052434F /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
