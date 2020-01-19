@@ -11,6 +11,8 @@ import UIKit
 class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var avatar: UIButton!
+    
     var menuState: SideMenuFactory.MenuState = .notLoggedIn
     var menuItems: [[String: Any]] = []
     
@@ -20,6 +22,8 @@ class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITabl
         menuItems = SideMenuFactory.shared.menuItems(for: .notLoggedIn)
         
         tableView.tableFooterView = UIView()
+        
+        avatar.rounded(color: .brown, width: 2)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadMenu), name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey), object: nil)
         
