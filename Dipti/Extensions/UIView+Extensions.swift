@@ -32,8 +32,9 @@ extension UIView {
     }
     
     
-    @objc func rounded(color: UIColor? = nil, width: CGFloat = 1, padding: CGFloat = 0) {
-        self.frame.size.width += padding
+    @objc func rounded(color: UIColor? = nil, width: CGFloat = 1, paddingX: CGFloat = 0, paddingY: CGFloat = 0) {
+        self.frame.size.width += paddingX
+        self.frame.size.height += paddingY
         let lenght = min(self.bounds.height, self.bounds.width)
         self.layer.cornerRadius = lenght / 2
         if color != nil {

@@ -17,9 +17,10 @@ extension UIButton {
         }
     }
     
-    @objc override func rounded(color: UIColor? = nil, width: CGFloat = 1, padding: CGFloat = 0) {
-        self.contentEdgeInsets = UIEdgeInsets(top: 0,left: padding, bottom: 0, right: padding)
-        self.frame.size.width += padding
+    @objc override func rounded(color: UIColor? = nil, width: CGFloat = 1, paddingX: CGFloat = 0, paddingY: CGFloat = 0) {
+        self.contentEdgeInsets = UIEdgeInsets(top: paddingY, left: paddingX, bottom: paddingY, right: paddingX)
+//        self.frame.size.width += paddingX
+//        self.frame.size.height += paddingY
         self.layer.cornerRadius = self.bounds.height / 2
         var borderColor = color
         if color == nil {
