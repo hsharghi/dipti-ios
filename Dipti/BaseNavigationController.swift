@@ -17,6 +17,9 @@ class BaseNavigationController: UINavigationController {
         appearance.tintColor = .black
         appearance.barTintColor = .black
         appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.isTranslucent = false
+        
+
 //
 //        self.title = "sdkfjslkdfj"
 //        self.navigationItem.titleView = UIImageView(image: UIImage(named: "dipti-full-icon-white"))
@@ -26,6 +29,10 @@ class BaseNavigationController: UINavigationController {
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     

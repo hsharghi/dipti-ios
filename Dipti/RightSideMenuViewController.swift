@@ -23,7 +23,7 @@ class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITabl
         
         tableView.tableFooterView = UIView()
         
-        avatar.rounded(color: .brown, width: 2)
+        avatar.rounded(color: .brown, width: 2, paddingX: 10, paddingY: 10)
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadMenu), name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey), object: nil)
         
