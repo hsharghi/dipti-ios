@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="iranian_sans.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Custom Tabbar-->
+        <scene sceneID="VZr-RQ-zPd">
+            <objects>
+                <viewController id="LXM-Lt-R2W" customClass="CustomTabbar" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SkS-l0-Sxa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bR7-ID-QVP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7bH-WA-WzK" userLabel="SelectButtonsStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sp9-s0-usc">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="54"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="Mz0-8c-5Jv"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="tabbarButtonTapped:" destination="LXM-Lt-R2W" eventType="touchUpInside" id="dKb-xx-Xgs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.0" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dQ-FT-hr2">
+                                                <rect key="frame" x="83" y="0.0" width="82.5" height="54"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="BCp-oF-KDI"/>
+                                                </constraints>
+                                            </button>
+                                            <button opaque="NO" alpha="0.0" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r04-js-x2f">
+                                                <rect key="frame" x="165.5" y="0.0" width="83" height="54"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="6lK-7t-J3f"/>
+                                                </constraints>
+                                            </button>
+                                            <button opaque="NO" alpha="0.0" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc3-83-jTO">
+                                                <rect key="frame" x="248.5" y="0.0" width="82.5" height="54"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="Vw9-UQ-7nN"/>
+                                                </constraints>
+                                            </button>
+                                            <button opaque="NO" alpha="0.0" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQz-rC-i82">
+                                                <rect key="frame" x="331" y="0.0" width="83" height="54"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="54" id="0Ym-N3-mZI"/>
+                                                </constraints>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-XL-ESG">
+                                        <rect key="frame" x="0.0" y="4" width="414" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5XE-Dw-e5q">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab-home" translatesAutoresizingMaskIntoConstraints="NO" id="riU-wA-hm7">
+                                                        <rect key="frame" x="25" y="0.0" width="33" height="25"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="صفحه اصلی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpw-NK-E1m">
+                                                        <rect key="frame" x="17" y="25" width="49" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qYT-Ze-0rV">
+                                                <rect key="frame" x="83" y="0.0" width="82.5" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab-collections" translatesAutoresizingMaskIntoConstraints="NO" id="e2X-vO-dhb">
+                                                        <rect key="frame" x="24.5" y="0.0" width="33" height="25"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دسته‌بندی‌ها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agc-fY-Ffr">
+                                                        <rect key="frame" x="16.5" y="25" width="49.5" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-RM-6A5">
+                                                <rect key="frame" x="165.5" y="0.0" width="83" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab-designers" translatesAutoresizingMaskIntoConstraints="NO" id="NtA-aI-vgs">
+                                                        <rect key="frame" x="25" y="0.0" width="33" height="25"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="برندها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aF-Ee-7Dr">
+                                                        <rect key="frame" x="29" y="25" width="25" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7xJ-X8-SEN">
+                                                <rect key="frame" x="248.5" y="0.0" width="82.5" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab-new" translatesAutoresizingMaskIntoConstraints="NO" id="1Qp-I5-ckH">
+                                                        <rect key="frame" x="25" y="0.0" width="33" height="25"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تازه ها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ym-UL-4rU">
+                                                        <rect key="frame" x="28.5" y="25" width="26" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bsa-Cb-oN8">
+                                                <rect key="frame" x="331" y="0.0" width="83" height="50"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab-profile" translatesAutoresizingMaskIntoConstraints="NO" id="XrT-OR-PBK">
+                                                        <rect key="frame" x="25" y="0.0" width="33" height="25"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="پروفایل" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZX-d1-399">
+                                                        <rect key="frame" x="27" y="25" width="29.5" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7bH-WA-WzK" firstAttribute="leading" secondItem="bR7-ID-QVP" secondAttribute="leading" id="11E-cq-3Mo"/>
+                                    <constraint firstAttribute="trailing" secondItem="7bH-WA-WzK" secondAttribute="trailing" id="9es-Er-6GT"/>
+                                    <constraint firstAttribute="height" constant="54" id="NBg-mW-FTt"/>
+                                    <constraint firstItem="Gag-XL-ESG" firstAttribute="leading" secondItem="bR7-ID-QVP" secondAttribute="leading" id="R8p-Cl-p9E"/>
+                                    <constraint firstItem="7bH-WA-WzK" firstAttribute="top" secondItem="bR7-ID-QVP" secondAttribute="top" id="bSs-LH-CHK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gag-XL-ESG" secondAttribute="trailing" id="cWo-4b-85x"/>
+                                    <constraint firstItem="Gag-XL-ESG" firstAttribute="top" secondItem="bR7-ID-QVP" secondAttribute="top" constant="4" id="pKt-RY-c1A"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gag-XL-ESG" secondAttribute="bottom" id="vpP-l0-jHu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bR7-ID-QVP" firstAttribute="trailing" secondItem="9eC-lm-f0K" secondAttribute="trailing" id="5PA-d2-uOv"/>
+                            <constraint firstItem="bR7-ID-QVP" firstAttribute="trailing" secondItem="9eC-lm-f0K" secondAttribute="trailing" id="IbU-iw-9YV"/>
+                            <constraint firstItem="bR7-ID-QVP" firstAttribute="leading" secondItem="9eC-lm-f0K" secondAttribute="leading" id="LAb-gx-foa"/>
+                            <constraint firstItem="bR7-ID-QVP" firstAttribute="top" secondItem="SkS-l0-Sxa" secondAttribute="top" id="VkN-pG-UHO"/>
+                            <constraint firstAttribute="bottom" secondItem="bR7-ID-QVP" secondAttribute="bottom" id="aBE-oK-Bbq"/>
+                            <constraint firstItem="bR7-ID-QVP" firstAttribute="leading" secondItem="9eC-lm-f0K" secondAttribute="leading" id="xnG-cy-NEO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9eC-lm-f0K"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x2n-iv-rTe"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="54"/>
+                    <connections>
+                        <outletCollection property="tabbarButtons" destination="Sp9-s0-usc" collectionClass="NSMutableArray" id="eKY-GD-897"/>
+                        <outletCollection property="tabbarButtons" destination="1dQ-FT-hr2" collectionClass="NSMutableArray" id="NBo-wZ-urQ"/>
+                        <outletCollection property="tabbarButtons" destination="r04-js-x2f" collectionClass="NSMutableArray" id="o3N-tP-QDt"/>
+                        <outletCollection property="tabbarButtons" destination="Dc3-83-jTO" collectionClass="NSMutableArray" id="wRk-kl-YVu"/>
+                        <outletCollection property="tabbarButtons" destination="YQz-rC-i82" collectionClass="NSMutableArray" id="xiq-Ic-3SU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l3-s9-UrV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185.50724637681162" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab-collections" width="33" height="33"/>
+        <image name="tab-designers" width="33" height="33"/>
+        <image name="tab-home" width="33" height="33"/>
+        <image name="tab-new" width="33" height="33"/>
+        <image name="tab-profile" width="33" height="33"/>
+    </resources>
+</document>
