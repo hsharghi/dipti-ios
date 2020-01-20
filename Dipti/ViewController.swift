@@ -16,6 +16,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupSideMenu()
 
+        
+        let image: UIImage = UIImage(named: "dipti-full-icon-white")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
 
     override func viewDidAppear(_ animated: Bool) {
