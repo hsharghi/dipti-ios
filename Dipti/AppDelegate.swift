@@ -97,6 +97,13 @@ extension AppDelegate: IntroPageDelegate {
     }
     
     func makeMainViewController() -> UIViewController {
-        return UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()!
+        if let mainVC = UIStoryboard.init(name: "Main", bundle: nil)
+            .instantiateInitialViewController() as? MainViewController {
+            
+            mainVC.viewControllers = MainViewControlelrsFactory.makeViewControlelrs()
+            return mainVC
+            
+        }
+        return UIViewController()
     }
 }

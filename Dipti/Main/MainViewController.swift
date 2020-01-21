@@ -12,29 +12,17 @@ import ESTabBarController
 class MainViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var safeFixView: UIView!
     
     var currentViewController: UIViewController?
-    var viewControllers: [UIViewController] {
-        makeViewControllers()
-    }
-
+    var viewControllers = [UIViewController]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
    
+        safeFixView.backgroundColor = AppData.color.yellow
     }
 
-    private func makeViewControllers() -> [UIViewController] {
-        var viewControllers = [UIViewController]()
-        
-        viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
-        viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
-        viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
-        viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
-        viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
-
-        return viewControllers
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedCustomTabbar" {

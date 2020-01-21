@@ -21,6 +21,7 @@
 		0F506BF023D73FA200303A1C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BEF23D73FA100303A1C /* Array+Extensions.swift */; };
 		0F506BF723D7417600303A1C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F506BF623D7417600303A1C /* Home.storyboard */; };
 		0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BF823D741E100303A1C /* HomeViewController.swift */; };
+		0F506BFB23D7454300303A1C /* MainViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
 		0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8723D0A99B001E1CA9 /* ViewController.swift */; };
 		0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8923D0A99B001E1CA9 /* Main.storyboard */; };
@@ -35,7 +36,6 @@
 		0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */; };
 		0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */; };
 		0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */; };
-		0FEF90B923D5DA6700D98060 /* ESTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 0FEF90B823D5DA6700D98060 /* ESTabBarController */; };
 		0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90BA23D5E29300D98060 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +50,7 @@
 		0F506BEF23D73FA100303A1C /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		0F506BF623D7417600303A1C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0F506BF823D741E100303A1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllersFactory.swift; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F65DC8723D0A99B001E1CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FEF90B923D5DA6700D98060 /* ESTabBarController in Frameworks */,
 				0F460E1723D45DF40052434F /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0FEF90BA23D5E29300D98060 /* MainViewController.swift */,
+				0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */,
 				0F65DC8923D0A99B001E1CA9 /* Main.storyboard */,
 			);
 			path = Main;
@@ -235,7 +236,6 @@
 			name = Dipti;
 			packageProductDependencies = (
 				0F460E1623D45DF40052434F /* SideMenu */,
-				0FEF90B823D5DA6700D98060 /* ESTabBarController */,
 			);
 			productName = Dipti;
 			productReference = 0F65DC8023D0A99B001E1CA9 /* Dipti.app */;
@@ -267,7 +267,6 @@
 			mainGroup = 0F65DC7723D0A99B001E1CA9;
 			packageReferences = (
 				0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */,
-				0FEF90B723D5DA6600D98060 /* XCRemoteSwiftPackageReference "ESTabBarController" */,
 			);
 			productRefGroup = 0F65DC8123D0A99B001E1CA9 /* Products */;
 			projectDirPath = "";
@@ -320,6 +319,7 @@
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
 				0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */,
 				0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */,
+				0F506BFB23D7454300303A1C /* MainViewControllersFactory.swift in Sources */,
 				0F460E7D23D481090052434F /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,14 +530,6 @@
 				minimumVersion = 6.4.6;
 			};
 		};
-		0FEF90B723D5DA6600D98060 /* XCRemoteSwiftPackageReference "ESTabBarController" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/eggswift/ESTabBarController";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -545,11 +537,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
-		};
-		0FEF90B823D5DA6700D98060 /* ESTabBarController */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0FEF90B723D5DA6600D98060 /* XCRemoteSwiftPackageReference "ESTabBarController" */;
-			productName = ESTabBarController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
