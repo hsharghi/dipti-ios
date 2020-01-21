@@ -112,14 +112,23 @@
                                         <rect key="frame" x="377" y="54" width="17" height="22"/>
                                         <state key="normal" image="side-menu-button"/>
                                         <connections>
-                                            <segue destination="dqO-1v-Nag" kind="show" id="GL6-6z-eaB"/>
+                                            <action selector="showSideMenu:" destination="x5p-O7-vvn" eventType="touchUpInside" id="ieu-SM-UKg"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dipti-full-icon-white" translatesAutoresizingMaskIntoConstraints="NO" id="39O-jA-XgT">
+                                        <rect key="frame" x="191" y="30" width="32" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="b6f-bt-b5B"/>
+                                            <constraint firstAttribute="height" constant="36" id="ny2-BM-Q9b"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="39O-jA-XgT" firstAttribute="centerX" secondItem="vYD-1d-Tcf" secondAttribute="centerX" id="9NF-Hn-mZk"/>
                                     <constraint firstAttribute="bottom" secondItem="VP4-07-T0L" secondAttribute="bottom" constant="12" id="YKa-Ir-zSX"/>
                                     <constraint firstAttribute="trailing" secondItem="VP4-07-T0L" secondAttribute="trailing" constant="20" id="ffh-y6-r4d"/>
+                                    <constraint firstItem="39O-jA-XgT" firstAttribute="top" secondItem="vYD-1d-Tcf" secondAttribute="top" constant="30" id="zOZ-tS-aMN"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZf-kR-PM2" userLabel="SafeFixView">
@@ -184,10 +193,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dipti-full-icon-white" width="32" height="37"/>
         <image name="search" width="24" height="24"/>
         <image name="side-menu-button" width="17" height="14"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="GL6-6z-eaB"/>
-    </inferredMetricsTieBreakers>
 </document>

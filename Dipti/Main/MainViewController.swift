@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ESTabBarController
 
 class MainViewController: UIViewController {
     
@@ -21,8 +20,21 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
    
         safeFixView.backgroundColor = AppData.color.yellow
+        
+        setupSideMenu()
     }
 
+    
+    private func setupSideMenu() {
+        
+        SideMenuFactory.shared.setRightMenu()
+        
+    }
+    
+    @IBAction func showSideMenu(_ sender: Any) {
+        SideMenuFactory.shared.showRightSideMenu(in: self)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "embedCustomTabbar" {

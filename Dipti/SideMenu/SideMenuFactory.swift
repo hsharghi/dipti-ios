@@ -19,7 +19,7 @@ final class SideMenuFactory {
     static let storybord = "SideMenu"
     static let storybordId = "SideMenuNavigationController"
     
-    static let shared = SideMenuFactory()
+    static let shared = SideMenuFactory(data: nil)
     
     init(data: [String: Any]? = nil) {
         if data == nil {
@@ -44,30 +44,60 @@ final class SideMenuFactory {
     private let menuData: [String: Any]
     static let sideMenuPlist = "sideMenu"
     
-    
+    func showRightSideMenu(in viewController: UIViewController) {
+        if let menu = SideMenuManager.default.rightMenuNavigationController {
+            viewController.present(menu, animated: true, completion: nil)
+        }
+    }
+
+    func showLeftSideMenu(in viewController: UIViewController) {
+        if let menu = SideMenuManager.default.leftMenuNavigationController {
+            viewController.present(menu, animated: true, completion: nil)
+        }
+    }
+
     func setLeftMenu(storyboardId: String = "LeftSideMenuViewController") {
         SideMenuManager.default.leftMenuNavigationController = menuNavigationController(storyboardId: storyboardId)
+        SideMenuManager.default.leftMenuNavigationController?.settings = makeMenuSettings()
     }
     
     func setRightMenu(storyboardId: String = "RightSideMenuViewController") {
         SideMenuManager.default.rightMenuNavigationController = menuNavigationController(storyboardId: storyboardId)
+        SideMenuManager.default.rightMenuNavigationController?.settings = makeMenuSettings()
     }
     
     
     
     private func menuNavigationController(storyboardId: String) -> SideMenuNavigationController? {
-        return UIStoryboard(name: SideMenuFactory.storybord, bundle: nil).instantiateViewController(identifier: storyboardId) as? SideMenuNavigationController
+        let a = UIStoryboard(name: SideMenuFactory.storybord, bundle: nil).instantiateViewController(identifier: storyboardId) as? SideMenuNavigationController
+        return a
     }
+    
+    
     private static func loadSideMenuItems() -> [String: Any] {
-
+        
         if let path = Bundle.main.path(forResource: SideMenuFactory.sideMenuPlist, ofType: "plist"), let dic = NSDictionary(contentsOfFile: path) as? [String: Any] {
-                return dic
+            return dic
         }
-
+        
         return [:]
     }
     
     
+    private func makeMenuSettings() -> SideMenuSettings {
+        let presentationStyle: SideMenuPresentationStyle = .menuSlideIn
+        presentationStyle.backgroundColor = UIColor.black
+        presentationStyle.presentingScaleFactor = 1
 
+        var settings = SideMenuSettings()
+        settings.presentDuration = 0.35
+        settings.presentationStyle = presentationStyle
+//        let styles:[UIBlurEffect.Style?] = [nil, .dark, .light, .extraLight]
+        settings.blurEffectStyle = nil
+
+        return settings
+    }
+    
+    
     
 }

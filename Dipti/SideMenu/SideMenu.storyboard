@@ -18,7 +18,7 @@
         <!--Right Side Menu View Controller-->
         <scene sceneID="H4Z-U5-d12">
             <objects>
-                <viewController storyboardIdentifier="LeftSideMenuViewController" id="MU6-6o-9pV" customClass="RightSideMenuViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MU6-6o-9pV" customClass="RightSideMenuViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bda-oT-rQw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,7 @@
         <!--Side Menu Navigation Controller-->
         <scene sceneID="g9C-Jb-uy3">
             <objects>
-                <navigationController storyboardIdentifier="SideMenuNavigationController" navigationBarHidden="YES" id="rM1-5h-DBN" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RightSideMenuViewController" navigationBarHidden="YES" id="rM1-5h-DBN" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VmZ-1T-z9N">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
