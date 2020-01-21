@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol CustomTabbarDelegate: class {
+    func didSelectTabItem(index: Int)
+}
+
 class CustomTabbar: UIViewController {
     
     @IBOutlet var tabbarButtons: [UIButton]!
-    let highlighterView = UIView(frame: .zero)
+    @IBOutlet weak var highlighterView: UIView!
+    
+    weak var delegate: CustomTabbarDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +29,6 @@ class CustomTabbar: UIViewController {
     func setupHighlighter() {
         highlighterView.backgroundColor = AppData.color.yellow
         highlighterView.isUserInteractionEnabled = false
-        self.view.addSubview(highlighterView)
-        highlighterView.layer.zPosition = 0
-
     }
     
     @IBAction func tabbarButtonTapped(_ sender: Any) {
@@ -33,8 +36,9 @@ class CustomTabbar: UIViewController {
         let button = sender as! UIButton
         let index = button.tag
         print("button \(index) tapped")
-        highlightButton(for: index)
         
+        delegate?.didSelectTabItem(index: index)
+        highlightButton(for: index)
         
     }
     

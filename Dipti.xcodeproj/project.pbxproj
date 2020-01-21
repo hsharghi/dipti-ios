@@ -17,6 +17,10 @@
 		0F460E8623D4A3A60052434F /* iranian_sans_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DCA323D0A9F6001E1CA9 /* iranian_sans_bold.ttf */; };
 		0F460E8723D4A3A90052434F /* iranian_sans_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DCA423D0A9F6001E1CA9 /* iranian_sans_light.ttf */; };
 		0F460E8823D4A3AC0052434F /* iranian_sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DCA223D0A9F6001E1CA9 /* iranian_sans.ttf */; };
+		0F506BED23D73A4700303A1C /* Embedder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BEC23D73A4700303A1C /* Embedder.swift */; };
+		0F506BF023D73FA200303A1C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BEF23D73FA100303A1C /* Array+Extensions.swift */; };
+		0F506BF723D7417600303A1C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F506BF623D7417600303A1C /* Home.storyboard */; };
+		0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BF823D741E100303A1C /* HomeViewController.swift */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
 		0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8723D0A99B001E1CA9 /* ViewController.swift */; };
 		0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8923D0A99B001E1CA9 /* Main.storyboard */; };
@@ -25,7 +29,6 @@
 		0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */; };
 		0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */; };
 		0F65DCA923D0B89F001E1CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */; };
-		0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */; };
 		0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */; };
 		0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69C23D61E5400F72811 /* CustomTabbar.swift */; };
 		0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */; };
@@ -43,6 +46,10 @@
 		0F460E8023D4818C0052434F /* SideMenuFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuFactory.swift; sourceTree = "<group>"; };
 		0F460E8223D488290052434F /* sideMenu.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = sideMenu.plist; sourceTree = "<group>"; };
 		0F460E8323D48E730052434F /* RightSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightSideMenuViewController.swift; sourceTree = "<group>"; };
+		0F506BEC23D73A4700303A1C /* Embedder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Embedder.swift; sourceTree = "<group>"; };
+		0F506BEF23D73FA100303A1C /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		0F506BF623D7417600303A1C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0F506BF823D741E100303A1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F65DC8723D0A99B001E1CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +63,6 @@
 		0F65DCA223D0A9F6001E1CA9 /* iranian_sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans.ttf; sourceTree = "<group>"; };
 		0F65DCA323D0A9F6001E1CA9 /* iranian_sans_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans_bold.ttf; sourceTree = "<group>"; };
 		0F65DCA423D0A9F6001E1CA9 /* iranian_sans_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iranian_sans_light.ttf; sourceTree = "<group>"; };
-		0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingPageViewController.swift; sourceTree = "<group>"; };
 		0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0F78C69C23D61E5400F72811 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,60 @@
 			path = SettingsData;
 			sourceTree = "<group>";
 		};
+		0F506BEE23D73A5500303A1C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0F506BEC23D73A4700303A1C /* Embedder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0F506BF123D740DA00303A1C /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */,
+				0F78C69C23D61E5400F72811 /* CustomTabbar.swift */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
+		0F506BF223D7410200303A1C /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0F460E8023D4818C0052434F /* SideMenuFactory.swift */,
+				0F460E8323D48E730052434F /* RightSideMenuViewController.swift */,
+				0F460E7923D4778F0052434F /* SideMenu.storyboard */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		0F506BF323D7411600303A1C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0FEF90BA23D5E29300D98060 /* MainViewController.swift */,
+				0F65DC8923D0A99B001E1CA9 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0F506BF423D7412D00303A1C /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */,
+				0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		0F506BF523D7416900303A1C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0F506BF623D7417600303A1C /* Home.storyboard */,
+				0F506BF823D741E100303A1C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		0F65DC7723D0A99B001E1CA9 = {
 			isa = PBXGroup;
 			children = (
@@ -110,21 +170,17 @@
 			children = (
 				0FEF90B023D4AC8100D98060 /* Extensions */,
 				0F65DCA023D0A9E5001E1CA9 /* Assets */,
+				0F506BEE23D73A5500303A1C /* Helpers */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
 				0F460E7B23D480EA0052434F /* SettingsData */,
-				0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */,
-				0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */,
-				0F460E8023D4818C0052434F /* SideMenuFactory.swift */,
-				0F65DCAD23D0C04E001E1CA9 /* FadingPageViewController.swift */,
-				0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */,
+				0F506BF123D740DA00303A1C /* CustomTabbar */,
+				0F506BF223D7410200303A1C /* SideMenu */,
+				0F506BF323D7411600303A1C /* Main */,
+				0F506BF423D7412D00303A1C /* Intro */,
 				0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */,
-				0FEF90BA23D5E29300D98060 /* MainViewController.swift */,
-				0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */,
-				0F78C69C23D61E5400F72811 /* CustomTabbar.swift */,
-				0F460E8323D48E730052434F /* RightSideMenuViewController.swift */,
-				0F65DC8923D0A99B001E1CA9 /* Main.storyboard */,
-				0F460E7923D4778F0052434F /* SideMenu.storyboard */,
+				0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */,
+				0F506BF523D7416900303A1C /* Home */,
 				0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */,
 				0F65DC8E23D0A99D001E1CA9 /* LaunchScreen.storyboard */,
 				0F65DC9123D0A99D001E1CA9 /* Info.plist */,
@@ -153,6 +209,7 @@
 		0FEF90B023D4AC8100D98060 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0F506BEF23D73FA100303A1C /* Array+Extensions.swift */,
 				0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */,
 				0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */,
 				0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */,
@@ -227,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F65DC9023D0A99D001E1CA9 /* LaunchScreen.storyboard in Resources */,
+				0F506BF723D7417600303A1C /* Home.storyboard in Resources */,
 				0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */,
 				0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */,
 				0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */,
@@ -247,14 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
+				0F506BED23D73A4700303A1C /* Embedder.swift in Sources */,
 				0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */,
+				0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */,
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
 				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F460E7F23D481690052434F /* SideMenuData.swift in Sources */,
 				0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */,
 				0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */,
+				0F506BF023D73FA200303A1C /* Array+Extensions.swift in Sources */,
 				0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */,
-				0F65DCAE23D0C04E001E1CA9 /* FadingPageViewController.swift in Sources */,
 				0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */,
 				0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,

@@ -73,10 +73,10 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXZ-Pm-wmT">
-                                        <rect key="frame" x="154" y="10" width="23" height="20"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXZ-Pm-wmT" userLabel="SelectionView">
+                                        <rect key="frame" x="154" y="10" width="6" height="6"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-XL-ESG">
                                         <rect key="frame" x="0.0" y="4" width="414" height="50"/>
@@ -182,6 +182,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="54"/>
                     <connections>
+                        <outlet property="highlighterView" destination="BXZ-Pm-wmT" id="zYM-b7-exe"/>
                         <outletCollection property="tabbarButtons" destination="Sp9-s0-usc" collectionClass="NSMutableArray" id="eKY-GD-897"/>
                         <outletCollection property="tabbarButtons" destination="1dQ-FT-hr2" collectionClass="NSMutableArray" id="NBo-wZ-urQ"/>
                         <outletCollection property="tabbarButtons" destination="r04-js-x2f" collectionClass="NSMutableArray" id="o3N-tP-QDt"/>
