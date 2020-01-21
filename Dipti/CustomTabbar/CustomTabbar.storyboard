@@ -73,8 +73,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXZ-Pm-wmT" userLabel="SelectionView">
-                                        <rect key="frame" x="154" y="10" width="6" height="6"/>
+                                    <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXZ-Pm-wmT" userLabel="SelectionView">
+                                        <rect key="frame" x="154" y="16" width="6" height="12"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>

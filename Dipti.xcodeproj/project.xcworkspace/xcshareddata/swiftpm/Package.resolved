@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "ESTabBarController",
-        "repositoryURL": "https://github.com/eggswift/ESTabBarController",
-        "state": {
-          "branch": "master",
-          "revision": "4c34d7190edd3e0721fd59dc34655f388ffe93d9",
-          "version": null
-        }
-      },
-      {
         "package": "SideMenu",
         "repositoryURL": "https://github.com/jonkykong/SideMenu",
         "state": {

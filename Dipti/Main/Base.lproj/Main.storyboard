@@ -167,6 +167,7 @@
                     <navigationItem key="navigationItem" id="HjA-vk-q56"/>
                     <connections>
                         <outlet property="containerView" destination="aZ1-QF-5x9" id="yWQ-lJ-JDa"/>
+                        <outlet property="safeFixView" destination="mZf-kR-PM2" id="0Km-7A-3lR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEO-0G-on5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
