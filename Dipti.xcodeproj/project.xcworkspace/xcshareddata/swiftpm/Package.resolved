@@ -9,6 +9,15 @@
           "revision": "fb25017bc7238145c4d6405255c3aeaa7993b4c7",
           "version": "6.4.6"
         }
+      },
+      {
+        "package": "UIImageColors",
+        "repositoryURL": "https://github.com/jathu/UIImageColors",
+        "state": {
+          "branch": null,
+          "revision": "e49e6c32ea556e9fa0109dc79686bea4a10d41a2",
+          "version": "2.2.0"
+        }
       }
     ]
   },
