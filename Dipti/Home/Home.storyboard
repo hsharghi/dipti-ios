@@ -30,16 +30,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-Ss-0eg" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-RL-1zD">
+                                            <containerView opaque="NO" tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-RL-1zD">
                                                 <rect key="frame" x="20" y="272.5" width="374" height="212.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CrG-RL-1zD" secondAttribute="height" multiplier="324:184" id="g9z-Uu-6xe"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="RdL-UO-0kH" kind="embed" id="Shk-I5-ZSn"/>
+                                                    <segue destination="RdL-UO-0kH" kind="embed" identifier="embedCollectionWomen" id="Shk-I5-ZSn"/>
                                                 </connections>
                                             </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6w-Ld-yKy">
+                                            <containerView opaque="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6w-Ld-yKy">
                                                 <rect key="frame" x="20" y="40" width="374" height="212.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="y6w-Ld-yKy" secondAttribute="height" multiplier="324:184" id="z27-Ef-rpo"/>
@@ -51,7 +51,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-9V-J9l">
                                                 <rect key="frame" x="20" y="505" width="374" height="175.5"/>
                                                 <subviews>
-                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-0W-eXm">
+                                                    <containerView opaque="NO" tag="300" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-0W-eXm">
                                                         <rect key="frame" x="0.0" y="0.0" width="175.5" height="175.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="zfc-0W-eXm" secondAttribute="height" id="f7u-62-ZOC"/>
@@ -60,7 +60,7 @@
                                                             <segue destination="jOv-DJ-8pt" kind="embed" id="kTd-tw-dRY"/>
                                                         </connections>
                                                     </containerView>
-                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-vR-luP">
+                                                    <containerView opaque="NO" tag="400" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-vR-luP">
                                                         <rect key="frame" x="198.5" y="0.0" width="175.5" height="175.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="jkP-vR-luP" secondAttribute="height" id="5DF-ST-d9e"/>
