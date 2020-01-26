@@ -21,5 +21,8 @@ final class AppData {
         static let lightGray = UIColor(hexString: "F3F4F6")
         static let darkBlue = UIColor(hexString: "515C6F")
     }
-    
+ 
+    static var cacheManager: CacheManager {
+        return CachyCacheManager()
+    }
 }
