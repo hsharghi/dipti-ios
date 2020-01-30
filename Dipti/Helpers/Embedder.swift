@@ -5,7 +5,8 @@ class ViewEmbedder {
         parent:UIViewController,
         container:UIView,
         child:UIViewController,
-        previous:UIViewController?){
+        previous:UIViewController?,
+        completion:((UIViewController)->Void)? = nil){
         
         if let previous = previous {
             removeFromParent(vc: previous)
@@ -17,8 +18,9 @@ class ViewEmbedder {
         let w = container.frame.size.width;
         let h = container.frame.size.height;
         child.view.frame = CGRect(x: 0, y: 0, width: w, height: h)
+        completion?(child)
     }
-    
+
     class func removeFromParent(vc:UIViewController){
         vc.willMove(toParent: nil)
         vc.view.removeFromSuperview()
