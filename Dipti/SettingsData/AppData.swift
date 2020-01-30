@@ -14,7 +14,19 @@ final class AppData {
     static let loginStatusNotificationKey = "loginStatusNotificationKey"
     static let sideMenuSelectNotificationKey = "sideMenuSelectNotificationKey"
     
-    
+    ////////////////////////
+    /// HomeViewController
+    ////////////////////////
+    static let segueMenCollection = "embedCollectionMen"
+    static let segueWomenCollection = "embedCollectionWomen"
+    static let segueKidsCollection = "embedCollectionKids"
+    static let segueBagsCollection = "embedCollectionBags"
+
+    static let menCollectionWidgetIdentifier = "menCollectionWidget"
+    static let womenCollectionWidgetIdentifier = "womenCollectionWidget"
+    static let kidsCollectionWidgetIdentifier = "kidsCollectionWidget"
+    static let bagsCollectionWidgetIdentifier = "bagsCollectionWidget"
+
     struct color {
         static let yellow = UIColor(hexString: "F7C200")
         static let gray = UIColor(hexString: "D8D8D8")
@@ -24,5 +36,17 @@ final class AppData {
  
     static var cacheManager: CacheManager {
         return CachyCacheManager()
+    }
+    
+    static var appDelegate: AppDelegate {
+        get {
+            return UIApplication.shared.delegate as! AppDelegate
+        }
+    }
+    
+    static var main: MainViewController? {
+        get {
+            return AppData.appDelegate.mainViewController
+        }
     }
 }
