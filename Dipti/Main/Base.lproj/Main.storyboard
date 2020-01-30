@@ -122,12 +122,21 @@
                                             <constraint firstAttribute="height" constant="36" id="ny2-BM-Q9b"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08E-V4-9Js">
+                                        <rect key="frame" x="20" y="53" width="22" height="23"/>
+                                        <state key="normal" image="back-circular-yellow"/>
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="x5p-O7-vvn" eventType="touchUpInside" id="BkD-l6-TY0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="39O-jA-XgT" firstAttribute="centerX" secondItem="vYD-1d-Tcf" secondAttribute="centerX" id="9NF-Hn-mZk"/>
+                                    <constraint firstItem="08E-V4-9Js" firstAttribute="leading" secondItem="vYD-1d-Tcf" secondAttribute="leading" constant="20" id="GlZ-N6-IEb"/>
                                     <constraint firstAttribute="bottom" secondItem="VP4-07-T0L" secondAttribute="bottom" constant="12" id="YKa-Ir-zSX"/>
                                     <constraint firstAttribute="trailing" secondItem="VP4-07-T0L" secondAttribute="trailing" constant="20" id="ffh-y6-r4d"/>
+                                    <constraint firstAttribute="bottom" secondItem="08E-V4-9Js" secondAttribute="bottom" constant="12" id="oqX-EH-zm8"/>
                                     <constraint firstItem="39O-jA-XgT" firstAttribute="top" secondItem="vYD-1d-Tcf" secondAttribute="top" constant="30" id="zOZ-tS-aMN"/>
                                 </constraints>
                             </view>
@@ -175,6 +184,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HjA-vk-q56"/>
                     <connections>
+                        <outlet property="backButton" destination="08E-V4-9Js" id="Wr1-va-D38"/>
                         <outlet property="containerView" destination="aZ1-QF-5x9" id="yWQ-lJ-JDa"/>
                         <outlet property="safeFixView" destination="mZf-kR-PM2" id="0Km-7A-3lR"/>
                     </connections>
@@ -193,6 +203,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back-circular-yellow" width="22" height="23"/>
         <image name="dipti-full-icon-white" width="32" height="37"/>
         <image name="search" width="24" height="24"/>
         <image name="side-menu-button" width="17" height="14"/>
