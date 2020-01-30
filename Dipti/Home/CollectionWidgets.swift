@@ -9,6 +9,15 @@
 import UIKit
 import UIImageColors
 
+protocol CollectionWidgetDelegate: UIViewController {
+    func viewButtonTapped()
+    func backgroundImageTapped()
+}
+
+extension CollectionWidgetDelegate {
+    func backgroundImageTapped() { }
+}
+
 class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
     
     @IBOutlet weak var viewAllButton: UIButton!
@@ -17,6 +26,8 @@ class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
     @IBOutlet weak var infoLabel: UILabel!
     
     var backgroundImage: UIImage?
+    var identifier: String = "fullWidget"
+    weak var delegate: CollectionWidgetDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +50,9 @@ class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
                                        endPoint: CGPoint(x: 0.8, y: 0.5))
     }
     
+    @IBAction func viewAllButtonTapped(_ sender: Any) {
+        delegate?.viewButtonTapped()
+    }
     
     
 }
@@ -49,13 +63,18 @@ class CollectionHalfWidthWidget: UIViewController {
     @IBOutlet weak var backgroundImageView: ObservableImageView!
     @IBOutlet weak var collectionLabel: UILabel!
     
-    
+    var identifier: String = "halfWidget"
+    weak var delegate: CollectionWidgetDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewAllButton.rounded(color: .clear, width: 1, paddingX: 0, paddingY: 0)
 
     }
         
+    @IBAction func viewAllButtonTapped(_ sender: Any) {
+        delegate?.viewButtonTapped()
+    }
 }
 
 
