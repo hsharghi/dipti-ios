@@ -30,6 +30,7 @@ final class AppData {
     struct color {
         static let yellow = UIColor(hexString: "F7C200")
         static let gray = UIColor(hexString: "D8D8D8")
+        static let veryLightGray = UIColor(hexString: "F2F2F2")
         static let lightGray = UIColor(hexString: "F3F4F6")
         static let darkBlue = UIColor(hexString: "515C6F")
     }
