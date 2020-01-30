@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     var viewControllers = [UIViewController]()
     var currentNavigationController: UINavigationController? {
         return (currentViewController as? UINavigationController) ??
-            currentViewController?.navigationController 
+            currentViewController?.navigationController
     }
     
     override func viewDidLoad() {
@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
         safeFixView.backgroundColor = AppData.color.yellow
         
         setupSideMenu()
+        toggleBackButton()
     }
     
     
@@ -68,6 +69,7 @@ class MainViewController: UIViewController {
     
     public func pushViewController(viewController: UIViewController, _ completion: ((UIViewController) -> Void)? = nil) {
         currentNavigationController?.pushViewController(viewController, animated: true)
+        completion?(viewController)
         toggleBackButton()
     }
     
