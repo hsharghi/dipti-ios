@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kAG-0r-Hhw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aIx-oO-aBP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -16,6 +16,24 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dwv-QC-Gv9">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="aIx-oO-aBP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dZ0-kQ-a4V">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i29-bj-bQo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="kAG-0r-Hhw" kind="relationship" relationship="rootViewController" id="9ZD-ga-rof"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GbA-hm-Cc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1064" y="-283"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="vE4-co-gHA">
             <objects>
@@ -57,7 +75,7 @@
                                                             <constraint firstAttribute="width" secondItem="zfc-0W-eXm" secondAttribute="height" id="f7u-62-ZOC"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="jOv-DJ-8pt" kind="embed" id="kTd-tw-dRY"/>
+                                                            <segue destination="jOv-DJ-8pt" kind="embed" identifier="embedCollectionKids" id="kTd-tw-dRY"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView opaque="NO" tag="400" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-vR-luP">
@@ -66,7 +84,7 @@
                                                             <constraint firstAttribute="width" secondItem="jkP-vR-luP" secondAttribute="height" id="5DF-ST-d9e"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="jOv-DJ-8pt" kind="embed" id="Yv3-Io-Q7b"/>
+                                                            <segue destination="jOv-DJ-8pt" kind="embed" identifier="embedCollectionBags" id="Yv3-Io-Q7b"/>
                                                         </connections>
                                                     </containerView>
                                                 </subviews>
@@ -81,7 +99,7 @@
                                                 </connections>
                                             </containerView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="6RV-9V-J9l" firstAttribute="trailing" secondItem="y6w-Ld-yKy" secondAttribute="trailing" id="32w-px-jGT"/>
                                             <constraint firstItem="OUI-x5-Agu" firstAttribute="leading" secondItem="7Qf-Ss-0eg" secondAttribute="leading" id="5DS-mG-Ht6"/>
@@ -121,6 +139,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mwm-L3-R21"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hdJ-ef-bh2"/>
                     <size key="freeformSize" width="414" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tJ-ve-Tfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -373,6 +392,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yv3-Io-Q7b"/>
-        <segue reference="Shk-I5-ZSn"/>
+        <segue reference="2AE-mZ-WFQ"/>
     </inferredMetricsTieBreakers>
 </document>

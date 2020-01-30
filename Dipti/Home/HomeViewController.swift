@@ -26,16 +26,51 @@ class HomeViewController: UIViewController {
         print("homevc loaded \(Date().description)")
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier?.contains("embedCollectionMen") ?? false {
+        switch segue.identifier {
+        case AppData.segueMenCollection:
             if let vc = segue.destination as? CollectionFullWidthWidget {
+                vc.delegate = self
+                vc.identifier = AppData.menCollectionWidgetIdentifier
                 vc.backgroundImage = UIImage(named: "collection-men")
             }
-        }
-        if segue.identifier?.contains("embedCollectionWomen") ?? false {
+        case AppData.segueWomenCollection:
             if let vc = segue.destination as? CollectionFullWidthWidget {
+                vc.delegate = self
+                vc.identifier = AppData.womenCollectionWidgetIdentifier
                 vc.backgroundImage = UIImage(named: "collection-women")
+            }
+        case AppData.segueKidsCollection:
+            if let vc = segue.destination as? CollectionFullWidthWidget {
+                vc.delegate = self
+                vc.identifier = AppData.kidsCollectionWidgetIdentifier
+                vc.backgroundImage = UIImage(named: "collection-kids")
+            }
+        case AppData.segueBagsCollection:
+            if let vc = segue.destination as? CollectionFullWidthWidget {
+                vc.delegate = self
+                vc.identifier = AppData.bagsCollectionWidgetIdentifier
+                vc.backgroundImage = UIImage(named: "collection-bags")
+            }
+
+        default:
+            return
+        }
+    }
+}
+
+extension HomeViewController: CollectionWidgetDelegate {
+    func viewButtonTapped(identifier: String) {
+        if let vc = UIStoryboard(name: "Product", bundle: nil).instantiateInitialViewController() as? ProductListViewController {
+            AppData.main?.pushViewController(viewController: vc) { vc in
+                if let vc = vc as? ProductListViewController {
+                    vc.products = ProductMockFactory.mockProducts(count: 20)
+                }
             }
         }
     }
+    
+    
 }
