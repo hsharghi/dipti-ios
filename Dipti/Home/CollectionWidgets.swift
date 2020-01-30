@@ -10,12 +10,12 @@ import UIKit
 import UIImageColors
 
 protocol CollectionWidgetDelegate: UIViewController {
-    func viewButtonTapped()
-    func backgroundImageTapped()
+    func viewButtonTapped(identifier: String)
+    func backgroundImageTapped(identifier: String)
 }
 
 extension CollectionWidgetDelegate {
-    func backgroundImageTapped() { }
+    func backgroundImageTapped(identifier: String) { }
 }
 
 class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
@@ -51,7 +51,7 @@ class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
     }
     
     @IBAction func viewAllButtonTapped(_ sender: Any) {
-        delegate?.viewButtonTapped()
+        delegate?.viewButtonTapped(identifier: identifier)
     }
     
     
@@ -73,7 +73,7 @@ class CollectionHalfWidthWidget: UIViewController {
     }
         
     @IBAction func viewAllButtonTapped(_ sender: Any) {
-        delegate?.viewButtonTapped()
+        delegate?.viewButtonTapped(identifier: identifier)
     }
 }
 
