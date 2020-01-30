@@ -189,7 +189,7 @@
                 <viewControllerPlaceholder storyboardName="CustomTabbar" id="7wa-9D-ggv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvX-vf-FDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="254"/>
+            <point key="canvasLocation" x="800" y="242"/>
         </scene>
     </scenes>
     <resources>

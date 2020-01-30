@@ -40,10 +40,22 @@
 		0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */; };
 		0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69C23D61E5400F72811 /* CustomTabbar.swift */; };
 		0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */; };
+		0FA1CC4323E020F8002F0F8E /* ProductMockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */; };
+		0FDD2C3523DEF1F5006EE934 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD2C3423DEF1F5006EE934 /* ProductDetail.swift */; };
+		0FDD2C3823E02011006EE934 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDD2C3723E02011006EE934 /* Product.storyboard */; };
 		0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */; };
 		0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */; };
 		0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */; };
 		0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEF90BA23D5E29300D98060 /* MainViewController.swift */; };
+		0FF8254223D99D19001F61D5 /* Cachy in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF8254123D99D19001F61D5 /* Cachy */; };
+		0FF8254723D99F00001F61D5 /* SwiftHash in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF8254623D99F00001F61D5 /* SwiftHash */; };
+		0FF8254923D9D2DF001F61D5 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8254823D9D2DF001F61D5 /* UIImage+Extensions.swift */; };
+		0FF8254B23D9D2E8001F61D5 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8254A23D9D2E8001F61D5 /* Data+Extensions.swift */; };
+		0FF8254D23D9D3F8001F61D5 /* CachyCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8254C23D9D3F8001F61D5 /* CachyCacheManager.swift */; };
+		0FF8254F23D9D6AE001F61D5 /* CacheManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8254E23D9D6AE001F61D5 /* CacheManagerProtocol.swift */; };
+		0FF8255123DDB78F001F61D5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8255023DDB78F001F61D5 /* Date+Extensions.swift */; };
+		0FF8255723DDCD77001F61D5 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8255623DDCD77001F61D5 /* ProductListViewController.swift */; };
+		0FF8255923DDCE27001F61D5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8255823DDCE27001F61D5 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,10 +92,20 @@
 		0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0F78C69C23D61E5400F72811 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
+		0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMockFactory.swift; sourceTree = "<group>"; };
+		0FDD2C3423DEF1F5006EE934 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
+		0FDD2C3723E02011006EE934 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0FEF90BA23D5E29300D98060 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0FF8254823D9D2DF001F61D5 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		0FF8254A23D9D2E8001F61D5 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		0FF8254C23D9D3F8001F61D5 /* CachyCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachyCacheManager.swift; sourceTree = "<group>"; };
+		0FF8254E23D9D6AE001F61D5 /* CacheManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerProtocol.swift; sourceTree = "<group>"; };
+		0FF8255023DDB78F001F61D5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		0FF8255623DDCD77001F61D5 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		0FF8255823DDCE27001F61D5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +113,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF8254223D99D19001F61D5 /* Cachy in Frameworks */,
 				0F3492B523D84006001BD150 /* UIImageColors in Frameworks */,
+				0FF8254723D99F00001F61D5 /* SwiftHash in Frameworks */,
 				0F460E1723D45DF40052434F /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */,
+				0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */,
 				0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */,
 			);
 			path = Intro;
@@ -197,8 +222,10 @@
 				0F506BF423D7412D00303A1C /* Intro */,
 				0F506BF323D7411600303A1C /* Main */,
 				0F506BF523D7416900303A1C /* Home */,
-				0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */,
 				0FEF90B523D4AED600D98060 /* BaseNavigationController.swift */,
+				0FF8255823DDCE27001F61D5 /* MockData.swift */,
+				0FDD2C3623E01FE6006EE934 /* Product */,
+				0FF8255223DDB7E8001F61D5 /* Cache */,
 				0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */,
 				0F65DC8E23D0A99D001E1CA9 /* LaunchScreen.storyboard */,
 				0F65DC9123D0A99D001E1CA9 /* Info.plist */,
@@ -227,6 +254,17 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0FDD2C3623E01FE6006EE934 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				0FDD2C3723E02011006EE934 /* Product.storyboard */,
+				0FDD2C3423DEF1F5006EE934 /* ProductDetail.swift */,
+				0FF8255623DDCD77001F61D5 /* ProductListViewController.swift */,
+				0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		0FEF90B023D4AC8100D98060 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,8 +272,20 @@
 				0FEF90B123D4AC9000D98060 /* UIView+Extensions.swift */,
 				0FEF90B323D4AC9600D98060 /* UIButton+Extensions.swift */,
 				0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */,
+				0FF8254A23D9D2E8001F61D5 /* Data+Extensions.swift */,
+				0FF8254823D9D2DF001F61D5 /* UIImage+Extensions.swift */,
+				0FF8255023DDB78F001F61D5 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0FF8255223DDB7E8001F61D5 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				0FF8254C23D9D3F8001F61D5 /* CachyCacheManager.swift */,
+				0FF8254E23D9D6AE001F61D5 /* CacheManagerProtocol.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +307,8 @@
 			packageProductDependencies = (
 				0F460E1623D45DF40052434F /* SideMenu */,
 				0F3492B423D84006001BD150 /* UIImageColors */,
+				0FF8254123D99D19001F61D5 /* Cachy */,
+				0FF8254623D99F00001F61D5 /* SwiftHash */,
 			);
 			productName = Dipti;
 			productReference = 0F65DC8023D0A99B001E1CA9 /* Dipti.app */;
@@ -289,6 +341,8 @@
 			packageReferences = (
 				0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */,
 				0F3492B323D84006001BD150 /* XCRemoteSwiftPackageReference "UIImageColors" */,
+				0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */,
+				0FF8254523D99F00001F61D5 /* XCRemoteSwiftPackageReference "SwiftHash" */,
 			);
 			productRefGroup = 0F65DC8123D0A99B001E1CA9 /* Products */;
 			projectDirPath = "";
@@ -307,6 +361,7 @@
 				0F65DC9023D0A99D001E1CA9 /* LaunchScreen.storyboard in Resources */,
 				0F506BF723D7417600303A1C /* Home.storyboard in Resources */,
 				0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */,
+				0FDD2C3823E02011006EE934 /* Product.storyboard in Resources */,
 				0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */,
 				0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */,
 				0F3492AB23D83EB8001BD150 /* IRANSansWeb_Bold.ttf in Resources */,
@@ -331,12 +386,18 @@
 				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
 				0F506BED23D73A4700303A1C /* Embedder.swift in Sources */,
 				0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */,
+				0FF8255123DDB78F001F61D5 /* Date+Extensions.swift in Sources */,
 				0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */,
+				0FF8255923DDCE27001F61D5 /* MockData.swift in Sources */,
+				0FF8254D23D9D3F8001F61D5 /* CachyCacheManager.swift in Sources */,
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
 				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F3492BB23D853FE001BD150 /* BrandCollectionViewController.swift in Sources */,
+				0FF8254B23D9D2E8001F61D5 /* Data+Extensions.swift in Sources */,
 				0F460E7F23D481690052434F /* SideMenuData.swift in Sources */,
+				0FDD2C3523DEF1F5006EE934 /* ProductDetail.swift in Sources */,
 				0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */,
+				0FA1CC4323E020F8002F0F8E /* ProductMockFactory.swift in Sources */,
 				0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */,
 				0F506BF023D73FA200303A1C /* Array+Extensions.swift in Sources */,
 				0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */,
@@ -344,6 +405,9 @@
 				0F3492B223D83F6C001BD150 /* CollectionWidgets.swift in Sources */,
 				0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
+				0FF8255723DDCD77001F61D5 /* ProductListViewController.swift in Sources */,
+				0FF8254F23D9D6AE001F61D5 /* CacheManagerProtocol.swift in Sources */,
+				0FF8254923D9D2DF001F61D5 /* UIImage+Extensions.swift in Sources */,
 				0F3492B723D842A3001BD150 /* AppHelper.swift in Sources */,
 				0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */,
 				0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */,
@@ -566,6 +630,22 @@
 				minimumVersion = 6.4.6;
 			};
 		};
+		0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Sadmansamee/CachyKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.12;
+			};
+		};
+		0FF8254523D99F00001F61D5 /* XCRemoteSwiftPackageReference "SwiftHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onmyway133/SwiftHash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -578,6 +658,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
+		};
+		0FF8254123D99D19001F61D5 /* Cachy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */;
+			productName = Cachy;
+		};
+		0FF8254623D99F00001F61D5 /* SwiftHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF8254523D99F00001F61D5 /* XCRemoteSwiftPackageReference "SwiftHash" */;
+			productName = SwiftHash;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
