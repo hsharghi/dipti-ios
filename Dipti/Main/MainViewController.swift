@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var safeFixView: UIView!
     @IBOutlet weak var backButton: UIView!
+    
+    @IBOutlet weak var searchViewTopConstraint: NSLayoutConstraint!
     
     var currentViewController: UIViewController?
     var viewControllers = [UIViewController]()
@@ -32,6 +34,20 @@ class MainViewController: UIViewController {
         toggleBackButton()
     }
     
+    func hideSearch() {
+        searchViewTopConstraint.constant = -30
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func scrollSearchArea(offset: CGFloat) {
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+    }
     
     private func setupSideMenu() {
         
@@ -84,7 +100,15 @@ extension MainViewController: CustomTabbarDelegate {
                                child: viewController,
                                previous: currentViewController) { vc in
                                 self.currentViewController = vc
+                                let svc = vc as? ScrollableViewController
+                                svc?.scrollableDelegate = self
             }
         }
+    }
+}
+
+extension MainViewController: ScrollableViewControllerDelegate {
+    func scrollViewDidSet(scrollView: UIScrollView) {
+        scrollView.delegate = self
     }
 }

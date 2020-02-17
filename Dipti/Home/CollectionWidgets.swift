@@ -32,7 +32,6 @@ class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewAllButton.rounded(color: .clear, width: 1, paddingX: 0, paddingY: 0)
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,6 +52,11 @@ class CollectionFullWidthWidget: UIViewController, UIImageViewObserverDelegate {
     @IBAction func viewAllButtonTapped(_ sender: Any) {
         delegate?.viewButtonTapped(identifier: identifier)
     }
+    
+    func imageTapped(_ sender: Any) {
+        delegate?.backgroundImageTapped(identifier: identifier)
+    }
+
     
     
 }
@@ -81,6 +85,7 @@ class CollectionHalfWidthWidget: UIViewController {
 
 protocol UIImageViewObserverDelegate: class {
     func imageDidSet(image: UIImage?, colors: UIImageColors?)
+    func imageTapped(_ sender: Any)
 }
 
 
@@ -97,6 +102,15 @@ class ObservableImageView: UIImageView {
         if let imageFile = imageFile {
             self.image = imageFile
         }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+        self.addGestureRecognizer(tapGesture)
+        self.isUserInteractionEnabled = true
+    }
+    
+    @objc private func imageTapped(_ sender: Any) {
+        print("tapped")
+        delegate?.imageTapped(sender)
     }
     
     override var image: UIImage? {

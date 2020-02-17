@@ -141,6 +141,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hdJ-ef-bh2"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="scrollViewOutlet" destination="WIp-gE-840" id="08R-c9-HP8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6tJ-ve-Tfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

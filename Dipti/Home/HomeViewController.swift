@@ -8,9 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: ScrollableViewController {
+    
+    @IBOutlet weak var scrollViewOutlet: UIScrollView!
     
     override func viewDidLoad() {
+        scrollView = scrollViewOutlet
         super.viewDidLoad()
         [100, 200, 300, 400].forEach { (tag) in
             if let view = self.view.viewWithTag(tag) {
@@ -72,5 +75,8 @@ extension HomeViewController: CollectionWidgetDelegate {
         }
     }
     
+    func backgroundImageTapped(identifier: String) {
+        AppData.main?.hideSearch()
+    }
     
 }
