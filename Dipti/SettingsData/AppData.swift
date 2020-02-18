@@ -51,5 +51,8 @@ final class AppData {
         get {
             return AppData.appDelegate.mainViewController
         }
+        set(mainViewController) {
+            AppData.appDelegate.mainViewController = mainViewController
+        }
     }
 }
