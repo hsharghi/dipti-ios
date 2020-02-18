@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Scrollable Navigation Controller-->
         <scene sceneID="dwv-QC-Gv9">
             <objects>
-                <navigationController navigationBarHidden="YES" id="aIx-oO-aBP" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="aIx-oO-aBP" customClass="ScrollableNavigationController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dZ0-kQ-a4V">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

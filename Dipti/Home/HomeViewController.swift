@@ -75,8 +75,4 @@ extension HomeViewController: CollectionWidgetDelegate {
         }
     }
     
-    func backgroundImageTapped(identifier: String) {
-        AppData.main?.hideSearch()
-    }
-    
 }
