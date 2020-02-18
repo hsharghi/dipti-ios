@@ -16,16 +16,18 @@ extension ScrollableViewControllerDelegate {
     func scrollViewDidSet(scrollView: UIScrollView) { }
 }
 
-class ScrollableViewController: UIViewController {
+class ScrollableViewController: UIViewController, UIScrollViewDelegate {
     
     weak var scrollableDelegate: ScrollableViewControllerDelegate?
     
     var scrollView: UIScrollView? {
         didSet {
             if let scrollView = scrollView {
+                scrollView.delegate = self
                 scrollableDelegate?.scrollViewDidSet(scrollView: scrollView)
             }
         }
     }
+
 
 }

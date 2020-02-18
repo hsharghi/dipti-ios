@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UIScrollViewDelegate {
+class MainViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var safeFixView: UIView!
@@ -26,7 +26,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AppData.appDelegate.mainViewController = self
+        AppData.main = self
         
         safeFixView.backgroundColor = AppData.color.yellow
         
@@ -41,12 +41,15 @@ class MainViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    func scrollSearchArea(offset: CGFloat) {
-        
+    func showSearch() {
+        searchViewTopConstraint.constant = 44
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
+    func scrollSearchArea(offset: CGFloat) {
+        
     }
     
     private func setupSideMenu() {
@@ -99,16 +102,30 @@ extension MainViewController: CustomTabbarDelegate {
                                container: containerView,
                                child: viewController,
                                previous: currentViewController) { vc in
-                                self.currentViewController = vc
-                                let svc = vc as? ScrollableViewController
-                                svc?.scrollableDelegate = self
+                                if let vc = vc as? ScrollableNavigationController {
+                                    self.currentViewController = vc
+                                    vc.scrollableDelegate = self
+                                }
+                                
             }
         }
     }
 }
 
-extension MainViewController: ScrollableViewControllerDelegate {
+extension MainViewController: ScrollableNavigationControllerDelegate {
+    
+    func childScrollViewDidScroll(_ scrollView: UIScrollView, direction: ScrollDirection ) {
+        if direction == .down && scrollView.contentOffset.y > 0 {
+            hideSearch()
+        }
+        if direction == .up && scrollView.contentOffset.y < scrollView.contentSize.height - scrollView.frame.height {
+            showSearch()
+        }
+    }
+    
     func scrollViewDidSet(scrollView: UIScrollView) {
-        scrollView.delegate = self
+        print(scrollView)
     }
 }
+
+
