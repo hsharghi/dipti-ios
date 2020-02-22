@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="height" constant="48" id="zCt-2Z-0i5"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKO-2h-VCq">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKO-2h-VCq" customClass="PaddedTextField" customModule="Dipti" customModuleProvider="target">
                                 <rect key="frame" x="20" y="112" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kOS-O9-9qk"/>
@@ -186,6 +186,7 @@
                         <outlet property="backButton" destination="08E-V4-9Js" id="Wr1-va-D38"/>
                         <outlet property="containerView" destination="aZ1-QF-5x9" id="yWQ-lJ-JDa"/>
                         <outlet property="safeFixView" destination="mZf-kR-PM2" id="0Km-7A-3lR"/>
+                        <outlet property="searchTextField" destination="sKO-2h-VCq" id="AF1-fW-4f6"/>
                         <outlet property="searchViewTopConstraint" destination="LDd-ei-Z5T" id="S8c-Q0-DAI"/>
                     </connections>
                 </viewController>

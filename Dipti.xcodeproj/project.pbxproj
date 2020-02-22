@@ -30,6 +30,7 @@
 		0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BF823D741E100303A1C /* HomeViewController.swift */; };
 		0F506BFB23D7454300303A1C /* MainViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */; };
 		0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F59B4E623FC02A5008A9E13 /* ScrollableNavigationController.swift */; };
+		0F5EA95923FD3718005274CD /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5EA95823FD3718005274CD /* PaddedTextField.swift */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
 		0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8723D0A99B001E1CA9 /* ViewController.swift */; };
 		0F65DC8B23D0A99B001E1CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8923D0A99B001E1CA9 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 		0F506BF823D741E100303A1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllersFactory.swift; sourceTree = "<group>"; };
 		0F59B4E623FC02A5008A9E13 /* ScrollableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableNavigationController.swift; sourceTree = "<group>"; };
+		0F5EA95823FD3718005274CD /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F65DC8723D0A99B001E1CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				0F506BEC23D73A4700303A1C /* Embedder.swift */,
 				0F3492B623D842A3001BD150 /* AppHelper.swift */,
+				0F5EA95823FD3718005274CD /* PaddedTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
 				0FF8255723DDCD77001F61D5 /* ProductListViewController.swift in Sources */,
+				0F5EA95923FD3718005274CD /* PaddedTextField.swift in Sources */,
 				0FF8254F23D9D6AE001F61D5 /* CacheManagerProtocol.swift in Sources */,
 				0FF8254923D9D2DF001F61D5 /* UIImage+Extensions.swift in Sources */,
 				0F3492B723D842A3001BD150 /* AppHelper.swift in Sources */,

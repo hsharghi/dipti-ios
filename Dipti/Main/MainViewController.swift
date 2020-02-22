@@ -13,8 +13,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var safeFixView: UIView!
     @IBOutlet weak var backButton: UIView!
-    
     @IBOutlet weak var searchViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchTextField: PaddedTextField!
     
     var currentViewController: UIViewController?
     var viewControllers = [UIViewController]()
@@ -28,12 +28,13 @@ class MainViewController: UIViewController {
         
         AppData.main = self
         
-        safeFixView.backgroundColor = AppData.color.yellow
+        searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 10))
         
+        safeFixView.backgroundColor = AppData.color.yellow
         setupSideMenu()
         toggleBackButton()
     }
-    
+        
     func hideSearch() {
         searchViewTopConstraint.constant = -30
         UIView.animate(withDuration: 0.5) {
@@ -64,6 +65,9 @@ class MainViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: Any) {
         currentNavigationController?.popViewController(animated: true)
+        if currentNavigationController?.viewControllers.count ?? 1 == 1 {
+            currentNavigationController?.popToRootViewController(animated: true)
+        }
         toggleBackButton()
     }
     
@@ -76,7 +80,8 @@ class MainViewController: UIViewController {
     }
     
     private func toggleBackButton() {
-            backButton.isHidden = !(currentNavigationController?.viewControllers.count ?? 0 > 1)
+        print("viewControllers: \(currentNavigationController?.viewControllers.count)")
+            backButton.isHidden = !(currentNavigationController?.viewControllers.count ?? 1 > 1)
     }
     
     public func embedViewController(viewController: UIViewController, _ completion: ((UIViewController) -> Void)? = nil) {
