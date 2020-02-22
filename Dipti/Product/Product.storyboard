@@ -20,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductListViewController" id="ZIZ-Gc-BaN" customClass="ProductListViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="07A-nD-Lf5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ttr-iX-9A8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mKz-YR-hNx">
                                     <size key="itemSize" width="215" height="294"/>
@@ -47,22 +47,22 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-a1-ADy">
-                                                    <rect key="frame" x="58" y="197" width="99.5" height="81"/>
+                                                    <rect key="frame" x="64.5" y="214.5" width="86" height="63.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آستین بلند چشم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-zB-AYG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="99.5" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="86" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آریگاتو" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjs-TW-4jR">
-                                                            <rect key="frame" x="0.0" y="29.5" width="99.5" height="22"/>
+                                                            <rect key="frame" x="0.0" y="23.5" width="86" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۲۵۰٫۰۰۰ تومان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4a-hr-6bb">
-                                                            <rect key="frame" x="0.0" y="57.5" width="99.5" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="46" width="86" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -110,6 +110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SBk-ro-ZfR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ayk-31-Rwp"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="collectionView" destination="ttr-iX-9A8" id="daI-O9-McS"/>
@@ -128,7 +129,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-01" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-YP-gnz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="99" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-01" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-YP-gnz">
                                 <rect key="frame" x="20" y="30" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DYd-YP-gnz" secondAttribute="height" id="5hD-2A-jeG"/>
@@ -177,6 +178,9 @@
                                     <constraint firstAttribute="height" constant="40" id="n7W-Qa-pK8"/>
                                 </constraints>
                                 <state key="normal" image="add-to-cart"/>
+                                <connections>
+                                    <segue destination="ZIZ-Gc-BaN" kind="show" id="kvj-ta-E28"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

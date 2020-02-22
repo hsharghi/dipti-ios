@@ -16,11 +16,17 @@ class ProductListViewController: UIViewController {
     
     var products = [Product]()
     
+    private var selectedProduct: Product?
+    private var selectedFrame : CGRect?
+    private var customInteractor : CustomInteractor?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 10, right: 0)
         collectionView.backgroundColor = AppData.color.veryLightGray
+        
+        self.navigationController?.delegate = self
     }
     
     
@@ -47,6 +53,9 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedProduct = products[indexPath.row]
+        let theAttributes:UICollectionViewLayoutAttributes! = collectionView.layoutAttributesForItem(at: indexPath)
+        selectedFrame = collectionView.convert(theAttributes.frame, to: collectionView.superview)
         performSegue(withIdentifier: "showProductDetail", sender: products[indexPath.item])
     }
     
@@ -55,6 +64,28 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
             let vc = segue.destination as? ProductDetailViewController,
             let product = sender as? Product {
             vc.product = product
+        }
+    }
+}
+
+extension ProductListViewController: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        guard let ci = customInteractor else { return nil }
+        return ci.transitionInProgress ? customInteractor : nil
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let frame = self.selectedFrame else { return nil }
+        guard let product = self.selectedProduct else { return nil }
+        guard let image = product.uiImage() else { return nil }
+        
+        switch operation {
+        case .push:
+            self.customInteractor = CustomInteractor(attachTo: toVC)
+            return PopDetailImageAnimator(duration: TimeInterval(UINavigationController.hideShowBarDuration), isPresenting: true, originFrame: frame, image: image)
+        default:
+            return PopDetailImageAnimator(duration: TimeInterval(UINavigationController.hideShowBarDuration), isPresenting: false, originFrame: frame, image: image)
         }
     }
 }
