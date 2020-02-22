@@ -55,4 +55,10 @@ final class AppData {
             AppData.appDelegate.mainViewController = mainViewController
         }
     }
+    
+    static var cart: Cart {
+        get {
+            return AppData.appDelegate.cart
+        }
+    }
 }
