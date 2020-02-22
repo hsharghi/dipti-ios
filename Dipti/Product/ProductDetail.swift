@@ -34,6 +34,24 @@ class ProductDetailViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        AppData.main?.hideSearch()
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        AppData.main?.hideSearch()
+//    }
+//
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        AppData.main?.showSearch()
+    }
+    
     
     private func setupView(with product: Product) {
         

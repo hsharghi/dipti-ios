@@ -20,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductListViewController" id="ZIZ-Gc-BaN" customClass="ProductListViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="07A-nD-Lf5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ttr-iX-9A8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mKz-YR-hNx">
                                     <size key="itemSize" width="215" height="294"/>
@@ -114,7 +114,6 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="collectionView" destination="ttr-iX-9A8" id="daI-O9-McS"/>
-                        <segue destination="Ziu-Tt-va3" kind="show" identifier="showProductDetail" id="eED-Xg-Iiu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5D-2e-tUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,17 +125,17 @@
             <objects>
                 <viewController storyboardIdentifier="ProductDetailViewController" id="Ziu-Tt-va3" customClass="ProductDetailViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6Q-u8-kYG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="99" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-01" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-YP-gnz">
-                                <rect key="frame" x="20" y="30" width="374" height="374"/>
+                                <rect key="frame" x="20" y="74" width="374" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DYd-YP-gnz" secondAttribute="height" id="5hD-2A-jeG"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-Fe-1uq">
-                                <rect key="frame" x="1" y="424" width="412" height="102.5"/>
+                                <rect key="frame" x="1" y="468" width="412" height="102.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آستین بلند چشم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y3-gv-TIk">
                                         <rect key="frame" x="0.0" y="0.0" width="412" height="21"/>
@@ -165,22 +164,19 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav-icon-gray" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Pa-iKz">
-                                <rect key="frame" x="338" y="332" width="32" height="32"/>
+                                <rect key="frame" x="338" y="376" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="bre-HB-hnu"/>
                                     <constraint firstAttribute="width" constant="32" id="hD0-xb-lgh"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-v1-Ixv">
-                                <rect key="frame" x="334" y="384" width="40" height="40"/>
+                                <rect key="frame" x="334" y="428" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="OeP-nB-dFa"/>
                                     <constraint firstAttribute="height" constant="40" id="n7W-Qa-pK8"/>
                                 </constraints>
                                 <state key="normal" image="add-to-cart"/>
-                                <connections>
-                                    <segue destination="ZIZ-Gc-BaN" kind="show" id="kvj-ta-E28"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
