@@ -9,7 +9,8 @@
 import Foundation
 
 class Product {
-    internal init(image: String, title: String, description: String, designer: String, price: Int = 0, category: Category) {
+    internal init(id: String? = nil, image: String, title: String, description: String, designer: String, price: Int = 0, category: Category) {
+        self.id = id ?? generateID()
         self.image = image
         self.title = title
         self.designer = designer
@@ -18,6 +19,7 @@ class Product {
         self.category = category
     }
     
+    var id: String
     var image: String
     var title: String
     var designer: String
@@ -42,6 +44,10 @@ class Product {
 
     ]
     
+    private func generateID(length: Int = 10) -> String {
+          let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890-"
+          return String((0..<length).map{ _ in letters.randomElement()! })
+    }
 }
 
 
