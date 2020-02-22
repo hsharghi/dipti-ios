@@ -65,9 +65,6 @@ class MainViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: Any) {
         currentNavigationController?.popViewController(animated: true)
-        if currentNavigationController?.viewControllers.count ?? 1 == 1 {
-            currentNavigationController?.popToRootViewController(animated: true)
-        }
         toggleBackButton()
     }
     
@@ -80,7 +77,6 @@ class MainViewController: UIViewController {
     }
     
     private func toggleBackButton() {
-        print("viewControllers: \(currentNavigationController?.viewControllers.count)")
             backButton.isHidden = !(currentNavigationController?.viewControllers.count ?? 1 > 1)
     }
     

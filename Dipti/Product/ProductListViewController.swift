@@ -56,7 +56,14 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
         self.selectedProduct = products[indexPath.row]
         let theAttributes:UICollectionViewLayoutAttributes! = collectionView.layoutAttributesForItem(at: indexPath)
         selectedFrame = collectionView.convert(theAttributes.frame, to: collectionView.superview)
-        performSegue(withIdentifier: "showProductDetail", sender: products[indexPath.item])
+        showProductDetail(with: products[indexPath.item])
+//        performSegue(withIdentifier: "showProductDetail", sender: products[indexPath.item])
+    }
+    
+    private func showProductDetail(with product: Product) {
+        guard let detailVC: ProductDetailViewController = storyboard?.instantiateVC() else { return }        
+        detailVC.product = product
+        AppData.main?.pushViewController(viewController: detailVC)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,6 +87,10 @@ extension ProductListViewController: UINavigationControllerDelegate {
         guard let product = self.selectedProduct else { return nil }
         guard let image = product.uiImage() else { return nil }
         
+        guard (fromVC as? ProductDetailViewController != nil && toVC as? ProductListViewController != nil) ||
+        (fromVC as? ProductListViewController != nil && toVC as? ProductDetailViewController != nil) else {
+            return nil
+        }
         switch operation {
         case .push:
             self.customInteractor = CustomInteractor(attachTo: toVC)
