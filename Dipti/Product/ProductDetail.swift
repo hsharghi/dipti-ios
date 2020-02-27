@@ -59,5 +59,8 @@ class ProductDetailViewController: UIViewController {
         
     }
     
+    @IBAction func addToCartButtonTapped(_ sender: Any) {
+        AppData.cart.add(item: product!)
+    }
     
 }

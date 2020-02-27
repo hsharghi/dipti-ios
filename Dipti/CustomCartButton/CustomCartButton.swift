@@ -24,7 +24,7 @@ class CustomCartButton: UIView {
     var badgeValue: Int = 0 {
         didSet {
             if let view = self.buttonView as? CustomCartView {
-                view.badgeValue = badgeValue
+                view.setBadgeValue(value: badgeValue)
             }
         }
     }

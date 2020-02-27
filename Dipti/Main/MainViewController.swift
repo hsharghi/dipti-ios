@@ -149,3 +149,9 @@ extension MainViewController: CartButtonDelegate {
     
     
 }
+
+extension MainViewController: CartDelegate {
+    func cartItemsChanged(count: Int) {
+        cartButton.badgeValue = count
+    }
+}

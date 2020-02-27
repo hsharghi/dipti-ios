@@ -12,7 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var mainViewController: MainViewController?
+    var mainViewController: MainViewController? {
+        didSet {
+            if let vc = mainViewController {
+                cart.delegate = vc
+            }
+        }
+    }
     var cart = Cart()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

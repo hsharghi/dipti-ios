@@ -8,15 +8,25 @@
 
 import Foundation
 
+protocol CartDelegate: class {
+    func cartItemsChanged(count: Int)
+}
 
 class Cart {
+    
+    weak var delegate: CartDelegate?
     
     struct Item {
         var item: Product
         var count: Int
     }
     
-    private var items = [Item]()
+    private var items = [Item]() {
+        didSet {
+            delegate?.cartItemsChanged(count: self.count)
+        }
+    }
+    
     var count: Int {
         var count = 0
         count = items.reduce(count) { (count, item) -> Int in
