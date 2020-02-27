@@ -29,7 +29,7 @@ class ProductDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productImageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .clear)
+        productImageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .lightGray)
         
         
     }
