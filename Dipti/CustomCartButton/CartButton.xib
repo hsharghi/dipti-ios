@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LeC-vc-p2q" customClass="CustomCartView" customModule="Dipti" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxV-Wy-GKz">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <state key="normal" image="cart"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="LeC-vc-p2q" eventType="touchUpInside" id="nhY-xm-6ZT"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD7-NU-V0L" userLabel="BadgeView">
+                    <rect key="frame" x="22" y="-2" width="20" height="20"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge" translatesAutoresizingMaskIntoConstraints="NO" id="Ko3-Ps-F58">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-j2-gkM">
+                            <rect key="frame" x="5.5" y="2" width="9" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="Ko3-Ps-F58" firstAttribute="width" secondItem="aD7-NU-V0L" secondAttribute="width" id="6QV-fi-vDR"/>
+                        <constraint firstAttribute="width" constant="20" id="6d7-7t-FqT"/>
+                        <constraint firstItem="Ko3-Ps-F58" firstAttribute="centerX" secondItem="aD7-NU-V0L" secondAttribute="centerX" id="B2T-6h-sbU"/>
+                        <constraint firstAttribute="height" constant="20" id="Dza-Kc-Kln"/>
+                        <constraint firstItem="cvW-j2-gkM" firstAttribute="centerY" secondItem="aD7-NU-V0L" secondAttribute="centerY" id="IBU-vt-yz8"/>
+                        <constraint firstItem="Ko3-Ps-F58" firstAttribute="centerY" secondItem="aD7-NU-V0L" secondAttribute="centerY" id="ckx-rc-gAd"/>
+                        <constraint firstItem="cvW-j2-gkM" firstAttribute="centerX" secondItem="aD7-NU-V0L" secondAttribute="centerX" id="dgS-ii-M1W"/>
+                        <constraint firstItem="Ko3-Ps-F58" firstAttribute="height" secondItem="aD7-NU-V0L" secondAttribute="height" id="hom-4g-TdN"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="hu4-PT-ncv" appends="YES" id="LJB-6o-e3h"/>
+                    </connections>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="XxV-Wy-GKz" firstAttribute="centerY" secondItem="LeC-vc-p2q" secondAttribute="centerY" id="9JN-5O-TUd"/>
+                <constraint firstItem="XxV-Wy-GKz" firstAttribute="height" secondItem="LeC-vc-p2q" secondAttribute="height" id="BM7-va-NDr"/>
+                <constraint firstItem="XxV-Wy-GKz" firstAttribute="centerX" secondItem="LeC-vc-p2q" secondAttribute="centerX" id="OJr-Pj-eg2"/>
+                <constraint firstItem="aD7-NU-V0L" firstAttribute="top" secondItem="LeC-vc-p2q" secondAttribute="top" constant="-2" id="h2l-qF-8uw"/>
+                <constraint firstItem="XxV-Wy-GKz" firstAttribute="width" secondItem="LeC-vc-p2q" secondAttribute="width" id="t8n-ds-FCL"/>
+                <constraint firstAttribute="trailing" secondItem="aD7-NU-V0L" secondAttribute="trailing" constant="-2" id="vtp-Qu-Nsa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="dbh-xM-y4O"/>
+            <connections>
+                <outlet property="badeLabel" destination="cvW-j2-gkM" id="SUo-NH-oIl"/>
+                <outlet property="badgeView" destination="aD7-NU-V0L" id="6yW-SM-oyJ"/>
+                <outlet property="button" destination="XxV-Wy-GKz" id="XFg-QO-Zg3"/>
+                <outlet property="tapOnBadgeView" destination="hu4-PT-ncv" id="qWn-WA-uQJ"/>
+            </connections>
+            <point key="canvasLocation" x="574" y="-255"/>
+        </view>
+        <tapGestureRecognizer id="hu4-PT-ncv">
+            <connections>
+                <action selector="badgeViewTapped:" destination="LeC-vc-p2q" id="KIC-IB-rQy"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="badge" width="20" height="20"/>
+        <image name="cart" width="86" height="86"/>
+    </resources>
+</document>
