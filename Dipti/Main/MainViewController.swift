@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var backButton: UIView!
     @IBOutlet weak var searchViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchTextField: PaddedTextField!
+    @IBOutlet weak var cartButton: CustomCartButton!
     
     var currentViewController: UIViewController?
     var viewControllers = [UIViewController]()
@@ -23,16 +24,27 @@ class MainViewController: UIViewController {
             currentViewController?.navigationController
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+      return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         AppData.main = self
         
         searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 10))
-        
+        setupCartButton()
+
         safeFixView.backgroundColor = AppData.color.yellow
         setupSideMenu()
         toggleBackButton()
+    }
+    
+    private func setupCartButton() {
+        let cartView = CustomCartView.instanceFromNib(frame: cartButton.frame)
+        cartButton.setup(view: cartView, target: self)
+        cartButton.badgeValue = 0
     }
         
     func hideSearch() {
@@ -130,3 +142,10 @@ extension MainViewController: ScrollableNavigationControllerDelegate {
 }
 
 
+extension MainViewController: CartButtonDelegate {
+    func cartButtonTapped() {
+        print("cart button tapped")
+    }
+    
+    
+}
