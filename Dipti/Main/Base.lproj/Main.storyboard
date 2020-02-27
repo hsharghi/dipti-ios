@@ -141,6 +141,13 @@
                                             <action selector="backButtonTapped:" destination="x5p-O7-vvn" eventType="touchUpInside" id="BkD-l6-TY0"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLm-Y6-lI4" customClass="CustomCartButton" customModule="Dipti" customModuleProvider="target">
+                                        <rect key="frame" x="313" y="45" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1mf-Ww-tb0"/>
+                                            <constraint firstAttribute="width" constant="40" id="bnx-AE-1Nm"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -150,7 +157,9 @@
                                     <constraint firstItem="VP4-07-T0L" firstAttribute="top" secondItem="vYD-1d-Tcf" secondAttribute="top" constant="54" id="OKu-FT-OE3"/>
                                     <constraint firstAttribute="trailing" secondItem="VP4-07-T0L" secondAttribute="trailing" constant="20" id="ffh-y6-r4d"/>
                                     <constraint firstAttribute="height" constant="88" id="rz1-0n-3jx"/>
+                                    <constraint firstItem="VP4-07-T0L" firstAttribute="leading" secondItem="jLm-Y6-lI4" secondAttribute="trailing" constant="24" id="ucZ-hJ-mG9"/>
                                     <constraint firstItem="39O-jA-XgT" firstAttribute="top" secondItem="vYD-1d-Tcf" secondAttribute="top" constant="36" id="zOZ-tS-aMN"/>
+                                    <constraint firstItem="jLm-Y6-lI4" firstAttribute="centerY" secondItem="VP4-07-T0L" secondAttribute="centerY" id="zb4-KQ-Cah"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -184,6 +193,7 @@
                     <navigationItem key="navigationItem" id="HjA-vk-q56"/>
                     <connections>
                         <outlet property="backButton" destination="08E-V4-9Js" id="Wr1-va-D38"/>
+                        <outlet property="cartButton" destination="jLm-Y6-lI4" id="vGz-PG-DcD"/>
                         <outlet property="containerView" destination="aZ1-QF-5x9" id="yWQ-lJ-JDa"/>
                         <outlet property="safeFixView" destination="mZf-kR-PM2" id="0Km-7A-3lR"/>
                         <outlet property="searchTextField" destination="sKO-2h-VCq" id="AF1-fW-4f6"/>
