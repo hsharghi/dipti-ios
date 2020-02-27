@@ -8,9 +8,16 @@
 
 import Foundation
 
-class Product {
+class Models {
+    class func generateID(length: Int = 10) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890-"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+}
+
+class Product: Models {
     internal init(id: String? = nil, image: String, title: String, description: String, designer: String, price: Int = 0, category: Category) {
-        self.id = id ?? generateID()
+        self.id = id ?? Self.generateID()
         self.image = image
         self.title = title
         self.designer = designer
@@ -28,7 +35,7 @@ class Product {
     var category: Category
     lazy var priceLabel: String  = { [unowned self] in
         return AppHelper.formatPrice(price: self.price, withLocale: "fa_IR", addSuffix: "تومان")
-    }()
+        }()
     
     static let mockedProducts = [
         Product(image: "fake-product-01", title: "دامن صورتی چپ و راستی", description: "", designer: "کوکیاژ", price: 870000, category: .categoryWomenClothSkirt),
@@ -41,17 +48,13 @@ class Product {
         Product(image: "fake-product-08", title: "کفش پاشنه بلند زرد", description: "کفش های دست ساز آزالی، بر اساس سفارش شما درست می شوند و به همین دلیل ممکن است مدت ۱۰ تا ۱۴ روز برای آماده کردن آن ها زمان نیاز باشد. در صورت مشکل در سایز، کفش برای سایز مناسب قابل تغییر است.", designer: "آزالی", price: 1190000, category: .categoryWomenShoe),
         Product(image: "fake-product-09", title: "پاشنه بلند اُپارت", description: "کفش های دست ساز ژین، بر اساس سفارش شما درست می شوند و به همین دلیل ممکن است مدت ۲۰ روز برای آماده کردن آن ها زمان نیاز باشد. در صورت مشکل در سایز، کفش برای سایز مناسب قابل تغییر است.", designer: "ژین", price: 1390000, category: .categoryWomenShoe),
         Product(image: "fake-product-10", title: "پاشنه بلند دُرسای یقه‌دار", description: "کفش های دست ساز ژین، بر اساس سفارش شما درست می شوند و به همین دلیل ممکن است مدت ۲۰ روز برای آماده کردن آن ها زمان نیاز باشد. در صورت مشکل در سایز، کفش برای سایز مناسب قابل تغییر است.", designer: "ژین", price: 955000, category: .categoryWomenShoe),
-
+        
     ]
     
-    private func generateID(length: Int = 10) -> String {
-          let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890-"
-          return String((0..<length).map{ _ in letters.randomElement()! })
-    }
 }
 
 
-class Category {
+class Category: Models {
     var name: String
     var parent: Category? = nil
     
@@ -68,7 +71,7 @@ class Category {
     static let categoryMenCloth = Category(name: "لباس", category: Category.categoryMen)
     static let categoryWomenClothSkirt = Category(name: "دامن", category: Category.categoryWomenCloth)
     static let categoryMenClothSliker = Category(name: "بارانی", category: Category.categoryMenCloth)
-
+    
     static let categories: [Category] = [
         .categoryWomen,
         .categoryWomenShoe, .categoryWomenCloth, .categoryWomenClothSkirt,
