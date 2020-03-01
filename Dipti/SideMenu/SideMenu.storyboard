@@ -7,11 +7,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="iranian_sans.ttf">
-            <string>IRANSansMobile</string>
-        </array>
-        <array key="iranian_sans_bold.ttf">
-            <string>IRANSansMobile-Bold</string>
+        <array key="IRANSansWeb.ttf">
+            <string>IRANSansWeb</string>
         </array>
     </customFonts>
     <scenes>
@@ -27,8 +24,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام کاربر" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35W-Kx-Wte">
-                                        <rect key="frame" x="276" y="80" width="46" height="24"/>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="15"/>
+                                        <rect key="frame" x="278" y="81" width="44" height="22"/>
+                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -62,8 +59,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJM-3s-elh">
-                                                    <rect key="frame" x="339" y="14.5" width="29" height="17.5"/>
-                                                    <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="11"/>
+                                                    <rect key="frame" x="339" y="13.5" width="29" height="19"/>
+                                                    <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="12"/>
                                                     <color key="textColor" red="0.31764705882352939" green="0.36078431372549019" blue="0.43529411764705883" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

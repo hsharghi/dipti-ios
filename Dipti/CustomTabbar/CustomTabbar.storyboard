@@ -7,8 +7,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="iranian_sans.ttf">
-            <string>IRANSansMobile</string>
+        <array key="IRANSansWeb.ttf">
+            <string>IRANSansWeb</string>
         </array>
     </customFonts>
     <scenes>
@@ -88,8 +88,8 @@
                                                         <rect key="frame" x="25" y="0.0" width="33" height="25"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="صفحه اصلی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpw-NK-E1m">
-                                                        <rect key="frame" x="17" y="25" width="49" height="25"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <rect key="frame" x="12" y="25" width="58.5" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="12"/>
                                                         <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -102,8 +102,8 @@
                                                         <rect key="frame" x="24.5" y="0.0" width="33" height="25"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="دسته‌بندی‌ها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agc-fY-Ffr">
-                                                        <rect key="frame" x="16.5" y="25" width="49.5" height="25"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <rect key="frame" x="11.5" y="25" width="59.5" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="12"/>
                                                         <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -116,8 +116,8 @@
                                                         <rect key="frame" x="25" y="0.0" width="33" height="25"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="برندها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aF-Ee-7Dr">
-                                                        <rect key="frame" x="29" y="25" width="25" height="25"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <rect key="frame" x="27" y="25" width="29.5" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="12"/>
                                                         <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -130,8 +130,8 @@
                                                         <rect key="frame" x="25" y="0.0" width="33" height="25"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تازه ها" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ym-UL-4rU">
-                                                        <rect key="frame" x="28.5" y="25" width="26" height="25"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <rect key="frame" x="25.5" y="25" width="32" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="12"/>
                                                         <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -144,8 +144,8 @@
                                                         <rect key="frame" x="25" y="0.0" width="33" height="25"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="پروفایل" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZX-d1-399">
-                                                        <rect key="frame" x="27" y="25" width="29.5" height="25"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                        <rect key="frame" x="24" y="25" width="35" height="25"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="12"/>
                                                         <color key="textColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
