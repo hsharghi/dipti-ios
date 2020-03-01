@@ -42,7 +42,7 @@ class CustomCartView: UIView {
     
     public func setBadgeValue(value: Int, pulse: Bool = true) {
         if (pulse) {
-            pulseBadgeView(scale: 1.25)
+            pulseBadgeView(duration: 0.2, scale: 1.5)
         }
         self.badgeValue = value
     }
