@@ -93,9 +93,9 @@ extension AppDelegate: IntroPageDelegate {
         let viewController = IntroMainPageViewController(viewControllers: [
             IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "فروش آنلاین کارهای تکدوز و محدود طراح ها و هنرمندهای ایرانی"),
             IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "صفحه دوم سلام. خوش آمدید"),
-            //                IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "یک صفحه دیگه نمیدونم دیگه صفحه چندمه"),
-            //                IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "بازم صفحه بعدی. دیگه به نظر همه چی درسته"),
-            //                IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "صفحه آخر رسیدیم"),
+            IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "یک صفحه دیگه نمیدونم دیگه صفحه چندمه"),
+            IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "بازم صفحه بعدی. دیگه به نظر همه چی درسته"),
+            IntroPageFactory.createIntroPage(logoImage: UIImage(named: "dipti-logo-yellow"), textImage: UIImage(named: "dipti-text-yellow"), message: "صفحه آخر رسیدیم"),
         ])
         
         viewController.introDelegate = self
