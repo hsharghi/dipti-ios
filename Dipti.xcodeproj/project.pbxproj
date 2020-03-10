@@ -43,6 +43,7 @@
 		0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */; };
 		0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69C23D61E5400F72811 /* CustomTabbar.swift */; };
 		0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */; };
+		0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */; };
 		0FA1CC4323E020F8002F0F8E /* ProductMockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */; };
 		0FA1CC4523E6A1B9002F0F8E /* ScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4423E6A1B9002F0F8E /* ScrollableViewController.swift */; };
 		0FCDC47C24010C9B001FEAB4 /* UIStroyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCDC47B24010C9B001FEAB4 /* UIStroyboard+Extension.swift */; };
@@ -104,6 +105,7 @@
 		0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0F78C69C23D61E5400F72811 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
+		0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCollectionView.swift; sourceTree = "<group>"; };
 		0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMockFactory.swift; sourceTree = "<group>"; };
 		0FA1CC4423E6A1B9002F0F8E /* ScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViewController.swift; sourceTree = "<group>"; };
 		0FCDC47B24010C9B001FEAB4 /* UIStroyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStroyboard+Extension.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				0F65DCA023D0A9E5001E1CA9 /* Assets */,
 				0F506BEE23D73A5500303A1C /* Helpers */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
+				0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
 				0F460E7B23D480EA0052434F /* SettingsData */,
 				0F506BF123D740DA00303A1C /* CustomTabbar */,
@@ -427,6 +430,7 @@
 				0FF8255923DDCE27001F61D5 /* MockData.swift in Sources */,
 				0FF8254D23D9D3F8001F61D5 /* CachyCacheManager.swift in Sources */,
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
+				0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */,
 				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F3492BB23D853FE001BD150 /* BrandCollectionViewController.swift in Sources */,
 				0FF8254B23D9D2E8001F61D5 /* Data+Extensions.swift in Sources */,

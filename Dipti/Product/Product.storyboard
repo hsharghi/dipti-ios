@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -47,22 +48,22 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-a1-ADy">
-                                                    <rect key="frame" x="58" y="195.5" width="99.5" height="82.5"/>
+                                                    <rect key="frame" x="64.5" y="213.5" width="86" height="64.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آستین بلند چشم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-zB-AYG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="99.5" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="86" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آریگاتو" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjs-TW-4jR">
-                                                            <rect key="frame" x="31" y="29.5" width="37.5" height="23.5"/>
+                                                            <rect key="frame" x="26" y="23.5" width="34" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۲۵۰٫۰۰۰ تومان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4a-hr-6bb">
-                                                            <rect key="frame" x="6.5" y="59" width="86" height="23.5"/>
+                                                            <rect key="frame" x="1" y="47" width="84" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -142,39 +143,50 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-Fe-1uq">
-                                                <rect key="frame" x="104" y="454" width="206" height="123"/>
+                                                <rect key="frame" x="102.5" y="454" width="209" height="105.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آستین بلند چشم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y3-gv-TIk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="28.5"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="18"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آریگاتو" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uL-AY-4mU">
-                                                        <rect key="frame" x="0.0" y="36.5" width="206" height="22"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۲۵۰٫۰۰۰ تومان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNH-DF-Ug7">
-                                                        <rect key="frame" x="0.0" y="66.5" width="206" height="28.5"/>
-                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="18"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="209" height="41"/>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="26"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fake-star-rate" translatesAutoresizingMaskIntoConstraints="NO" id="Gf2-Wy-fS6">
-                                                        <rect key="frame" x="0.0" y="103" width="206.00000000000006" height="20"/>
+                                                        <rect key="frame" x="0.0" y="49" width="209.00000000000006" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="jkd-kA-nJU"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="H7M-Lh-EaA">
+                                                        <rect key="frame" x="0.0" y="77" width="209" height="28.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آریگاتو" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uL-AY-4mU">
+                                                                <rect key="frame" x="0.0" y="3.5" width="37.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y3-gv-TIk">
+                                                                <rect key="frame" x="61.5" y="0.0" width="4.5" height="28.5"/>
+                                                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="آستین بلند چشم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-wG-gxP">
+                                                                <rect key="frame" x="90" y="0.0" width="119" height="28.5"/>
+                                                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-v1-Ixv">
-                                                <rect key="frame" x="334" y="414" width="40" height="40"/>
+                                                <rect key="frame" x="314" y="404" width="60" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="OeP-nB-dFa"/>
-                                                    <constraint firstAttribute="height" constant="40" id="n7W-Qa-pK8"/>
+                                                    <constraint firstAttribute="width" constant="60" id="OeP-nB-dFa"/>
+                                                    <constraint firstAttribute="height" constant="60" id="n7W-Qa-pK8"/>
                                                 </constraints>
                                                 <state key="normal" image="add-to-cart"/>
                                                 <connections>
@@ -182,24 +194,66 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="98" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav-icon-gray" translatesAutoresizingMaskIntoConstraints="NO" id="TTt-Pa-iKz">
-                                                <rect key="frame" x="338" y="80" width="32" height="32"/>
+                                                <rect key="frame" x="328" y="80" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="bre-HB-hnu"/>
                                                     <constraint firstAttribute="width" constant="32" id="hD0-xb-lgh"/>
                                                 </constraints>
                                             </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M2w-yv-zqW" customClass="ColorPickerCollectionView" customModule="Dipti" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="567.5" width="374" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eyR-m9-RHt"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J5q-88-wy1">
+                                                    <size key="itemSize" width="44" height="39"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="colorCell" id="ICk-72-ApR" customClass="ColorPickerCell" customModule="Dipti" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="39"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vdy-bf-l8P">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44" height="39"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Dp-oN-Mkv">
+                                                                    <rect key="frame" x="3" y="3" width="38" height="33"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="7Dp-oN-Mkv" secondAttribute="trailing" constant="3" id="R6c-NI-RHL"/>
+                                                                <constraint firstAttribute="bottom" secondItem="7Dp-oN-Mkv" secondAttribute="bottom" constant="3" id="VTB-Oj-qKO"/>
+                                                                <constraint firstItem="7Dp-oN-Mkv" firstAttribute="top" secondItem="vdy-bf-l8P" secondAttribute="top" constant="3" id="bOE-mx-AQw"/>
+                                                                <constraint firstItem="7Dp-oN-Mkv" firstAttribute="leading" secondItem="vdy-bf-l8P" secondAttribute="leading" constant="3" id="lE2-lO-Zcy"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="44" height="39"/>
+                                                        <connections>
+                                                            <outlet property="colorView" destination="7Dp-oN-Mkv" id="W9E-ka-6qa"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="P9d-v1-Ixv" firstAttribute="trailing" secondItem="DYd-YP-gnz" secondAttribute="trailing" constant="-20" id="56U-nO-XAH"/>
                                             <constraint firstItem="TTt-Pa-iKz" firstAttribute="top" secondItem="DYd-YP-gnz" secondAttribute="top" constant="20" id="5GH-BY-cre"/>
+                                            <constraint firstItem="M2w-yv-zqW" firstAttribute="top" secondItem="cwB-Fe-1uq" secondAttribute="bottom" constant="8" id="EJL-H1-jXG"/>
                                             <constraint firstItem="DYd-YP-gnz" firstAttribute="top" secondItem="V3i-qI-g33" secondAttribute="top" constant="60" id="ELu-kR-LlZ"/>
                                             <constraint firstAttribute="trailing" secondItem="DYd-YP-gnz" secondAttribute="trailing" constant="20" id="Gzc-qI-d8H"/>
                                             <constraint firstItem="cwB-Fe-1uq" firstAttribute="centerX" secondItem="DYd-YP-gnz" secondAttribute="centerX" id="Vnj-CM-lAu"/>
                                             <constraint firstItem="TTt-Pa-iKz" firstAttribute="centerX" secondItem="P9d-v1-Ixv" secondAttribute="centerX" id="W3S-e8-GLM"/>
+                                            <constraint firstItem="M2w-yv-zqW" firstAttribute="leading" secondItem="V3i-qI-g33" secondAttribute="leading" constant="20" id="jIw-qK-W5H"/>
                                             <constraint firstItem="DYd-YP-gnz" firstAttribute="bottom" secondItem="P9d-v1-Ixv" secondAttribute="centerY" id="jlB-xO-chb"/>
                                             <constraint firstItem="DYd-YP-gnz" firstAttribute="leading" secondItem="V3i-qI-g33" secondAttribute="leading" constant="20" id="mAl-vz-6Kk"/>
                                             <constraint firstItem="cwB-Fe-1uq" firstAttribute="top" secondItem="DYd-YP-gnz" secondAttribute="bottom" constant="20" id="qzr-94-uz7"/>
+                                            <constraint firstAttribute="trailing" secondItem="M2w-yv-zqW" secondAttribute="trailing" constant="20" id="yGT-xj-cX7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -228,6 +282,7 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="addToCartButton" destination="P9d-v1-Ixv" id="YFl-Uu-02W"/>
+                        <outlet property="colorPicker" destination="M2w-yv-zqW" id="cby-Ou-XeX"/>
                         <outlet property="designerName" destination="3uL-AY-4mU" id="xph-al-I2n"/>
                         <outlet property="favButton" destination="TTt-Pa-iKz" id="s3C-x3-HWs"/>
                         <outlet property="priceLabel" destination="xNH-DF-Ug7" id="U9b-xn-n91"/>

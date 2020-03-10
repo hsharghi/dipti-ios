@@ -16,19 +16,17 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var favButton: UIImageView!
+    @IBOutlet weak var colorPicker: ColorPickerCollectionView!
     
-    var product: Product? {
-        didSet {
-            if let product = product {
-                setupView(with: product)
-            }
-        }
-    }
-    
+    var product: Product?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let product = product {
+            setupView(with: product)
+        }
+
         productImageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .lightGray)
         
         
@@ -55,7 +53,19 @@ class ProductDetailViewController: UIViewController {
     
     private func setupView(with product: Product) {
         
-        
+        for option in product.options ?? [] {
+            switch option {
+            case .color(let colors):
+                colorPicker.colors = colors
+                colorPicker.delegate = colorPicker
+                colorPicker.dataSource = colorPicker
+            case .size(let sizes):
+                print(sizes)
+            
+            case .general(let generalOptions):
+                print(generalOptions)
+            }
+        }
         
     }
     
