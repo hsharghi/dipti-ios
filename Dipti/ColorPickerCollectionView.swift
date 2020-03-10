@@ -45,9 +45,6 @@ class ColorPickerCell: UICollectionViewCell {
     @IBOutlet weak var colorView: UIView!
     var selectedCell = false
     
-    override func layoutSubviews() {
-        print(colorView.frame)
-    }
     var color: UIColor? {
         didSet {
             if let color = color {

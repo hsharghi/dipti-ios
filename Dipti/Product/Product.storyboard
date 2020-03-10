@@ -48,22 +48,22 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="8eC-a1-ADy">
-                                                    <rect key="frame" x="64.5" y="213.5" width="86" height="64.5"/>
+                                                    <rect key="frame" x="58" y="195.5" width="99.5" height="82.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آستین بلند چشم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-zB-AYG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="86" height="17.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="99.5" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آریگاتو" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjs-TW-4jR">
-                                                            <rect key="frame" x="26" y="23.5" width="34" height="17.5"/>
+                                                            <rect key="frame" x="31" y="29.5" width="37.5" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۲۵۰٫۰۰۰ تومان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4a-hr-6bb">
-                                                            <rect key="frame" x="1" y="47" width="84" height="17.5"/>
+                                                            <rect key="frame" x="6.5" y="59" width="86" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -239,20 +239,37 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pZ-gX-r9g">
+                                                <rect key="frame" x="103.5" y="640" width="207" height="30"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="m79-zI-qeM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="17"/>
+                                                <state key="normal" title="انتخاب سایز">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectSizeButtonTapped:" destination="Ziu-Tt-va3" eventType="touchUpInside" id="BZZ-TR-gd7"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="P9d-v1-Ixv" firstAttribute="trailing" secondItem="DYd-YP-gnz" secondAttribute="trailing" constant="-20" id="56U-nO-XAH"/>
                                             <constraint firstItem="TTt-Pa-iKz" firstAttribute="top" secondItem="DYd-YP-gnz" secondAttribute="top" constant="20" id="5GH-BY-cre"/>
+                                            <constraint firstItem="6pZ-gX-r9g" firstAttribute="centerX" secondItem="V3i-qI-g33" secondAttribute="centerX" id="5Z9-Xu-0lL"/>
                                             <constraint firstItem="M2w-yv-zqW" firstAttribute="top" secondItem="cwB-Fe-1uq" secondAttribute="bottom" constant="8" id="EJL-H1-jXG"/>
                                             <constraint firstItem="DYd-YP-gnz" firstAttribute="top" secondItem="V3i-qI-g33" secondAttribute="top" constant="60" id="ELu-kR-LlZ"/>
                                             <constraint firstAttribute="trailing" secondItem="DYd-YP-gnz" secondAttribute="trailing" constant="20" id="Gzc-qI-d8H"/>
                                             <constraint firstItem="cwB-Fe-1uq" firstAttribute="centerX" secondItem="DYd-YP-gnz" secondAttribute="centerX" id="Vnj-CM-lAu"/>
                                             <constraint firstItem="TTt-Pa-iKz" firstAttribute="centerX" secondItem="P9d-v1-Ixv" secondAttribute="centerX" id="W3S-e8-GLM"/>
+                                            <constraint firstItem="6pZ-gX-r9g" firstAttribute="top" secondItem="M2w-yv-zqW" secondAttribute="bottom" constant="32.5" id="i7X-gq-din"/>
                                             <constraint firstItem="M2w-yv-zqW" firstAttribute="leading" secondItem="V3i-qI-g33" secondAttribute="leading" constant="20" id="jIw-qK-W5H"/>
                                             <constraint firstItem="DYd-YP-gnz" firstAttribute="bottom" secondItem="P9d-v1-Ixv" secondAttribute="centerY" id="jlB-xO-chb"/>
                                             <constraint firstItem="DYd-YP-gnz" firstAttribute="leading" secondItem="V3i-qI-g33" secondAttribute="leading" constant="20" id="mAl-vz-6Kk"/>
                                             <constraint firstItem="cwB-Fe-1uq" firstAttribute="top" secondItem="DYd-YP-gnz" secondAttribute="bottom" constant="20" id="qzr-94-uz7"/>
+                                            <constraint firstItem="6pZ-gX-r9g" firstAttribute="width" secondItem="V3i-qI-g33" secondAttribute="width" multiplier="0.5" id="yFy-Lh-CsB"/>
                                             <constraint firstAttribute="trailing" secondItem="M2w-yv-zqW" secondAttribute="trailing" constant="20" id="yGT-xj-cX7"/>
                                         </constraints>
                                     </view>
@@ -288,6 +305,7 @@
                         <outlet property="priceLabel" destination="xNH-DF-Ug7" id="U9b-xn-n91"/>
                         <outlet property="productImageView" destination="DYd-YP-gnz" id="ejb-zx-BGD"/>
                         <outlet property="productTitle" destination="0Y3-gv-TIk" id="9IJ-OL-5tk"/>
+                        <outlet property="sizeSelectionButton" destination="6pZ-gX-r9g" id="pRs-7f-Yuh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DL-I6-4Ho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

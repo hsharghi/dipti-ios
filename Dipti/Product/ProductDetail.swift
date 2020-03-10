@@ -17,6 +17,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var favButton: UIImageView!
     @IBOutlet weak var colorPicker: ColorPickerCollectionView!
+    @IBOutlet weak var sizeSelectionButton: UIButton!
     
     var product: Product?
     
@@ -28,7 +29,7 @@ class ProductDetailViewController: UIViewController {
         }
 
         productImageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .lightGray)
-        
+        sizeSelectionButton.layer.cornerRadius = 5
         
     }
     
@@ -38,12 +39,6 @@ class ProductDetailViewController: UIViewController {
         AppData.main?.hideSearch()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//
-//        AppData.main?.hideSearch()
-//    }
-//
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -66,6 +61,10 @@ class ProductDetailViewController: UIViewController {
                 print(generalOptions)
             }
         }
+        
+    }
+    
+    @IBAction func selectSizeButtonTapped(_ sender: Any) {
         
     }
     
