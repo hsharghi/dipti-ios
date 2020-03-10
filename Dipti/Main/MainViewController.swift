@@ -119,7 +119,7 @@ extension MainViewController: CustomTabbarDelegate {
                                     self.currentViewController = vc
                                     vc.scrollableDelegate = self
                                 }
-                                
+                                self.toggleBackButton()
             }
         }
     }
