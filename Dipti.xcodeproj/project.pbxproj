@@ -40,6 +40,9 @@
 		0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */; };
 		0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */; };
 		0F65DCA923D0B89F001E1CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F65DC8C23D0A99D001E1CA9 /* Assets.xcassets */; };
+		0F67ED11243B516B00C28C3A /* HHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67ED10243B516B00C28C3A /* HHPickerView.swift */; };
+		0F67ED13243B571600C28C3A /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67ED12243B571600C28C3A /* Double+Extension.swift */; };
+		0F67ED15243B577F00C28C3A /* UIPicker+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F67ED14243B577F00C28C3A /* UIPicker+Extensions.swift */; };
 		0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */; };
 		0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69C23D61E5400F72811 /* CustomTabbar.swift */; };
 		0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */; };
@@ -102,6 +105,9 @@
 		0F65DC9723D0A9BF001E1CA9 /* IntroStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroStoryboard.storyboard; sourceTree = "<group>"; };
 		0F65DC9823D0A9BF001E1CA9 /* IntroSimplePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroSimplePageViewController.swift; sourceTree = "<group>"; };
 		0F65DC9923D0A9BF001E1CA9 /* IntroMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroMainPageViewController.swift; sourceTree = "<group>"; };
+		0F67ED10243B516B00C28C3A /* HHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHPickerView.swift; sourceTree = "<group>"; };
+		0F67ED12243B571600C28C3A /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		0F67ED14243B577F00C28C3A /* UIPicker+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPicker+Extensions.swift"; sourceTree = "<group>"; };
 		0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0F78C69C23D61E5400F72811 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0F506BEC23D73A4700303A1C /* Embedder.swift */,
+				0F67ED10243B516B00C28C3A /* HHPickerView.swift */,
 				0F3492B623D842A3001BD150 /* AppHelper.swift */,
 				0F5EA95823FD3718005274CD /* PaddedTextField.swift */,
 			);
@@ -302,7 +309,9 @@
 				0FF8254A23D9D2E8001F61D5 /* Data+Extensions.swift */,
 				0FF8254823D9D2DF001F61D5 /* UIImage+Extensions.swift */,
 				0FF8255023DDB78F001F61D5 /* Date+Extensions.swift */,
+				0F67ED12243B571600C28C3A /* Double+Extension.swift */,
 				0FCDC47B24010C9B001FEAB4 /* UIStroyboard+Extension.swift */,
+				0F67ED14243B577F00C28C3A /* UIPicker+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 				0FF8255123DDB78F001F61D5 /* Date+Extensions.swift in Sources */,
 				0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */,
 				0FF8255923DDCE27001F61D5 /* MockData.swift in Sources */,
+				0F67ED11243B516B00C28C3A /* HHPickerView.swift in Sources */,
 				0FF8254D23D9D3F8001F61D5 /* CachyCacheManager.swift in Sources */,
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
 				0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */,
@@ -448,9 +458,11 @@
 				0F3492B223D83F6C001BD150 /* CollectionWidgets.swift in Sources */,
 				0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */,
 				0FFB10562407F223000A6DA6 /* CustomCartButton.swift in Sources */,
+				0F67ED13243B571600C28C3A /* Double+Extension.swift in Sources */,
 				0FA1CC4523E6A1B9002F0F8E /* ScrollableViewController.swift in Sources */,
 				0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
+				0F67ED15243B577F00C28C3A /* UIPicker+Extensions.swift in Sources */,
 				0FF8255723DDCD77001F61D5 /* ProductListViewController.swift in Sources */,
 				0F5EA95923FD3718005274CD /* PaddedTextField.swift in Sources */,
 				0FF8254F23D9D6AE001F61D5 /* CacheManagerProtocol.swift in Sources */,
