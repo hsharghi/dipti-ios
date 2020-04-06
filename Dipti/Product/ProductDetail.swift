@@ -18,16 +18,19 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var favButton: UIImageView!
     @IBOutlet weak var colorPicker: ColorPickerCollectionView!
     @IBOutlet weak var sizeSelectionButton: UIButton!
+//    @IBOutlet var sizePickerView: HHPickerView!
+    @IBOutlet weak var sizeButton: UIButton!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     
     var product: Product?
+    var generalOptions = [String]()
+    var sizePickerView: HHPickerView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let product = product {
-            setupView(with: product)
-        }
-
         productImageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .lightGray)
         sizeSelectionButton.layer.cornerRadius = 5
         
@@ -35,7 +38,11 @@ class ProductDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if let product = product {
+            setupView(with: product)
+        }
+
+
         AppData.main?.hideSearch()
     }
     
@@ -44,32 +51,81 @@ class ProductDetailViewController: UIViewController {
         
         AppData.main?.showSearch()
     }
-    
+       
     
     private func setupView(with product: Product) {
+        print("at first: \(sizeButton.frame)")
+        colorPicker.isHidden = true
+        sizeButton.isHidden = true
+        descriptionLabel.text = product.description
         
         for option in product.options ?? [] {
             switch option {
             case .color(let colors):
+                colorPicker.isHidden = false
+                contentView.layoutIfNeeded()
                 colorPicker.colors = colors
                 colorPicker.delegate = colorPicker
                 colorPicker.dataSource = colorPicker
             case .size(let sizes):
-                print(sizes)
-            
+                sizeButton.isHidden = false
+                contentView.layoutIfNeeded()
+                if sizes.count == 0 {
+                    continue
+                }
+                addSizePickerView(for: sizes)
+
             case .general(let generalOptions):
                 print(generalOptions)
+                self.generalOptions = generalOptions
             }
         }
         
+        
+        
+        
+    }
+    
+    private func addSizePickerView(for sizes: [String]) {
+        print("while creating: \(sizeButton.frame)")
+        sizePickerView = HHPickerView(titles: sizes, hideDuration: 1)
+        contentView.addSubview(sizePickerView!)
+        sizePickerView?.horizontal()
+        let convertedOrigin = sizeButton.superview?.convert(sizeButton.frame.origin, to: contentView)
+        let frame = CGRect(x: 0, y: (convertedOrigin?.y ?? 0)  - 15, width: view.bounds.width, height: 60)
+        sizePickerView?.frame = frame
+        sizePickerView?.HHDelegate = self
+        sizePickerView?.alpha = 0
     }
     
     @IBAction func selectSizeButtonTapped(_ sender: Any) {
-        
+        UIView.animate(withDuration: 0.2) {
+            self.sizeButton.alpha = 0
+        }
+        sizePickerView?.showPickerView()
     }
     
     @IBAction func addToCartButtonTapped(_ sender: Any) {
         AppData.cart.add(item: product!)
     }
     
+    
+}
+
+
+extension ProductDetailViewController: HHPickerViewDelegate {
+    func didSelectItem(_ pickerView: HHPickerView, item: String, at row: Int) {
+        sizeButton.setTitle("سایز -  \(item)", for: .normal)
+    }
+    
+    func pickerViewWillHide(_ pickerView: HHPickerView, in: TimeInterval) {
+        sizeButton.isEnabled = false
+        UIView.animate(withDuration: `in`) {
+            self.sizeButton.alpha = 1
+        }
+    }
+    
+    func pickerViewDidHide(_ pickerView: HHPickerView) {
+        sizeButton.isEnabled = true
+    }
 }
