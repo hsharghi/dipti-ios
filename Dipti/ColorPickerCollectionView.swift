@@ -12,7 +12,7 @@ class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UIC
     
     var colors = [UIColor]()
     var selectedIndex = 0
-    
+    let cellSize = CGSize(width: 40, height: 40)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
     }
@@ -28,6 +28,17 @@ class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UIC
         cell.color = colors[indexPath.item]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        let totalCellWidth: CGFloat = cellSize.width * CGFloat(colors.count)
+        let totalSpacingWidth: CGFloat = 10 * CGFloat(colors.count - 1)
+
+        let leftInset = (self.bounds.width - (totalCellWidth + totalSpacingWidth)) / 2
+        let rightInset = leftInset
+
+        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
