@@ -18,10 +18,12 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var favButton: UIImageView!
     @IBOutlet weak var colorPicker: ColorPickerCollectionView!
     @IBOutlet weak var sizeSelectionButton: UIButton!
-//    @IBOutlet var sizePickerView: HHPickerView!
     @IBOutlet weak var sizeButton: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageLeftOffsetConstraint: NSLayoutConstraint!
     
     
     var product: Product?
@@ -88,7 +90,7 @@ class ProductDetailViewController: UIViewController {
     
     private func addSizePickerView(for sizes: [String]) {
         print("while creating: \(sizeButton.frame)")
-        sizePickerView = HHPickerView(titles: sizes, hideDuration: 1)
+        sizePickerView = HHPickerView(titles: sizes, hideDuration: 0.6)
         contentView.addSubview(sizePickerView!)
         sizePickerView?.horizontal()
         let convertedOrigin = sizeButton.superview?.convert(sizeButton.frame.origin, to: contentView)
@@ -127,5 +129,20 @@ extension ProductDetailViewController: HHPickerViewDelegate {
     
     func pickerViewDidHide(_ pickerView: HHPickerView) {
         sizeButton.isEnabled = true
+    }
+}
+
+
+extension ProductDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView.contentOffset.y > 16 {
+//            let diff = scrollView.contentOffset.y - 16
+//            imageTopConstraint.constant = 16 + diff * 4
+//            imageLeftOffsetConstraint.constant = 16 + diff * 4
+        } else {
+//            imageLeftOffsetConstraint
+        }
+        print(scrollView.contentOffset.y)
     }
 }
