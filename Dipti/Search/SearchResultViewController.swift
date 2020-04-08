@@ -103,25 +103,47 @@ extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
         
         switch indexPath.section {
         case 0:
-            cell.textLabel?.text = result.products?[indexPath.row].title
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SearchProductCell.self), for: indexPath) as? SearchProductCell {
+                cell.product = result.products?[indexPath.row]
+                return cell
+            }
         case 1:
-            cell.textLabel?.text = result.categories?[indexPath.row].name
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SearchCategoryCell.self), for: indexPath) as? SearchCategoryCell {
+                cell.category = result.categories?[indexPath.row]
+                return cell
+            }
         case 2:
-            cell.textLabel?.text = result.designers?[indexPath.row]
-        default:
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SearchDesignerCell.self), for: indexPath) as? SearchDesignerCell {
+                cell.designer = result.designers?[indexPath.row]
+                return cell
+            }
+        default: break
         }
-        
-        return cell
-        
+                return UITableViewCell()
+
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let title = titleForHeader(in: section)
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 20))
+        view.backgroundColor = headerIsEnabled(in: section) ? AppData.color.yellow : .lightGray
+        let label = UILabel(frame: CGRect(x: 0, y: 6, width: self.view.bounds.width - 30, height: 20))
+        label.font = UIFont(name: "IRANSansWeb-Bold", size: 16)
+        label.text = title
+        label.textColor = headerIsEnabled(in: section) ? .black : .darkGray
+        label.textAlignment = .right
+        view.addSubview(label)
+        return view
+    }
+
+    private func titleForHeader(in section: Int) -> String? {
         switch section {
         case 0:
             return "کالاها"
@@ -129,11 +151,29 @@ extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource
             return "دسته‌بندی‌ها"
         case 2:
             return "طراحان"
-        default:
-            return ""
+        default: break
+            
         }
+
+        return nil
     }
     
+    
+    private func headerIsEnabled(in section: Int) -> Bool {
+        switch section {
+        case 0:
+            return result.products?.count ?? 0 > 0
+        case 1:
+            return result.categories?.count ?? 0 > 0
+        case 2:
+            return result.designers?.count ?? 0 > 0
+            
+        default: break
+            
+        }
+
+        return false
+    }
     
     
 }
