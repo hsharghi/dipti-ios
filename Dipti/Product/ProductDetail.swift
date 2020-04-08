@@ -33,7 +33,7 @@ class ProductDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productImageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .lightGray)
+        productImageView.roundConrners(masks: .allCorners, radius: 10, color: .lightGray)
         sizeSelectionButton.layer.cornerRadius = 5
         
     }

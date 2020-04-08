@@ -35,8 +35,6 @@ final class AppData {
         static let darkBlue = UIColor(hexString: "515C6F")
     }
  
-    static let allCorners: CACornerMask = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-
     static var cacheManager: CacheManager {
         return CachyCacheManager()
     }

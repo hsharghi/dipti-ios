@@ -17,12 +17,7 @@ class HomeViewController: ScrollableViewController {
         super.viewDidLoad()
         [100, 200, 300, 400].forEach { (tag) in
             if let view = self.view.viewWithTag(tag) {
-                view.roundConrners(masks: [
-                    .layerMinXMaxYCorner,
-                    .layerMaxXMaxYCorner,
-                    .layerMinXMinYCorner,
-                    .layerMaxXMinYCorner
-                ], radius: 10)
+                view.roundConrners(masks: .allCorners, radius: 10)
                 
             }
         }

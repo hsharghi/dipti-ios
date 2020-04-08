@@ -114,10 +114,10 @@ class ProductListCell: UICollectionViewCell {
         
     func setupCell(product: Product) {
         contentView.backgroundColor = .white
-        contentView.roundConrners(masks: AppData.allCorners, radius: 8, color: .clear)
+        contentView.roundConrners(masks: .allCorners, radius: 8, color: .clear)
         imageView.image = UIImage(named: product.image)
         imageView.layer.borderWidth = 0.5
-        imageView.roundConrners(masks: AppData.allCorners, radius: 10, color: .gray)
+        imageView.roundConrners(masks: .allCorners, radius: 10, color: .gray)
         titleLabel.text = product.title
         designerName.text = product.designer
         priceLabel.text = product.priceLabel
