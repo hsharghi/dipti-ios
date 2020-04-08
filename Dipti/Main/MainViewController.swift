@@ -230,7 +230,11 @@ extension MainViewController: ScrollableNavigationControllerDelegate {
 
 extension MainViewController: CartButtonDelegate {
     func cartButtonTapped() {
-        print("cart button tapped")
+        
+        if let vc = UIStoryboard(name: "Cart", bundle: nil).instantiateViewController(identifier: String(describing: CartViewController.self)) as? CartViewController {
+            present(vc, animated: true, completion: nil)
+        }
+        
     }
     
     
