@@ -10,14 +10,14 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var containerView: RoundShadowView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var safeFixView: UIView!
     @IBOutlet weak var backButton: UIView!
     @IBOutlet weak var searchViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchTextField: PaddedTextField!
     @IBOutlet weak var cartButton: CustomCartButton!
-    @IBOutlet weak var searchContainer: UIView!
-    @IBOutlet weak var searchContainerHeightConstraint: NSLayoutConstraint!
+    //    @IBOutlet weak var searchContainer: UIView!
+    //    @IBOutlet weak var searchContainerHeightConstraint: NSLayoutConstraint!
     
     var currentViewController: UIViewController?
     var viewControllers = [UIViewController]()
@@ -28,9 +28,9 @@ class MainViewController: UIViewController {
     var searchResultViewController: SearchResultViewController?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-      return .lightContent
+        return .lightContent
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,27 +38,24 @@ class MainViewController: UIViewController {
         
         searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 10))
         setupCartButton()
-
+        
         safeFixView.backgroundColor = AppData.color.yellow
         setupSideMenu()
         toggleBackButton()
-
-        containerView.roundConrners(masks: .allCorners, radius: 20)
-        containerView.layer.masksToBounds = true
         
-          NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-            
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-            
-        }
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
-        override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        }
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
     private func setupCartButton() {
         let cartView = CustomCartView.instanceFromNib(frame: cartButton.frame)
         cartButton.setup(view: cartView, target: self)
@@ -73,38 +70,32 @@ class MainViewController: UIViewController {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardFrame = self.view.convert(keyboardSize, from: nil)
             
-            self.searchContainerHeightConstraint.constant = self.view.bounds.height - 180 - keyboardFrame.height
-            UIView.animate(withDuration: 0.25) {
-                self.view.layoutIfNeeded()
+            if let searchView = searchResultViewController?.view.superview {
+                let frame = searchView.frame
+                let newFrame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: view.bounds.height - 180 - keyboardFrame.height)
+                UIView.animate(withDuration: 0.25) {
+                    searchView.frame = newFrame
+                    searchView.layoutIfNeeded()
+                }
             }
-
-//            var frame = containerView.frame
-//            frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: frame.height - keyboardFrame.height)
-//            containerView.frame = frame
         }
     }
     
     @objc func keyboardWillHide(notification:NSNotification){
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardFrame = self.view.convert(keyboardSize, from: nil)
+        if let _ = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             
-            
-            self.searchContainerHeightConstraint.constant = self.view.bounds.height - 266
-            UIView.animate(withDuration: 0.25) {
-                self.view.layoutIfNeeded()
+            if let searchView = searchResultViewController?.view.superview {
+                let frame = searchView.frame
+                let newFrame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: view.bounds.height - 266)
+                UIView.animate(withDuration: 0.25) {
+                    searchView.frame = newFrame
+                    searchView.layoutIfNeeded()
+                }
             }
-
-//
-//        var frame = containerView.frame
-//        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: frame.height + keyboardFrame.height)
-//        containerView.frame = frame
-//
-//        UIView.animate(withDuration: 0.3) {
-//            self.containerView.setNeedsLayout()
-//        }
+            
         }
     }
-        
+    
     func hideSearch() {
         searchViewTopConstraint.constant = -30
         UIView.animate(withDuration: 0.5) {
@@ -147,7 +138,7 @@ class MainViewController: UIViewController {
     }
     
     private func toggleBackButton() {
-            backButton.isHidden = !(currentNavigationController?.viewControllers.count ?? 1 > 1)
+        backButton.isHidden = !(currentNavigationController?.viewControllers.count ?? 1 > 1)
     }
     
     public func embedViewController(viewController: UIViewController, _ completion: ((UIViewController) -> Void)? = nil) {
@@ -178,18 +169,26 @@ class MainViewController: UIViewController {
     }
     
     private func showSearchResultVC(with searchTerm: String) {
-
+        
+        let view = RoundShadowView(frame: CGRect(x: searchTextField.frame.origin.x,
+                                                 y: searchTextField.frame.origin.y + searchTextField.frame.height + 8,
+                                                 width: searchTextField.frame.width,
+                                                 height: self.view.bounds.height - 266))
+        
+        view.tag = 999
+        
+        self.view.addSubview(view)
+        
         ViewEmbedder.embed(storyboard: UIStoryboard(name: "SearchResult", bundle: nil),
                            withIdentifier: String(describing: SearchResultViewController.self),
                            parent: self,
-                           container: searchContainer,
+                           container: view,
                            removePrevious: false) { (vc) in
                             if let vc = vc as? SearchResultViewController {
                                 self.searchResultViewController = vc
                                 vc.delegate = self
                                 vc.setSearchTerm(term: searchTerm)
                             }
-                            self.searchContainerHeightConstraint.constant = self.view.bounds.height - 266
         }
     }
 }
@@ -246,62 +245,20 @@ extension MainViewController: CartDelegate {
 
 extension MainViewController: SearchResultViewDelegate {
     func closeButtonTapped() {
-        if let vc = searchResultViewController {
-            ViewEmbedder.removeFromParent(vc: vc)
-            searchResultViewController = nil
-        }
+        let searchView = self.view.subviews.filter { $0.tag == 999 }.first
+        searchView?.removeFromSuperview()
+        searchResultViewController = nil
     }
     
     func hideKeyboard() {
         searchTextField.endEditing(true)
     }
-}
-
-
-
-class RoundShadowView: UIView {
-  
-    let containerView = UIView()
-    let cornerRadius: CGFloat = 20
-  
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        layoutView()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-               super.init(coder: aDecoder)
-        layoutView()
-
-    }
-
-    func layoutView() {
-      
-      // set the shadow of the view's layer
-      layer.backgroundColor = UIColor.clear.cgColor
-      layer.shadowColor = UIColor.black.cgColor
-      layer.shadowOffset = CGSize(width: 0, height: 1.0)
-      layer.shadowOpacity = 0.4
-      layer.shadowRadius = 6.0
-        
-      // set the cornerRadius of the containerView's layer
-      containerView.layer.cornerRadius = cornerRadius
-      containerView.layer.masksToBounds = true
-      
-      addSubview(containerView)
-      
-      //
-      // add additional views to the containerView here
-      //
-      
-      // add constraints
-      containerView.translatesAutoresizingMaskIntoConstraints = false
-      
-      // pin the containerView to the edges to the view
-      containerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-      containerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-      containerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-      containerView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    
+    func productTapped(product: Product) {
+        if let vc = UIStoryboard(name: "Product", bundle: nil).instantiateViewController(identifier: String(describing: ProductDetailViewController.self)) as? ProductDetailViewController {
+            vc.product = product
+            pushViewController(viewController: vc)
+        }
     }
 }
+
