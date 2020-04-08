@@ -27,7 +27,7 @@ class ViewEmbedder {
         vc.removeFromParent()
     }
     
-    class func embed(storyboard: UIStoryboard? = nil, withIdentifier id:String, parent:UIViewController, container:UIView, completion:((UIViewController)->Void)? = nil){
+    class func embed(storyboard: UIStoryboard? = nil, withIdentifier id:String, parent:UIViewController, container:UIView, removePrevious: Bool = true, completion:((UIViewController)->Void)? = nil) {
         var vc: UIViewController?
         if let storyboard = storyboard {
             vc = storyboard.instantiateViewController(withIdentifier: id)
@@ -38,7 +38,7 @@ class ViewEmbedder {
             parent: parent,
             container: container,
             child: vc!,
-            previous: parent.children.first
+            previous: removePrevious ? parent.children.first : nil
         )
         completion?(vc!)
     }
