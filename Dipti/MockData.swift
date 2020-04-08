@@ -16,7 +16,15 @@ class Models {
 }
 
 class Product: Models {
-    internal init(id: String? = nil, image: String, title: String, description: String, designer: String, price: Int = 0, category: Category, options: [ProductOption.Option]? = nil) {
+    internal init(id: String? = nil,
+                  image: String,
+                  title: String,
+                  description: String,
+                  designer: String,
+                  price: Int = 0,
+                  category: Category,
+                  options: [ProductOption.Option]? = nil) {
+        
         self.id = id ?? Self.generateID()
         self.image = image
         self.title = title
@@ -56,7 +64,12 @@ class Product: Models {
 }
 
 
-class Category: Models {
+class Category: Models, Equatable {
+    
+    static func == (lhs: Category, rhs: Category) -> Bool {
+        lhs.name == rhs.name && lhs.parent == lhs.parent
+    }
+    
     var name: String
     var parent: Category? = nil
     
