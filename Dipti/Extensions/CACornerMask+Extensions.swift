@@ -16,7 +16,7 @@ public extension CACornerMask {
     }
     
     static var topCorners: CACornerMask {
-        return [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        return [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
     static var bottomCorners: CACornerMask {
