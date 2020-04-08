@@ -49,6 +49,7 @@
 		0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */; };
 		0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69C23D61E5400F72811 /* CustomTabbar.swift */; };
 		0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */; };
+		0F7DEEA5243DEA39002CA8B1 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DEEA4243DEA39002CA8B1 /* RoundShadowView.swift */; };
 		0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */; };
 		0FA1CC4323E020F8002F0F8E /* ProductMockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */; };
 		0FA1CC4523E6A1B9002F0F8E /* ScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4423E6A1B9002F0F8E /* ScrollableViewController.swift */; };
@@ -72,6 +73,7 @@
 		0FFB10522407F21A000A6DA6 /* CustomCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFB10512407F21A000A6DA6 /* CustomCartView.swift */; };
 		0FFB10542407F21F000A6DA6 /* CartButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FFB10532407F21F000A6DA6 /* CartButton.xib */; };
 		0FFB10562407F223000A6DA6 /* CustomCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFB10552407F223000A6DA6 /* CustomCartButton.swift */; };
+		0FFFCA8F243DCDF40084AAE0 /* SearchResultTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFFCA8E243DCDF40084AAE0 /* SearchResultTableViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +119,7 @@
 		0F78C69A23D6060E00F72811 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		0F78C69C23D61E5400F72811 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
+		0F7DEEA4243DEA39002CA8B1 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCollectionView.swift; sourceTree = "<group>"; };
 		0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMockFactory.swift; sourceTree = "<group>"; };
 		0FA1CC4423E6A1B9002F0F8E /* ScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 		0FFB10512407F21A000A6DA6 /* CustomCartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCartView.swift; sourceTree = "<group>"; };
 		0FFB10532407F21F000A6DA6 /* CartButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartButton.xib; sourceTree = "<group>"; };
 		0FFB10552407F223000A6DA6 /* CustomCartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCartButton.swift; sourceTree = "<group>"; };
+		0FFFCA8E243DCDF40084AAE0 /* SearchResultTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				0F67ED10243B516B00C28C3A /* HHPickerView.swift */,
 				0F3492B623D842A3001BD150 /* AppHelper.swift */,
 				0F5EA95823FD3718005274CD /* PaddedTextField.swift */,
+				0F7DEEA4243DEA39002CA8B1 /* RoundShadowView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				0F67ED1A243C72A200C28C3A /* SearchResultViewController.swift */,
+				0FFFCA8E243DCDF40084AAE0 /* SearchResultTableViewCells.swift */,
 				0F67ED1C243C72E700C28C3A /* SearchResult.storyboard */,
 			);
 			path = Search;
@@ -458,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
+				0F7DEEA5243DEA39002CA8B1 /* RoundShadowView.swift in Sources */,
 				0F506BED23D73A4700303A1C /* Embedder.swift in Sources */,
 				0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */,
 				0FF8255123DDB78F001F61D5 /* Date+Extensions.swift in Sources */,
@@ -491,6 +498,7 @@
 				0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
 				0F67ED15243B577F00C28C3A /* UIPicker+Extensions.swift in Sources */,
+				0FFFCA8F243DCDF40084AAE0 /* SearchResultTableViewCells.swift in Sources */,
 				0FF8255723DDCD77001F61D5 /* ProductListViewController.swift in Sources */,
 				0F5EA95923FD3718005274CD /* PaddedTextField.swift in Sources */,
 				0FF8254F23D9D6AE001F61D5 /* CacheManagerProtocol.swift in Sources */,

@@ -167,16 +167,9 @@
                                     <constraint firstItem="jLm-Y6-lI4" firstAttribute="centerY" secondItem="VP4-07-T0L" secondAttribute="centerY" id="zb4-KQ-Cah"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BK-M9-DlR" customClass="RoundShadowView" customModule="Dipti" customModuleProvider="target">
-                                <rect key="frame" x="20" y="170" width="374" height="630"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="oor-gN-FJc"/>
-                                </constraints>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0BK-M9-DlR" firstAttribute="leading" secondItem="G8J-Ip-feQ" secondAttribute="leading" constant="20" id="0iA-5d-2An"/>
                             <constraint firstItem="6gV-nX-T2o" firstAttribute="centerY" secondItem="sKO-2h-VCq" secondAttribute="centerY" id="2Zg-i8-8JE"/>
                             <constraint firstAttribute="trailing" secondItem="sKO-2h-VCq" secondAttribute="trailing" constant="20" id="4wx-aw-rX4"/>
                             <constraint firstItem="vYD-1d-Tcf" firstAttribute="trailing" secondItem="G8J-Ip-feQ" secondAttribute="trailing" id="8QQ-fp-6gB"/>
@@ -190,10 +183,8 @@
                             <constraint firstItem="QTQ-3m-XCt" firstAttribute="trailing" secondItem="G8J-Ip-feQ" secondAttribute="trailing" id="MSb-ph-dj1"/>
                             <constraint firstItem="mZf-kR-PM2" firstAttribute="bottom" secondItem="r0p-E4-6Zc" secondAttribute="bottom" id="Mn9-P7-aBx"/>
                             <constraint firstItem="QTQ-3m-XCt" firstAttribute="top" secondItem="aZ1-QF-5x9" secondAttribute="bottom" id="Oo4-GG-53O"/>
-                            <constraint firstItem="G8J-Ip-feQ" firstAttribute="trailing" secondItem="0BK-M9-DlR" secondAttribute="trailing" constant="20" id="RU5-aX-SQK"/>
                             <constraint firstItem="tcZ-nh-Wxf" firstAttribute="leading" secondItem="r0p-E4-6Zc" secondAttribute="leading" id="Tey-hz-3eO"/>
                             <constraint firstAttribute="trailing" secondItem="tcZ-nh-Wxf" secondAttribute="trailing" id="VGg-ha-KXa"/>
-                            <constraint firstItem="0BK-M9-DlR" firstAttribute="top" secondItem="sKO-2h-VCq" secondAttribute="bottom" constant="8" id="WLR-hD-Vbg"/>
                             <constraint firstItem="vYD-1d-Tcf" firstAttribute="top" secondItem="r0p-E4-6Zc" secondAttribute="top" id="Z0V-xL-Bdm"/>
                             <constraint firstItem="mZf-kR-PM2" firstAttribute="trailing" secondItem="G8J-Ip-feQ" secondAttribute="trailing" id="ZhY-if-dZM"/>
                             <constraint firstItem="mZf-kR-PM2" firstAttribute="top" secondItem="QTQ-3m-XCt" secondAttribute="bottom" id="hHz-8S-iTs"/>
@@ -210,8 +201,6 @@
                         <outlet property="cartButton" destination="jLm-Y6-lI4" id="vGz-PG-DcD"/>
                         <outlet property="containerView" destination="aZ1-QF-5x9" id="yWQ-lJ-JDa"/>
                         <outlet property="safeFixView" destination="mZf-kR-PM2" id="0Km-7A-3lR"/>
-                        <outlet property="searchContainer" destination="0BK-M9-DlR" id="USz-oc-HEo"/>
-                        <outlet property="searchContainerHeightConstraint" destination="oor-gN-FJc" id="MEd-fY-Lo2"/>
                         <outlet property="searchTextField" destination="sKO-2h-VCq" id="AF1-fW-4f6"/>
                         <outlet property="searchViewTopConstraint" destination="LDd-ei-Z5T" id="S8c-Q0-DAI"/>
                     </connections>

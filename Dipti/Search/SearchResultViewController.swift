@@ -11,6 +11,7 @@ import UIKit
 protocol SearchResultViewDelegate: class {
     func closeButtonTapped()
     func hideKeyboard()
+    func productTapped(product: Product)
 }
 
 class SearchResultViewController: UIViewController, UIScrollViewDelegate {
@@ -77,6 +78,7 @@ class SearchResultViewController: UIViewController, UIScrollViewDelegate {
     
     
     @IBAction func closeTapped(_ sender: Any) {
+        delegate?.hideKeyboard()
         delegate?.closeButtonTapped()
     }
 }
@@ -143,6 +145,20 @@ extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource
         return view
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            if let product = result.products?[indexPath.row] {
+                closeTapped(tableView)
+                delegate?.productTapped(product: product)
+            }
+            
+        default:
+            return
+        }
+    }
+    
+    
     private func titleForHeader(in section: Int) -> String? {
         switch section {
         case 0:
