@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansWeb.ttf">
+            <string>IRANSansWeb</string>
+        </array>
+        <array key="IRANSansWeb_Bold.ttf">
+            <string>IRANSansWeb-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="vfy-Ee-WZk">
+            <objects>
+                <viewController storyboardIdentifier="CartViewController" id="nQr-yv-fMv" customClass="CartViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GsW-tJ-bH7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-eu-lMz">
+                                <rect key="frame" x="0.0" y="46.5" width="414" height="654.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartItemCell" rowHeight="120" id="rgL-mn-Gxg" customClass="CartItemCell" customModule="Dipti" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rgL-mn-Gxg" id="PDn-gv-g6m">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZhI-3B-P9L">
+                                                    <rect key="frame" x="314" y="20" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="eLX-br-699"/>
+                                                        <constraint firstAttribute="width" constant="80" id="seR-J4-Fby"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukk-PL-V2y">
+                                                    <rect key="frame" x="274" y="79.5" width="32" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ8-sp-Mix">
+                                                    <rect key="frame" x="276" y="24" width="30" height="19"/>
+                                                    <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="designer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4f-tY-muK">
+                                                    <rect key="frame" x="267" y="41" width="39" height="12"/>
+                                                    <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="10"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9r9-rs-i4S">
+                                                    <rect key="frame" x="20" y="19" width="60" height="82.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-Ce-lCx">
+                                                            <rect key="frame" x="14" y="0.0" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="IPd-Kw-ADt"/>
+                                                                <constraint firstAttribute="width" constant="32" id="cCg-x0-BZ5"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" image="plus-icon"/>
+                                                            <connections>
+                                                                <action selector="plusButtonTapped:" destination="rgL-mn-Gxg" eventType="touchUpInside" id="mad-xm-A0Z"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-eI-0eU">
+                                                            <rect key="frame" x="0.0" y="33" width="60" height="16.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="scC-iP-JRx"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-Yv-SAN">
+                                                            <rect key="frame" x="14" y="50.5" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="8Mb-y6-sap"/>
+                                                                <constraint firstAttribute="width" constant="32" id="IHg-eC-wFH"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" image="minus-icon"/>
+                                                            <connections>
+                                                                <action selector="minusButtonTapped:" destination="rgL-mn-Gxg" eventType="touchUpInside" id="aHq-h4-KPI"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZhI-3B-P9L" firstAttribute="trailing" secondItem="PDn-gv-g6m" secondAttribute="trailingMargin" id="3C8-9N-TmS"/>
+                                                <constraint firstItem="r4f-tY-muK" firstAttribute="trailing" secondItem="HZ8-sp-Mix" secondAttribute="trailing" id="8KD-1S-aWS"/>
+                                                <constraint firstItem="ukk-PL-V2y" firstAttribute="bottom" secondItem="ZhI-3B-P9L" secondAttribute="bottom" constant="-4" id="9gt-Xp-gsI"/>
+                                                <constraint firstItem="r4f-tY-muK" firstAttribute="top" secondItem="HZ8-sp-Mix" secondAttribute="bottom" constant="-2" id="EiC-Wt-AYs"/>
+                                                <constraint firstItem="9r9-rs-i4S" firstAttribute="leading" secondItem="PDn-gv-g6m" secondAttribute="leadingMargin" id="Nbd-oc-SAW"/>
+                                                <constraint firstItem="ZhI-3B-P9L" firstAttribute="centerY" secondItem="PDn-gv-g6m" secondAttribute="centerY" id="OTl-3h-1ij"/>
+                                                <constraint firstItem="9r9-rs-i4S" firstAttribute="centerY" secondItem="PDn-gv-g6m" secondAttribute="centerY" id="imA-Nb-qPn"/>
+                                                <constraint firstItem="HZ8-sp-Mix" firstAttribute="top" secondItem="ZhI-3B-P9L" secondAttribute="top" constant="4" id="kXy-sd-xyV"/>
+                                                <constraint firstItem="ZhI-3B-P9L" firstAttribute="leading" secondItem="HZ8-sp-Mix" secondAttribute="trailing" constant="8" id="qT3-sn-a5t"/>
+                                                <constraint firstItem="ukk-PL-V2y" firstAttribute="trailing" secondItem="HZ8-sp-Mix" secondAttribute="trailing" id="xg1-hp-S1h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countLabel" destination="o9c-eI-0eU" id="6w6-ow-fl3"/>
+                                            <outlet property="designer" destination="r4f-tY-muK" id="qba-xL-lro"/>
+                                            <outlet property="minusButton" destination="amZ-Yv-SAN" id="IyZ-LC-R4s"/>
+                                            <outlet property="plusButton" destination="ff6-Ce-lCx" id="lUU-br-0IS"/>
+                                            <outlet property="price" destination="ukk-PL-V2y" id="ydr-wN-HPT"/>
+                                            <outlet property="productImage" destination="ZhI-3B-P9L" id="OhL-ff-Dfn"/>
+                                            <outlet property="productTitle" destination="HZ8-sp-Mix" id="EaH-uM-AFy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nQr-yv-fMv" id="k8k-eJ-Yhz"/>
+                                    <outlet property="delegate" destination="nQr-yv-fMv" id="SyE-Ti-IYH"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3K-YQ-qP8">
+                                <rect key="frame" x="20" y="762" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gad-qy-ULz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <state key="normal" title="پرداخت">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سبد خرید" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLh-A9-4iD">
+                                <rect key="frame" x="172.5" y="16" width="69" height="23.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جمع سبد خرید:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mT-ew-gkX">
+                                <rect key="frame" x="284.5" y="721" width="99.5" height="21"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۰۰۰" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44J-zF-XsC">
+                                <rect key="frame" x="30" y="721" width="25" height="21"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back-circular-white" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-GE-kWX">
+                                <rect key="frame" x="32.5" y="773.5" width="37.5" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PUd-GE-kWX" secondAttribute="height" multiplier="1:1" id="1wj-X7-H9e"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KLh-A9-4iD" firstAttribute="top" secondItem="GsW-tJ-bH7" secondAttribute="top" constant="16" id="6i5-W5-lao"/>
+                            <constraint firstItem="d3K-YQ-qP8" firstAttribute="leading" secondItem="PUd-GE-kWX" secondAttribute="trailing" constant="-50" id="H21-Cu-BZS"/>
+                            <constraint firstItem="44J-zF-XsC" firstAttribute="centerY" secondItem="6mT-ew-gkX" secondAttribute="centerY" id="H2q-XN-4Cg"/>
+                            <constraint firstItem="Jeo-eu-lMz" firstAttribute="leading" secondItem="r3p-ZK-HN1" secondAttribute="leading" id="MIC-Tj-qVc"/>
+                            <constraint firstItem="r3p-ZK-HN1" firstAttribute="bottom" secondItem="d3K-YQ-qP8" secondAttribute="bottom" constant="40" id="NAM-fc-EOs"/>
+                            <constraint firstItem="r3p-ZK-HN1" firstAttribute="trailing" secondItem="6mT-ew-gkX" secondAttribute="trailing" constant="30" id="SJK-5w-nNw"/>
+                            <constraint firstItem="KLh-A9-4iD" firstAttribute="centerX" secondItem="GsW-tJ-bH7" secondAttribute="centerX" id="UYy-nA-0lZ"/>
+                            <constraint firstItem="r3p-ZK-HN1" firstAttribute="trailing" secondItem="d3K-YQ-qP8" secondAttribute="trailing" constant="20" id="X2A-Oe-qt3"/>
+                            <constraint firstItem="d3K-YQ-qP8" firstAttribute="leading" secondItem="r3p-ZK-HN1" secondAttribute="leading" constant="20" id="Y52-hh-28e"/>
+                            <constraint firstItem="6mT-ew-gkX" firstAttribute="top" secondItem="Jeo-eu-lMz" secondAttribute="bottom" constant="20" id="ZRQ-64-F7P"/>
+                            <constraint firstItem="d3K-YQ-qP8" firstAttribute="top" secondItem="6mT-ew-gkX" secondAttribute="bottom" constant="20" id="duj-6y-c7u"/>
+                            <constraint firstItem="d3K-YQ-qP8" firstAttribute="centerX" secondItem="GsW-tJ-bH7" secondAttribute="centerX" id="m0L-EX-ORa"/>
+                            <constraint firstItem="44J-zF-XsC" firstAttribute="leading" secondItem="r3p-ZK-HN1" secondAttribute="leading" constant="30" id="nzl-Fw-oa5"/>
+                            <constraint firstItem="PUd-GE-kWX" firstAttribute="width" secondItem="d3K-YQ-qP8" secondAttribute="width" multiplier="0.1" id="rJa-ZZ-kSD"/>
+                            <constraint firstItem="Jeo-eu-lMz" firstAttribute="trailing" secondItem="r3p-ZK-HN1" secondAttribute="trailing" id="sbH-jD-VZa"/>
+                            <constraint firstItem="Jeo-eu-lMz" firstAttribute="top" secondItem="KLh-A9-4iD" secondAttribute="bottom" constant="7" id="vqA-PI-7wy"/>
+                            <constraint firstItem="PUd-GE-kWX" firstAttribute="centerY" secondItem="d3K-YQ-qP8" secondAttribute="centerY" id="vxT-MS-LK4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r3p-ZK-HN1"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="cartTotalLabel" destination="44J-zF-XsC" id="ZFn-gK-Vdd"/>
+                        <outlet property="checkoutButton" destination="d3K-YQ-qP8" id="tya-jM-nM5"/>
+                        <outlet property="tableView" destination="Jeo-eu-lMz" id="d2T-31-6pH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOO-PK-HXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="189.50892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-circular-white" width="18" height="18"/>
+        <image name="minus-icon" width="6" height="1"/>
+        <image name="plus-icon" width="6" height="6"/>
+    </resources>
+</document>

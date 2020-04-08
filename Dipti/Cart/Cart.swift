@@ -16,18 +16,24 @@ class Cart {
     
     weak var delegate: CartDelegate?
     
-    struct Item {
+    class Item {
+        
+        internal init(item: Product, count: Int) {
+            self.item = item
+            self.count = count
+        }
+        
         var item: Product
         var count: Int
     }
     
     private var items = [Item]() {
         didSet {
-            delegate?.cartItemsChanged(count: self.count)
+            delegate?.cartItemsChanged(count: self.totalCount)
         }
     }
     
-    var count: Int {
+    var totalCount: Int {
         var count = 0
         count = items.reduce(count) { (count, item) -> Int in
             return count + item.count
@@ -35,8 +41,21 @@ class Cart {
         return count
     }
     
+    var uniqueCount: Int {
+        return items.count
+    }
+    
+    var totalValue: Int {
+        var value = 0
+        value = items.reduce(value) { (value, item) -> Int in
+            return value + item.count * item.item.price
+        }
+        return value
+
+    }
+    
     func add(item: Product, count: Int = 1) {
-        if var item = items.filter({$0.item == item}).first {
+        if let item = items.filter({$0.item == item}).first {
             item.count += count
             return
         }

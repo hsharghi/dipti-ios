@@ -56,10 +56,19 @@ class ProductDetailViewController: UIViewController {
        
     
     private func setupView(with product: Product) {
+        
+        if productImageView.image == nil {
+            productImageView.image = product.uiImage()
+        }
+        
+        priceLabel.text = product.priceLabel
+        productTitle.text = product.title
+        designerName.text = product.designer
+        descriptionLabel.text = product.description
+        
         print("at first: \(sizeButton.frame)")
         colorPicker.isHidden = true
         sizeButton.isHidden = true
-        descriptionLabel.text = product.description
         
         for option in product.options ?? [] {
             switch option {

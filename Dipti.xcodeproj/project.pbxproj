@@ -50,6 +50,9 @@
 		0F78C69D23D61E5400F72811 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78C69C23D61E5400F72811 /* CustomTabbar.swift */; };
 		0F78C69F23D61EBE00F72811 /* CustomTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */; };
 		0F7DEEA5243DEA39002CA8B1 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DEEA4243DEA39002CA8B1 /* RoundShadowView.swift */; };
+		0F7DEEA7243DEFAB002CA8B1 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7DEEA6243DEFAB002CA8B1 /* Cart.storyboard */; };
+		0F7DEEA9243DF44B002CA8B1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DEEA8243DF44B002CA8B1 /* CartViewController.swift */; };
+		0F7DEEAB243E04D6002CA8B1 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DEEAA243E04D6002CA8B1 /* UIAlertController+Extensions.swift */; };
 		0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */; };
 		0FA1CC4323E020F8002F0F8E /* ProductMockFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */; };
 		0FA1CC4523E6A1B9002F0F8E /* ScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA1CC4423E6A1B9002F0F8E /* ScrollableViewController.swift */; };
@@ -120,6 +123,9 @@
 		0F78C69C23D61E5400F72811 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		0F78C69E23D61EBE00F72811 /* CustomTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabbar.storyboard; sourceTree = "<group>"; };
 		0F7DEEA4243DEA39002CA8B1 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		0F7DEEA6243DEFAB002CA8B1 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
+		0F7DEEA8243DF44B002CA8B1 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		0F7DEEAA243E04D6002CA8B1 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCollectionView.swift; sourceTree = "<group>"; };
 		0FA1CC4223E020F8002F0F8E /* ProductMockFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMockFactory.swift; sourceTree = "<group>"; };
 		0FA1CC4423E6A1B9002F0F8E /* ScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +309,8 @@
 			children = (
 				0FFB10502407F20D000A6DA6 /* CustomCartButton */,
 				0FCDC47D2401232C001FEAB4 /* Cart.swift */,
+				0F7DEEA6243DEFAB002CA8B1 /* Cart.storyboard */,
+				0F7DEEA8243DF44B002CA8B1 /* CartViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 				0FCDC47B24010C9B001FEAB4 /* UIStroyboard+Extension.swift */,
 				0F67ED14243B577F00C28C3A /* UIPicker+Extensions.swift */,
 				0F67ED1E243DC41600C28C3A /* CACornerMask+Extensions.swift */,
+				0F7DEEAA243E04D6002CA8B1 /* UIAlertController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +455,7 @@
 				0F3492AB23D83EB8001BD150 /* IRANSansWeb_Bold.ttf in Resources */,
 				0F3492AC23D83EB8001BD150 /* IRANSansWeb_Medium.ttf in Resources */,
 				0F65DC9A23D0A9BF001E1CA9 /* IntroStoryboard.storyboard in Resources */,
+				0F7DEEA7243DEFAB002CA8B1 /* Cart.storyboard in Resources */,
 				0F460E8523D4935F0052434F /* sideMenu.plist in Resources */,
 				0F67ED1D243C72E700C28C3A /* SearchResult.storyboard in Resources */,
 				0F3492B023D83EB8001BD150 /* IRANSansWeb_UltraLight.ttf in Resources */,
@@ -473,6 +483,7 @@
 				0F67ED11243B516B00C28C3A /* HHPickerView.swift in Sources */,
 				0FF8254D23D9D3F8001F61D5 /* CachyCacheManager.swift in Sources */,
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
+				0F7DEEAB243E04D6002CA8B1 /* UIAlertController+Extensions.swift in Sources */,
 				0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */,
 				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F3492BB23D853FE001BD150 /* BrandCollectionViewController.swift in Sources */,
@@ -506,6 +517,7 @@
 				0F4EC3972407F6C000EA845C /* String+Extensions.swift in Sources */,
 				0F3492B723D842A3001BD150 /* AppHelper.swift in Sources */,
 				0F78C69B23D6060E00F72811 /* UIColor+Extensions.swift in Sources */,
+				0F7DEEA9243DF44B002CA8B1 /* CartViewController.swift in Sources */,
 				0FEF90B423D4AC9600D98060 /* UIButton+Extensions.swift in Sources */,
 				0F506BFB23D7454300303A1C /* MainViewControllersFactory.swift in Sources */,
 				0F460E7D23D481090052434F /* AppData.swift in Sources */,

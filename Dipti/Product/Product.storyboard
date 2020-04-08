@@ -377,7 +377,7 @@
                         <outlet property="imageTopConstraint" destination="Gzc-qI-d8H" id="xqP-RQ-IP7"/>
                         <outlet property="priceLabel" destination="xNH-DF-Ug7" id="U9b-xn-n91"/>
                         <outlet property="productImageView" destination="DYd-YP-gnz" id="ejb-zx-BGD"/>
-                        <outlet property="productTitle" destination="0Y3-gv-TIk" id="9IJ-OL-5tk"/>
+                        <outlet property="productTitle" destination="BXb-wG-gxP" id="QHy-wf-ajj"/>
                         <outlet property="scrollView" destination="uvu-RU-Ru1" id="97m-Vi-o9a"/>
                         <outlet property="sizeButton" destination="6pZ-gX-r9g" id="iRY-dF-dsh"/>
                         <outlet property="sizeSelectionButton" destination="6pZ-gX-r9g" id="pRs-7f-Yuh"/>
