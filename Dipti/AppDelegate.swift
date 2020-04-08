@@ -12,6 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var alertWindow: UIWindow?
+    
+    
     var mainViewController: MainViewController? {
         didSet {
             if let vc = mainViewController {
@@ -46,6 +49,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return true
+    }
+
+    
+    func showAlert(_ title: String, message: String, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
+        let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if let actions = actions {
+            actions.forEach { (action) in
+                alert.addAction(action)
+            }
+        } else {
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+        }
+        
+        alert.presentGlobally(animated: true) {
+            if let closure = completion {
+                closure()
+            }
+        }
+
+    }
+
+    func showShareControl(items: [Any], in viewController: UIViewController, completion: (() -> Void)? = nil) -> Void {
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        activityVC.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            if !completed {
+                // User canceled
+                return
+            }
+        }
+
+        activityVC.presentGlobally(animated: true) {
+            if let closure = completion {
+                closure()
+            }
+        }
     }
 
 

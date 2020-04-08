@@ -18,7 +18,8 @@ class AppHelper {
     }
     
     
-    class func formatPrice(price: Int, withLocale locale: String? = nil, addPrefix prefix: String? = nil, addSuffix suffix: String? = nil) -> String {
+
+    class func formatNumber(number: Int, withLocale locale: String? = nil, addPrefix prefix: String? = nil, addSuffix suffix: String? = nil) -> String {
         let numberFormatter = NumberFormatter()
         if locale != nil {
             numberFormatter.locale = Locale(identifier: locale!)
@@ -27,7 +28,7 @@ class AppHelper {
         numberFormatter.numberStyle = .decimal
         numberFormatter.groupingSeparator = ","
 
-        var formattedPrice = numberFormatter.string(from: NSNumber(value: price))
+        var formattedPrice = numberFormatter.string(from: NSNumber(value: number))
 
         if prefix != nil {
             formattedPrice = prefix! + (formattedPrice ?? "")
@@ -40,6 +41,14 @@ class AppHelper {
 
     }
 
-
     
+    static func showAlert(_ title: String, message: String?, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
+        AppData.appDelegate.showAlert(title, message: message ?? "", actions: actions, completion: completion)
+    }
+
+    static func showShareControl(items: [Any], in viewController: UIViewController, completion: (() -> Void)? = nil) -> Void {
+        AppData.appDelegate.showShareControl(items: items, in: viewController, completion: completion)
+    }
+
+
 }
