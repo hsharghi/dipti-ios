@@ -26,6 +26,54 @@ extension UIAlertController {
         UIAlertController.globalPresentationWindow?.isHidden = true
         UIAlertController.globalPresentationWindow = nil
     }
+    
+
+        //Set background color of UIAlertController
+          func setBackgroudColor(color: UIColor) {
+            if let bgView = self.view.subviews.first,
+              let groupView = bgView.subviews.first,
+              let contentView = groupView.subviews.first {
+              contentView.backgroundColor = color
+            }
+          }
+
+          //Set title font and title color
+        func setTitle(font: UIFont? = nil,
+                      color: UIColor? = nil) {
+            guard let title = self.title else { return }
+            let attributeString = NSMutableAttributedString(string: title)//1
+            if let titleFont = font {
+              attributeString.addAttributes([NSAttributedString.Key.font : titleFont],//2
+                range: title.nsRange)
+            }
+            if let titleColor = color {
+              attributeString.addAttributes([NSAttributedString.Key.foregroundColor : titleColor],//3
+                range: title.nsRange)
+            }
+            self.setValue(attributeString, forKey: "attributedTitle")//4
+          }
+
+          //Set message font and message color
+          func setMessage(font: UIFont? = nil,
+                          color: UIColor? = nil) {
+            guard let title = self.message else {
+              return
+            }
+            let attributedString = NSMutableAttributedString(string: title)
+            if let titleFont = font {
+              attributedString.addAttributes([NSAttributedString.Key.font : titleFont], range: title.nsRange)
+            }
+            if let titleColor = color {
+              attributedString.addAttributes([NSAttributedString.Key.foregroundColor : titleColor], range: title.nsRange)
+            }
+            self.setValue(attributedString, forKey: "attributedMessage")
+          }
+
+          //Set tint color of UIAlertController
+          func setTint(color: UIColor) {
+            self.view.tintColor = color
+          }
+
      
 }
 
@@ -48,6 +96,5 @@ extension UIActivityViewController {
         UIActivityViewController.globalPresentationWindow?.isHidden = true
         UIActivityViewController.globalPresentationWindow = nil
     }
-     
 }
 

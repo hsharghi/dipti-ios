@@ -52,8 +52,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    func showAlert(_ title: String, message: String, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
+    func showAlert(_ title: String, titleFont: UIFont? = nil, message: String, messageFont: UIFont? = nil, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        var alertTitleFont = UIFont(name: "IRANSansWeb-Bold", size: 20)
+        var alertMessageFont = UIFont(name: "IRANSansWeb", size: 16)
+        if let titleFont = titleFont {
+            alertTitleFont = titleFont
+        }
+        alert.setTitle(font: alertTitleFont, color: nil)
+
+        if let messageFont = messageFont {
+            alertMessageFont = messageFont
+        }
+        alert.setMessage(font: alertMessageFont, color: nil)
+//        // Change background color of UIAlertController
+//        alertController.setBackgroudColor(color: UIColor.black)
+
         if let actions = actions {
             actions.forEach { (action) in
                 alert.addAction(action)

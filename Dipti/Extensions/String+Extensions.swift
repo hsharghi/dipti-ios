@@ -76,4 +76,10 @@ extension String {
         }
         return String(self.dropFirst(prefix.count))
     }
+    
+    var nsRange: NSRange {
+        return NSRange(self.startIndex..., in: self)
+    }
+
+    
 }
