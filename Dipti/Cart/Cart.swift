@@ -29,7 +29,7 @@ class Cart {
     
     private var items = [Item]() {
         didSet {
-            delegate?.cartItemsChanged(count: self.totalCount)
+            itemsChanged()
         }
     }
     
@@ -57,6 +57,7 @@ class Cart {
     func add(item: Product, count: Int = 1) {
         if let item = items.filter({$0.item == item}).first {
             item.count += count
+            itemsChanged()
             return
         }
         
@@ -69,8 +70,9 @@ class Cart {
     }
     
     func subtract(item: Product, count: Int = 1) {
-        if var cartItem = items.filter({$0.item == item}).first {
+        if let cartItem = items.filter({$0.item == item}).first {
             cartItem.count -= count
+            itemsChanged()
             if cartItem.count <= 0 {
                 self.remove(item: item)
             }
@@ -86,6 +88,9 @@ class Cart {
         return items
     }
     
+    private func itemsChanged() {
+        delegate?.cartItemsChanged(count: self.totalCount)
+    }
 }
 
 extension Product: Equatable {
