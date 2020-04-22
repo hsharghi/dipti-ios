@@ -66,7 +66,6 @@ class ProductDetailViewController: UIViewController {
         designerName.text = product.designer
         descriptionLabel.text = product.description
         
-        print("at first: \(sizeButton.frame)")
         colorPicker.isHidden = true
         sizeButton.isHidden = true
         
@@ -98,7 +97,6 @@ class ProductDetailViewController: UIViewController {
     }
     
     private func addSizePickerView(for sizes: [String]) {
-        print("while creating: \(sizeButton.frame)")
         sizePickerView = HHPickerView(titles: sizes, hideDuration: 0.6)
         contentView.addSubview(sizePickerView!)
         sizePickerView?.horizontal()

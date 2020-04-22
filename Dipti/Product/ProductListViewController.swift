@@ -53,9 +53,9 @@ extension ProductListViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ProductListCell else { return }
         self.selectedProduct = products[indexPath.row]
-        let theAttributes:UICollectionViewLayoutAttributes! = collectionView.layoutAttributesForItem(at: indexPath)
-        selectedFrame = collectionView.convert(theAttributes.frame, to: collectionView.superview)
+        selectedFrame = cell.imageView.superview?.convert(cell.imageView.frame, to: collectionView.superview)
         showProductDetail(with: products[indexPath.item])
 //        performSegue(withIdentifier: "showProductDetail", sender: products[indexPath.item])
     }
