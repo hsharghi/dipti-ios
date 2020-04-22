@@ -30,6 +30,8 @@
 		0F506BF723D7417600303A1C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F506BF623D7417600303A1C /* Home.storyboard */; };
 		0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BF823D741E100303A1C /* HomeViewController.swift */; };
 		0F506BFB23D7454300303A1C /* MainViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */; };
+		0F5881A0244B43680027C329 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F58819F244B43680027C329 /* Auth.storyboard */; };
+		0F5881A3244B4BAD0027C329 /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5881A2244B4BAD0027C329 /* SkyFloatingLabelTextField */; };
 		0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F59B4E623FC02A5008A9E13 /* ScrollableNavigationController.swift */; };
 		0F5EA95923FD3718005274CD /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5EA95823FD3718005274CD /* PaddedTextField.swift */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
@@ -101,6 +103,7 @@
 		0F506BF623D7417600303A1C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0F506BF823D741E100303A1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllersFactory.swift; sourceTree = "<group>"; };
+		0F58819F244B43680027C329 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		0F59B4E623FC02A5008A9E13 /* ScrollableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableNavigationController.swift; sourceTree = "<group>"; };
 		0F5EA95823FD3718005274CD /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF8254223D99D19001F61D5 /* Cachy in Frameworks */,
+				0F5881A3244B4BAD0027C329 /* SkyFloatingLabelTextField in Frameworks */,
 				0F3492B523D84006001BD150 /* UIImageColors in Frameworks */,
 				0FF8254723D99F00001F61D5 /* SwiftHash in Frameworks */,
 				0F460E1723D45DF40052434F /* SideMenu in Frameworks */,
@@ -237,6 +241,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		0F58819E244B43460027C329 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0F58819F244B43680027C329 /* Auth.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		0F65DC7723D0A99B001E1CA9 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +277,7 @@
 				0F460E7B23D480EA0052434F /* SettingsData */,
 				0F506BF123D740DA00303A1C /* CustomTabbar */,
 				0F506BF223D7410200303A1C /* SideMenu */,
+				0F58819E244B43460027C329 /* Auth */,
 				0F506BF423D7412D00303A1C /* Intro */,
 				0F506BF323D7411600303A1C /* Main */,
 				0F506BF523D7416900303A1C /* Home */,
@@ -396,6 +409,7 @@
 				0F3492B423D84006001BD150 /* UIImageColors */,
 				0FF8254123D99D19001F61D5 /* Cachy */,
 				0FF8254623D99F00001F61D5 /* SwiftHash */,
+				0F5881A2244B4BAD0027C329 /* SkyFloatingLabelTextField */,
 			);
 			productName = Dipti;
 			productReference = 0F65DC8023D0A99B001E1CA9 /* Dipti.app */;
@@ -430,6 +444,7 @@
 				0F3492B323D84006001BD150 /* XCRemoteSwiftPackageReference "UIImageColors" */,
 				0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */,
 				0FF8254523D99F00001F61D5 /* XCRemoteSwiftPackageReference "SwiftHash" */,
+				0F5881A1244B4BAD0027C329 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */,
 			);
 			productRefGroup = 0F65DC8123D0A99B001E1CA9 /* Products */;
 			projectDirPath = "";
@@ -445,6 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5881A0244B43680027C329 /* Auth.storyboard in Resources */,
 				0F65DC9023D0A99D001E1CA9 /* LaunchScreen.storyboard in Resources */,
 				0F506BF723D7417600303A1C /* Home.storyboard in Resources */,
 				0F460E7A23D4778F0052434F /* SideMenu.storyboard in Resources */,
@@ -738,6 +754,14 @@
 				minimumVersion = 6.4.6;
 			};
 		};
+		0F5881A1244B4BAD0027C329 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Skyscanner/SkyFloatingLabelTextField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.0;
+			};
+		};
 		0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Sadmansamee/CachyKit";
@@ -766,6 +790,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F460E1523D45DF40052434F /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
+		};
+		0F5881A2244B4BAD0027C329 /* SkyFloatingLabelTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F5881A1244B4BAD0027C329 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */;
+			productName = SkyFloatingLabelTextField;
 		};
 		0FF8254123D99D19001F61D5 /* Cachy */ = {
 			isa = XCSwiftPackageProductDependency;
