@@ -110,13 +110,13 @@ extension AppDelegate: IntroPageDelegate {
         
         UserDefaults.standard.set(false, forKey: "showIntro")
         
-        if let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController() {
+        if let vc = makeMainViewController() as? MainViewController {
             
             if let snapshot = (UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.snapshotView(afterScreenUpdates: true)) {
                 vc.view.addSubview(snapshot)
                 window?.rootViewController = vc
                 UIView.transition(with: snapshot,
-                                  duration: 1,
+                                  duration: 0.25,
                                   options: .transitionCrossDissolve,
                                   animations: {
                                     snapshot.layer.opacity = 0
