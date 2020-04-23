@@ -10,6 +10,7 @@ import UIKit
 
 protocol SearchResultViewDelegate: class {
     func closeButtonTapped()
+    func dismissSearchView()
     func hideKeyboard()
     func productTapped(product: Product)
 }
@@ -149,7 +150,7 @@ extension SearchResultViewController: UITableViewDelegate, UITableViewDataSource
         switch indexPath.section {
         case 0:
             if let product = result.products?[indexPath.row] {
-                closeTapped(tableView)
+                delegate?.dismissSearchView()
                 delegate?.productTapped(product: product)
             }
             

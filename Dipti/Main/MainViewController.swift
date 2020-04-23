@@ -249,9 +249,8 @@ extension MainViewController: CartDelegate {
 
 extension MainViewController: SearchResultViewDelegate {
     func closeButtonTapped() {
-        let searchView = self.view.subviews.filter { $0.tag == 999 }.first
-        searchView?.removeFromSuperview()
-        searchResultViewController = nil
+        searchTextField.text = ""
+        dismissSearchView()
     }
     
     func hideKeyboard() {
@@ -264,5 +263,16 @@ extension MainViewController: SearchResultViewDelegate {
             pushViewController(viewController: vc)
         }
     }
+    
+    func dismissSearchView() {
+        let searchView = self.view.subviews.filter { $0.tag == 999 }.first
+        searchView?.removeFromSuperview()
+        searchResultViewController = nil
+    }
 }
 
+extension MainViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchChanged(textField)
+    }
+}
