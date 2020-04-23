@@ -27,26 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let window = window {
-            
-            
-            let showIntro = UserDefaults.standard.value(forKey: "showIntro") as? Bool
-            var viewController: UIViewController
-            
-            if showIntro ?? true {
-                viewController = makeIntroVC()
-            } else {
-                viewController = makeMainViewController()
-            }
-            
-            window.rootViewController = viewController
-            
-            self.window = window
-            self.window?.makeKeyAndVisible()
-            
-            
+        let showIntro = UserDefaults.standard.value(forKey: "showIntro") as? Bool
+        var viewController: UIViewController
+        
+        if showIntro ?? true {
+            viewController = makeIntroVC()
+        } else {
+//            viewController = UIStoryboard(name: "Auth", bundle: nil).instantiateInitialViewController()!
+            viewController = makeMainViewController()
         }
         
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = viewController
+        
+        self.window = window
+        self.window?.makeKeyAndVisible()
         
         return true
     }
