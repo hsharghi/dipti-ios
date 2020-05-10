@@ -12,6 +12,7 @@ final class AppData {
     
     static let showIntroKey = "showIntro"
     static let loginStatusNotificationKey = "loginStatusNotificationKey"
+    static let loginTokenDataKey = "loginTokenDataKey"
     static let sideMenuSelectNotificationKey = "sideMenuSelectNotificationKey"
     
     ////////////////////////
@@ -34,6 +35,12 @@ final class AppData {
         static let lightGray = UIColor(hexString: "F3F4F6")
         static let darkBlue = UIColor(hexString: "515C6F")
     }
+    
+    
+    static let forgetPasswordResponse = """
+لینک بازیابی رمز عبور شما به آدرس ایمیل وارد شده ارسال شد.
+ لطفا به ایمیل خود مراجعه کنید و بر روی لینک فرستاده شده بزنید تا به صحفه بازیابی رمز عبور هدایت شوید.
+"""
  
     static var cacheManager: CacheManager {
         return CachyCacheManager()
@@ -69,17 +76,19 @@ final class AppData {
     
     static var loginToken: String? {
         get {
-            return appDelegate.loginToken
+            if let data = UserDefaults.standard.string(forKey: loginTokenDataKey) {
+                return data
+            }
+            return nil
         }
         
-        set {
-            appDelegate.loginToken = newValue
+        set(token) {
+            UserDefaults.standard.set(token, forKey: loginTokenDataKey)
+            appDelegate.loginToken = token
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey),
                                             object: nil,
                                             userInfo: nil)
         }
     }
-    
-    
     
 }
