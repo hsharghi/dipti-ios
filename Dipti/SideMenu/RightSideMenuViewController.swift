@@ -19,7 +19,7 @@ class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuItems = SideMenuFactory.shared.menuItems(for: .notLoggedIn)
+        menuItems = getMenuItems()
         
         tableView.tableFooterView = UIView()
         
@@ -70,8 +70,12 @@ class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @objc func reloadMenu() {
-        menuItems = SideMenuFactory.shared.menuItems(for: AppData.isUserLoggedIn ? .loggedIn : .notLoggedIn)
+        menuItems = getMenuItems()
         tableView.reloadData()
+    }
+    
+    private func getMenuItems() -> [[String: Any]] {
+        return SideMenuFactory.shared.menuItems(for: AppData.isUserLoggedIn ? .loggedIn : .notLoggedIn)
     }
 }
 
