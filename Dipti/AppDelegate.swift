@@ -49,6 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         self.window?.makeKeyAndVisible()
         
+        loginToken = AppData.loginToken
+        
         return true
     }
 
@@ -64,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func showAlert(_ title: String, titleFont: UIFont? = nil, message: String, messageFont: UIFont? = nil, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
+    func showAlert(_ title: String, titleFont: UIFont? = nil, message: String, messageFont: UIFont? = nil, dismissButtonTitle: String = "OK", actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         var alertTitleFont = UIFont(name: "IRANSansWeb-Bold", size: 20)
         var alertMessageFont = UIFont(name: "IRANSansWeb", size: 16)
@@ -85,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 alert.addAction(action)
             }
         } else {
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            alert.addAction(UIAlertAction(title: dismissButtonTitle, style: .default))
         }
         
         alert.presentGlobally(animated: true) {

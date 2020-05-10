@@ -42,8 +42,8 @@ class AppHelper {
     }
 
     
-    static func showAlert(_ title: String, message: String?, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
-        AppData.appDelegate.showAlert(title, message: message ?? "", actions: actions, completion: completion)
+    static func showAlert(_ title: String, message: String?, dismissButtonTitle: String = "OK", actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
+        AppData.appDelegate.showAlert(title, message: message ?? "", dismissButtonTitle: dismissButtonTitle, actions: actions, completion: completion)
     }
 
     static func showShareControl(items: [Any], in viewController: UIViewController, completion: (() -> Void)? = nil) -> Void {
