@@ -47,16 +47,39 @@ final class AppData {
     
     static var main: MainViewController? {
         get {
-            return AppData.appDelegate.mainViewController
+            return appDelegate.mainViewController
         }
         set(mainViewController) {
-            AppData.appDelegate.mainViewController = mainViewController
+            appDelegate.mainViewController = mainViewController
         }
     }
     
     static var cart: Cart {
         get {
-            return AppData.appDelegate.cart
+            return appDelegate.cart
         }
     }
+    
+    static var isUserLoggedIn: Bool {
+        get {
+            return appDelegate.loginToken != nil
+                && !appDelegate.loginToken!.isEmpty
+        }
+    }
+    
+    static var loginToken: String? {
+        get {
+            return appDelegate.loginToken
+        }
+        
+        set {
+            appDelegate.loginToken = newValue
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey),
+                                            object: nil,
+                                            userInfo: nil)
+        }
+    }
+    
+    
+    
 }
