@@ -25,8 +25,10 @@ class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITabl
         
         avatar.rounded(color: .brown, width: 2, paddingX: 10, paddingY: 10)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadMenu), name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey), object: nil)
-        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(reloadMenu),
+                                               name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey),
+                                               object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,8 +70,8 @@ class RightSideMenuViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @objc func reloadMenu() {
-//        loadMenuItems()
-//        profileInfoTableView.reloadData()
+        menuItems = SideMenuFactory.shared.menuItems(for: AppData.isUserLoggedIn ? .loggedIn : .notLoggedIn)
+        tableView.reloadData()
     }
 }
 
