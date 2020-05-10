@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var alertWindow: UIWindow?
+    var loginToken: String?
     
     
     var mainViewController: MainViewController? {
@@ -37,6 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             viewController = makeMainViewController()
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(sideMenuItemTapped(notification:)),
+                                               name: NSNotification.Name(rawValue: AppData.sideMenuSelectNotificationKey),
+                                               object: nil)
+        
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = viewController
         
@@ -46,6 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    @objc private func sideMenuItemTapped(notification: Notification) {
+        print(notification.userInfo)
+        if let vc = window?.rootViewController {
+            vc.dismiss(animated: true) {
+                AppHelper.showLogin(in: vc) {
+                        print("completed!")
+                }
+            }
+        }
+    }
+    
     
     func showAlert(_ title: String, titleFont: UIFont? = nil, message: String, messageFont: UIFont? = nil, actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
