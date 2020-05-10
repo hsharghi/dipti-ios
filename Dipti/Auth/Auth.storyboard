@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q1M-Vd-gfb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansWeb.ttf">
+            <string>IRANSansWeb</string>
+        </array>
+        <array key="IRANSansWeb_Bold.ttf">
+            <string>IRANSansWeb-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="vKA-HR-3rJ">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="AOg-e3-gC3" customClass="LoginViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JGY-Ya-IWc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-Wa-fo3" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="247" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="ایمیل"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="آدرس ایمیل خود را وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="ایمیل"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCQ-ch-IhH" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="297" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="رمز عبور"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="رمز عبور خود را وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="رمز عبور"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-mw-9eh">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="48v-eb-Lok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <state key="normal" title="ایجاد حساب کاربری">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupTapped:" destination="AOg-e3-gC3" eventType="touchUpInside" id="1Lx-lZ-I7A"/>
+                                    <segue destination="eWV-GJ-3sJ" kind="show" id="frg-2B-fFs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ورود به حساب کاربری" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g0-zw-GmD">
+                                <rect key="frame" x="129.5" y="138" width="155" height="28.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="هنوز حساب کاربری ندارید؟" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGl-A6-OQ5">
+                                <rect key="frame" x="122" y="768.5" width="170.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg4-xT-yOZ">
+                                <rect key="frame" x="136" y="339" width="142" height="34"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                <state key="normal" title="رمز عبور را فراموش کرده‌ام">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgetPasswordTapped:" destination="AOg-e3-gC3" eventType="touchUpInside" id="bhw-Lb-AOF"/>
+                                    <segue destination="S9s-fS-Emm" kind="show" id="2ao-WV-92b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZb-PS-qOJ">
+                                <rect key="frame" x="20" y="393" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="WBm-5f-K4u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <state key="normal" title="ورود">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="AOg-e3-gC3" eventType="touchUpInside" id="WaV-QT-BXd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cg4-xT-yOZ" firstAttribute="top" secondItem="qCQ-ch-IhH" secondAttribute="bottom" constant="8" id="1aA-Nv-ygp"/>
+                            <constraint firstItem="NZb-PS-qOJ" firstAttribute="leading" secondItem="NcP-fY-zWR" secondAttribute="leading" constant="20" id="6uB-5t-Ot1"/>
+                            <constraint firstItem="1QB-Wa-fo3" firstAttribute="top" secondItem="6g0-zw-GmD" secondAttribute="bottom" constant="80.5" id="8Ev-6l-XjV"/>
+                            <constraint firstItem="NcP-fY-zWR" firstAttribute="trailing" secondItem="NZb-PS-qOJ" secondAttribute="trailing" constant="20" id="Eis-jU-bsS"/>
+                            <constraint firstItem="6g0-zw-GmD" firstAttribute="top" secondItem="NcP-fY-zWR" secondAttribute="top" constant="50" id="HIK-Sr-l8e"/>
+                            <constraint firstItem="LGl-A6-OQ5" firstAttribute="centerX" secondItem="JGY-Ya-IWc" secondAttribute="centerX" id="Kyw-K2-pZW"/>
+                            <constraint firstItem="qCQ-ch-IhH" firstAttribute="leading" secondItem="1QB-Wa-fo3" secondAttribute="leading" id="Q4r-yZ-y4s"/>
+                            <constraint firstItem="c5D-mw-9eh" firstAttribute="bottom" secondItem="NcP-fY-zWR" secondAttribute="bottom" id="Xxo-pl-8jj"/>
+                            <constraint firstItem="1QB-Wa-fo3" firstAttribute="leading" secondItem="NcP-fY-zWR" secondAttribute="leading" constant="20" id="g4b-uu-EEc"/>
+                            <constraint firstItem="NcP-fY-zWR" firstAttribute="trailing" secondItem="c5D-mw-9eh" secondAttribute="trailing" constant="20" id="gYc-7M-RI5"/>
+                            <constraint firstItem="6g0-zw-GmD" firstAttribute="centerX" secondItem="JGY-Ya-IWc" secondAttribute="centerX" id="imj-f9-k4u"/>
+                            <constraint firstItem="NcP-fY-zWR" firstAttribute="trailing" secondItem="1QB-Wa-fo3" secondAttribute="trailing" constant="20" id="lqa-mx-UhN"/>
+                            <constraint firstItem="qCQ-ch-IhH" firstAttribute="trailing" secondItem="1QB-Wa-fo3" secondAttribute="trailing" id="oqq-Ch-yzQ"/>
+                            <constraint firstItem="NZb-PS-qOJ" firstAttribute="top" secondItem="cg4-xT-yOZ" secondAttribute="bottom" constant="20" id="pJa-nu-erD"/>
+                            <constraint firstItem="c5D-mw-9eh" firstAttribute="leading" secondItem="NcP-fY-zWR" secondAttribute="leading" constant="20" id="rOY-DK-QYi"/>
+                            <constraint firstItem="cg4-xT-yOZ" firstAttribute="centerX" secondItem="JGY-Ya-IWc" secondAttribute="centerX" id="rP9-eK-tKM"/>
+                            <constraint firstItem="qCQ-ch-IhH" firstAttribute="top" secondItem="1QB-Wa-fo3" secondAttribute="top" constant="50" id="xD9-nJ-R24"/>
+                            <constraint firstItem="c5D-mw-9eh" firstAttribute="top" secondItem="LGl-A6-OQ5" secondAttribute="bottom" constant="8" id="z3B-l3-Rk5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NcP-fY-zWR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qV6-jG-6AV"/>
+                    <connections>
+                        <outlet property="email" destination="1QB-Wa-fo3" id="gZE-pg-vBZ"/>
+                        <outlet property="password" destination="qCQ-ch-IhH" id="Qxy-T9-qA1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qom-7O-ym2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="5"/>
+        </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="hwd-aU-hQO">
+            <objects>
+                <viewController storyboardIdentifier="ForgetPasswordViewController" id="S9s-fS-Emm" customClass="ForgetPasswordViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vec-ep-mwB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uVr-QW-ik5" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="247" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="آدرس ایمیل"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="آدرس ایمیل خود را وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="ایمیل"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بازیابی رمز عبور" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29S-dX-LvD">
+                                <rect key="frame" x="152.5" y="138" width="109" height="28.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-Sp-ap5">
+                                <rect key="frame" x="20" y="340.5" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sGq-V2-Vq2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <state key="normal" title="بازیابی رمز عبور">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="retrievePasswordTapped:" destination="S9s-fS-Emm" eventType="touchUpInside" id="LAa-C9-gwj"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نتیجه " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIR-hW-Z6w">
+                                <rect key="frame" x="20" y="420.5" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0za-ko-euW" firstAttribute="trailing" secondItem="PCj-Sp-ap5" secondAttribute="trailing" constant="20" id="5AK-Nm-qFF"/>
+                            <constraint firstItem="0za-ko-euW" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yIR-hW-Z6w" secondAttribute="bottom" constant="20" id="66o-aK-2RP"/>
+                            <constraint firstItem="29S-dX-LvD" firstAttribute="centerX" secondItem="vec-ep-mwB" secondAttribute="centerX" id="6Wp-g6-frH"/>
+                            <constraint firstItem="yIR-hW-Z6w" firstAttribute="leading" secondItem="0za-ko-euW" secondAttribute="leading" constant="20" id="6X5-nK-3t0"/>
+                            <constraint firstItem="0za-ko-euW" firstAttribute="trailing" secondItem="uVr-QW-ik5" secondAttribute="trailing" constant="20" id="881-Ae-7QR"/>
+                            <constraint firstItem="uVr-QW-ik5" firstAttribute="leading" secondItem="0za-ko-euW" secondAttribute="leading" constant="20" id="DYx-vY-3V2"/>
+                            <constraint firstItem="PCj-Sp-ap5" firstAttribute="leading" secondItem="0za-ko-euW" secondAttribute="leading" constant="20" id="EFW-e8-FIz"/>
+                            <constraint firstItem="uVr-QW-ik5" firstAttribute="top" secondItem="29S-dX-LvD" secondAttribute="bottom" constant="80.5" id="RuP-1L-kNz"/>
+                            <constraint firstItem="0za-ko-euW" firstAttribute="trailing" secondItem="yIR-hW-Z6w" secondAttribute="trailing" constant="20" id="Vk5-au-3fF"/>
+                            <constraint firstItem="yIR-hW-Z6w" firstAttribute="top" secondItem="PCj-Sp-ap5" secondAttribute="bottom" constant="20" id="iCg-Fn-EUb"/>
+                            <constraint firstItem="29S-dX-LvD" firstAttribute="top" secondItem="0za-ko-euW" secondAttribute="top" constant="50" id="xUr-So-cpv"/>
+                            <constraint firstItem="PCj-Sp-ap5" firstAttribute="top" secondItem="uVr-QW-ik5" secondAttribute="bottom" constant="59.5" id="y5a-2T-QlN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0za-ko-euW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lom-0T-pNj"/>
+                    <connections>
+                        <outlet property="email" destination="uVr-QW-ik5" id="zhJ-3X-gi1"/>
+                        <outlet property="resultLabel" destination="yIR-hW-Z6w" id="10u-ly-u71"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmy-dG-tkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349" y="5"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="SWX-Xn-rJe">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="eWV-GJ-3sJ" customClass="RegisterViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U2z-lc-vNt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUH-2W-9JR" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="305.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="شماره موبایل"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="شماره موبایل خود را وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="شماره موبایل"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2d-G2-d7R" userLabel="رمز" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="355.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="رمز عبور"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="رمز عبور را تعیین کنید (حداقل ۶ کاراکتر)"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="رمز عبور"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpq-5u-r7P" userLabel="تکرار رمز" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="405.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="تکرار رمز عبور"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="رمز عبور خود را دوباره وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="تکرار رمز عبور"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47W-pR-dVm">
+                                <rect key="frame" x="20" y="802" width="374" height="60"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="G1e-WK-bUJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <state key="normal" title="ثبت نام">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="eWV-GJ-3sJ" eventType="touchUpInside" id="7kH-y4-epd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ایجاد حساب کاربری" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDi-jQ-gYd">
+                                <rect key="frame" x="136" y="138" width="142" height="29"/>
+                                <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ex5-19-HaR" userLabel="نام" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="205.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="نام"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="نام و نام خانوادگی خود را وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="نام"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VK2-Xr-pfM" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="20" y="255.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="آدرس ایمیل"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="selectedTitle" value="آدرس ایمیل خود را وارد کنید"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="آدرس ایمیل"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CDi-jQ-gYd" firstAttribute="top" secondItem="hKl-ec-CY0" secondAttribute="top" constant="50" id="0G1-p9-YRN"/>
+                            <constraint firstItem="xUH-2W-9JR" firstAttribute="leading" secondItem="Ex5-19-HaR" secondAttribute="leading" id="25I-cR-Xh0"/>
+                            <constraint firstItem="VK2-Xr-pfM" firstAttribute="top" secondItem="Ex5-19-HaR" secondAttribute="top" constant="50" id="39r-ZE-cMs"/>
+                            <constraint firstItem="gpq-5u-r7P" firstAttribute="leading" secondItem="Ex5-19-HaR" secondAttribute="leading" id="5DN-ta-pUI"/>
+                            <constraint firstItem="47W-pR-dVm" firstAttribute="leading" secondItem="hKl-ec-CY0" secondAttribute="leading" constant="20" id="7m1-DD-fa6"/>
+                            <constraint firstItem="gpq-5u-r7P" firstAttribute="trailing" secondItem="Ex5-19-HaR" secondAttribute="trailing" id="D3R-K9-R83"/>
+                            <constraint firstItem="xUH-2W-9JR" firstAttribute="top" secondItem="VK2-Xr-pfM" secondAttribute="top" constant="50" id="ELe-3z-Gkv"/>
+                            <constraint firstItem="hKl-ec-CY0" firstAttribute="trailing" secondItem="Ex5-19-HaR" secondAttribute="trailing" constant="20" id="GwX-Ag-0ku"/>
+                            <constraint firstItem="47W-pR-dVm" firstAttribute="bottom" secondItem="hKl-ec-CY0" secondAttribute="bottom" id="PAt-7x-NLh"/>
+                            <constraint firstItem="X2d-G2-d7R" firstAttribute="top" secondItem="xUH-2W-9JR" secondAttribute="top" constant="50" id="PXY-QQ-zR2"/>
+                            <constraint firstItem="VK2-Xr-pfM" firstAttribute="trailing" secondItem="Ex5-19-HaR" secondAttribute="trailing" id="Rv5-R2-84R"/>
+                            <constraint firstItem="X2d-G2-d7R" firstAttribute="trailing" secondItem="Ex5-19-HaR" secondAttribute="trailing" id="SO9-qa-8a9"/>
+                            <constraint firstItem="CDi-jQ-gYd" firstAttribute="centerX" secondItem="U2z-lc-vNt" secondAttribute="centerX" id="Wbc-C7-vda"/>
+                            <constraint firstItem="Ex5-19-HaR" firstAttribute="top" secondItem="CDi-jQ-gYd" secondAttribute="bottom" constant="38.5" id="bLA-28-4b3"/>
+                            <constraint firstItem="hKl-ec-CY0" firstAttribute="trailing" secondItem="47W-pR-dVm" secondAttribute="trailing" constant="20" id="hnr-gu-BkQ"/>
+                            <constraint firstItem="Ex5-19-HaR" firstAttribute="leading" secondItem="hKl-ec-CY0" secondAttribute="leading" constant="20" id="pIN-Nu-3Mi"/>
+                            <constraint firstItem="gpq-5u-r7P" firstAttribute="top" secondItem="X2d-G2-d7R" secondAttribute="top" constant="50" id="qWW-JK-6Ee"/>
+                            <constraint firstItem="VK2-Xr-pfM" firstAttribute="leading" secondItem="Ex5-19-HaR" secondAttribute="leading" id="qhN-Xp-N7z"/>
+                            <constraint firstItem="xUH-2W-9JR" firstAttribute="trailing" secondItem="Ex5-19-HaR" secondAttribute="trailing" id="z8r-y4-NOu"/>
+                            <constraint firstItem="X2d-G2-d7R" firstAttribute="leading" secondItem="Ex5-19-HaR" secondAttribute="leading" id="zte-he-HRw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hKl-ec-CY0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zhS-me-8F7"/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="gpq-5u-r7P" id="bdK-St-rZZ"/>
+                        <outlet property="email" destination="VK2-Xr-pfM" id="11J-V1-ID4"/>
+                        <outlet property="name" destination="Ex5-19-HaR" id="hNI-Kx-Owh"/>
+                        <outlet property="password" destination="X2d-G2-d7R" id="Szn-lu-KWf"/>
+                        <outlet property="phoneNumber" destination="xUH-2W-9JR" id="UKN-si-qjg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pww-3D-3fD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086" y="5"/>
+        </scene>
+        <!--Auth Navigation Controller-->
+        <scene sceneID="gNP-1s-4Hi">
+            <objects>
+                <navigationController storyboardIdentifier="AuthNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="q1M-Vd-gfb" customClass="AuthNavigationController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ew-V6-MUa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AOg-e3-gC3" kind="relationship" relationship="rootViewController" id="wkA-CC-KXv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dT9-l2-fWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84.057971014492765" y="4.6875"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0BD2FC246827BF00B6B618 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FB246827BE00B6B618 /* AuthNavigationController.swift */; };
+		0F0BD2FE24682E7B00B6B618 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */; };
+		0F0BD30024682F2200B6B618 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FF24682F2200B6B618 /* FormViewController.swift */; };
+		0F0BD3072468392100B6B618 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */; };
 		0F3492AB23D83EB8001BD150 /* IRANSansWeb_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A523D83EB7001BD150 /* IRANSansWeb_Bold.ttf */; };
 		0F3492AC23D83EB8001BD150 /* IRANSansWeb_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A623D83EB7001BD150 /* IRANSansWeb_Medium.ttf */; };
 		0F3492AD23D83EB8001BD150 /* IRANSansWeb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A723D83EB7001BD150 /* IRANSansWeb.ttf */; };
@@ -32,6 +36,9 @@
 		0F506BFB23D7454300303A1C /* MainViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */; };
 		0F5881A0244B43680027C329 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F58819F244B43680027C329 /* Auth.storyboard */; };
 		0F5881A3244B4BAD0027C329 /* SkyFloatingLabelTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5881A2244B4BAD0027C329 /* SkyFloatingLabelTextField */; };
+		0F5881A5245595E10027C329 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5881A4245595E10027C329 /* LoginViewController.swift */; };
+		0F5881A724559D2E0027C329 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5881A624559D2D0027C329 /* ForgetPasswordViewController.swift */; };
+		0F5881A924559F620027C329 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5881A824559F620027C329 /* RegisterViewController.swift */; };
 		0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F59B4E623FC02A5008A9E13 /* ScrollableNavigationController.swift */; };
 		0F5EA95923FD3718005274CD /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5EA95823FD3718005274CD /* PaddedTextField.swift */; };
 		0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */; };
@@ -82,6 +89,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0BD2FB246827BE00B6B618 /* AuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
+		0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		0F0BD2FF24682F2200B6B618 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		0F3492A523D83EB7001BD150 /* IRANSansWeb_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb_Bold.ttf; sourceTree = "<group>"; };
 		0F3492A623D83EB7001BD150 /* IRANSansWeb_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb_Medium.ttf; sourceTree = "<group>"; };
 		0F3492A723D83EB7001BD150 /* IRANSansWeb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb.ttf; sourceTree = "<group>"; };
@@ -104,6 +115,9 @@
 		0F506BF823D741E100303A1C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F506BFA23D7454300303A1C /* MainViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllersFactory.swift; sourceTree = "<group>"; };
 		0F58819F244B43680027C329 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		0F5881A4245595E10027C329 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0F5881A624559D2D0027C329 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		0F5881A824559F620027C329 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0F59B4E623FC02A5008A9E13 /* ScrollableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableNavigationController.swift; sourceTree = "<group>"; };
 		0F5EA95823FD3718005274CD /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		0F65DC8023D0A99B001E1CA9 /* Dipti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dipti.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +259,11 @@
 			isa = PBXGroup;
 			children = (
 				0F58819F244B43680027C329 /* Auth.storyboard */,
+				0F5881A624559D2D0027C329 /* ForgetPasswordViewController.swift */,
+				0F0BD2FF24682F2200B6B618 /* FormViewController.swift */,
+				0F0BD2FB246827BE00B6B618 /* AuthNavigationController.swift */,
+				0F5881A824559F620027C329 /* RegisterViewController.swift */,
+				0F5881A4245595E10027C329 /* LoginViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -268,13 +287,13 @@
 		0F65DC8223D0A99B001E1CA9 /* Dipti */ = {
 			isa = PBXGroup;
 			children = (
-				0FEF90B023D4AC8100D98060 /* Extensions */,
 				0F65DCA023D0A9E5001E1CA9 /* Assets */,
+				0FEF90B023D4AC8100D98060 /* Extensions */,
+				0F460E7B23D480EA0052434F /* SettingsData */,
 				0F506BEE23D73A5500303A1C /* Helpers */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
 				0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
-				0F460E7B23D480EA0052434F /* SettingsData */,
 				0F506BF123D740DA00303A1C /* CustomTabbar */,
 				0F506BF223D7410200303A1C /* SideMenu */,
 				0F58819E244B43460027C329 /* Auth */,
@@ -365,6 +384,8 @@
 				0F67ED14243B577F00C28C3A /* UIPicker+Extensions.swift */,
 				0F67ED1E243DC41600C28C3A /* CACornerMask+Extensions.swift */,
 				0F7DEEAA243E04D6002CA8B1 /* UIAlertController+Extensions.swift */,
+				0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */,
+				0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -492,7 +513,9 @@
 				0F65DC9B23D0A9BF001E1CA9 /* IntroSimplePageViewController.swift in Sources */,
 				0F7DEEA5243DEA39002CA8B1 /* RoundShadowView.swift in Sources */,
 				0F506BED23D73A4700303A1C /* Embedder.swift in Sources */,
+				0F0BD2FC246827BF00B6B618 /* AuthNavigationController.swift in Sources */,
 				0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */,
+				0F0BD2FE24682E7B00B6B618 /* UINavigationController+Extensions.swift in Sources */,
 				0FF8255123DDB78F001F61D5 /* Date+Extensions.swift in Sources */,
 				0F506BF923D741E100303A1C /* HomeViewController.swift in Sources */,
 				0FF8255923DDCE27001F61D5 /* MockData.swift in Sources */,
@@ -503,9 +526,13 @@
 				0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */,
 				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F3492BB23D853FE001BD150 /* BrandCollectionViewController.swift in Sources */,
+				0F5881A5245595E10027C329 /* LoginViewController.swift in Sources */,
+				0F0BD3072468392100B6B618 /* UIViewController+Extensions.swift in Sources */,
 				0FF8254B23D9D2E8001F61D5 /* Data+Extensions.swift in Sources */,
+				0F5881A724559D2E0027C329 /* ForgetPasswordViewController.swift in Sources */,
 				0F67ED1F243DC41600C28C3A /* CACornerMask+Extensions.swift in Sources */,
 				0FFB10522407F21A000A6DA6 /* CustomCartView.swift in Sources */,
+				0F5881A924559F620027C329 /* RegisterViewController.swift in Sources */,
 				0F460E7F23D481690052434F /* SideMenuData.swift in Sources */,
 				0FDD2C3523DEF1F5006EE934 /* ProductDetail.swift in Sources */,
 				0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */,
@@ -520,6 +547,7 @@
 				0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */,
 				0FFB10562407F223000A6DA6 /* CustomCartButton.swift in Sources */,
 				0F67ED1B243C72A200C28C3A /* SearchResultViewController.swift in Sources */,
+				0F0BD30024682F2200B6B618 /* FormViewController.swift in Sources */,
 				0F67ED13243B571600C28C3A /* Double+Extension.swift in Sources */,
 				0FA1CC4523E6A1B9002F0F8E /* ScrollableViewController.swift in Sources */,
 				0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */,
