@@ -124,6 +124,16 @@
             <key>title</key>
             <string>درباره ما</string>
         </dict>
+        <dict>
+            <key>icon</key>
+            <string>login</string>
+            <key>selector</key>
+            <string>logout</string>
+            <key>sortOrder</key>
+            <integer>200</integer>
+            <key>title</key>
+            <string>خروج</string>
+        </dict>
 	</array>
 	<key>notLoggedInItems</key>
 	<array>
