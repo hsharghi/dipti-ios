@@ -50,5 +50,14 @@ class AppHelper {
         AppData.appDelegate.showShareControl(items: items, in: viewController, completion: completion)
     }
 
+    
+    class func showLogin(in viewController: UIViewController, completion: (() -> Void)? = nil) {
+        let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateInitialViewController() as! AuthNavigationController
+        viewController.present(vc, animated: true) {
+            if let completion = completion {
+                completion()
+            }
+        }
+    }
 
 }
