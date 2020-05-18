@@ -8,7 +8,6 @@
 
 import UIKit
 import SkyFloatingLabelTextField
-import SwiftyHUDView
 
 
 class LoginViewController: FormViewController {

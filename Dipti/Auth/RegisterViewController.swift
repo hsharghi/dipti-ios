@@ -17,7 +17,13 @@ class RegisterViewController: FormViewController {
     @IBOutlet weak var phoneNumber: SkyFloatingLabelTextField!
     @IBOutlet weak var password: SkyFloatingLabelTextField!
     @IBOutlet weak var confirmPassword: SkyFloatingLabelTextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupScrollView(scrollView, contentView: contentView)
+    }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
         guard validateFields() else { return }
