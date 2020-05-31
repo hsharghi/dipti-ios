@@ -11,6 +11,7 @@
 		0F0BD2FE24682E7B00B6B618 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */; };
 		0F0BD30024682F2200B6B618 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FF24682F2200B6B618 /* FormViewController.swift */; };
 		0F0BD3072468392100B6B618 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */; };
+		0F2C20102483F3CD009A163C /* CategoryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C200F2483F3CD009A163C /* CategoryWidget.swift */; };
 		0F3492AB23D83EB8001BD150 /* IRANSansWeb_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A523D83EB7001BD150 /* IRANSansWeb_Bold.ttf */; };
 		0F3492AC23D83EB8001BD150 /* IRANSansWeb_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A623D83EB7001BD150 /* IRANSansWeb_Medium.ttf */; };
 		0F3492AD23D83EB8001BD150 /* IRANSansWeb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A723D83EB7001BD150 /* IRANSansWeb.ttf */; };
@@ -94,6 +95,7 @@
 		0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		0F0BD2FF24682F2200B6B618 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		0F2C200F2483F3CD009A163C /* CategoryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWidget.swift; sourceTree = "<group>"; };
 		0F3492A523D83EB7001BD150 /* IRANSansWeb_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb_Bold.ttf; sourceTree = "<group>"; };
 		0F3492A623D83EB7001BD150 /* IRANSansWeb_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb_Medium.ttf; sourceTree = "<group>"; };
 		0F3492A723D83EB7001BD150 /* IRANSansWeb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb.ttf; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				0F506BF823D741E100303A1C /* HomeViewController.swift */,
 				0F3492BA23D853FE001BD150 /* BrandCollectionViewController.swift */,
 				0F3492B123D83F6C001BD150 /* CollectionWidgets.swift */,
+				0F2C200F2483F3CD009A163C /* CategoryWidget.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				0F65DC8823D0A99B001E1CA9 /* ViewController.swift in Sources */,
 				0F65DC8423D0A99B001E1CA9 /* AppDelegate.swift in Sources */,
 				0F3492B223D83F6C001BD150 /* CollectionWidgets.swift in Sources */,
+				0F2C20102483F3CD009A163C /* CategoryWidget.swift in Sources */,
 				0FB62D252483BC1B00DB68B1 /* TitleBarTextField.swift in Sources */,
 				0FEF90B623D4AED600D98060 /* BaseNavigationController.swift in Sources */,
 				0FFB10562407F223000A6DA6 /* CustomCartButton.swift in Sources */,
