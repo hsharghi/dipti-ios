@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
         
         AppData.main = self
         
-        searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 10))
+        searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 50))
         setupCartButton()
         
         safeFixView.backgroundColor = AppData.color.yellow
@@ -179,7 +179,7 @@ class MainViewController: UIViewController {
         
         self.view.addSubview(view)
         
-        ViewEmbedder.embed(storyboard: UIStoryboard(name: "SearchResult", bundle: nil),
+        ViewEmbedder.embed(storyboard: UIStoryboard(name: "Search", bundle: nil),
                            withIdentifier: String(describing: SearchResultViewController.self),
                            parent: self,
                            container: view,
