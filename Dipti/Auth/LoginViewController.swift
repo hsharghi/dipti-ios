@@ -12,17 +12,21 @@ import SkyFloatingLabelTextField
 
 class LoginViewController: FormViewController {
     
-    @IBOutlet weak var email: SkyFloatingLabelTextField!
-    @IBOutlet weak var password: SkyFloatingLabelTextField!
-    
+    @IBOutlet weak var email: TitleBarTextField!
+    @IBOutlet weak var password: TitleBarTextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupScrollView(scrollView, contentView: contentView)
+        view.viewWithTag(99)?.roundConrners(masks: .allCorners, radius: 8)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.transparent(animated: true)
+        setupSocialButtons()
     }
     
     @IBAction func forgetPasswordTapped(_ sender: Any) {
@@ -58,6 +62,23 @@ class LoginViewController: FormViewController {
         return validation
     }
     
+    private func setupSocialButtons() {
+        if let googleButton = view.viewWithTag(100) as? UIButton {
+            googleButton.setBackgroundImage(UIImage(named: "login-google"), for: .normal)
+            googleButton.layoutIfNeeded()
+            googleButton.backgroundColor = UIColor(hexString: "DC4E41")
+            googleButton.subviews.first?.contentMode = .scaleAspectFit
+            googleButton.roundConrners(masks: .leftCorners, radius: 10)
+        }
+        if let facebookButton = view.viewWithTag(200) as? UIButton {
+            facebookButton.setBackgroundImage(UIImage(named: "login-facebook"), for: .normal)
+            facebookButton.layoutIfNeeded()
+            facebookButton.backgroundColor = UIColor(hexString: "3B5998")
+            facebookButton.subviews.first?.contentMode = .scaleAspectFit
+            facebookButton.roundConrners(masks: .rightCorners, radius: 10)
+        }
+
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         navigationController?.opaque(animated: true)

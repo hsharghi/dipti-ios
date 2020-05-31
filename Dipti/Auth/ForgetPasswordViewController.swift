@@ -22,6 +22,7 @@ class ForgetPasswordViewController: FormViewController {
             self.resultLabel.text = AppData.forgetPasswordResponse
             self.resultLabel.isHidden = false
             (self.view.subviews.filter {$0 is UIButton}.first as! UIButton).isEnabled = false
+            self.view.endEditing(true)
         }
     }
     

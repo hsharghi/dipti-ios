@@ -33,6 +33,12 @@ class FormViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+  
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        if let textField = textField as? SkyFloatingLabelTextField {
+            textField.errorMessage = nil
+        }
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if let textField = textField as? SkyFloatingLabelTextField {
@@ -75,19 +81,32 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     
     
     private func setupView() {
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "IRANSansWeb-Bold", size: 18)!]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
 
         roundButtons(in: self.view)
-        setTextFieldAlignments(in: self.view)
+        setupTextFields(in: self.view)
     }
     
-    private func setTextFieldAlignments(in view: UIView) {
+    private func setupTextFields(in view: UIView) {
         view.subviews.forEach { (view) in
             if let textBox = view as? SkyFloatingLabelTextField {
-                textBox.textAlignment = .center
-                textBox.titleLabel.textAlignment = .center
+                textBox.delegate = self
+                textBox.lineColor = .clear
+                textBox.roundConrners(masks: .allCorners, radius: 10)
+                textBox.titleColor = .clear
+                textBox.backgroundColor = UIColor(hexString: "F5F5F5")
+                textBox.titleFont = UIFont(name: "IRANSansWeb", size: 6)!
+                textBox.font = UIFont(name: "IRANSansWeb", size: 16)!
+                textBox.selectedTitleColor = .clear
+                textBox.selectedLineColor = UIColor(hexString: "F5F5F5")
+                textBox.titleLabel.textAlignment = textBox.textAlignment
+                if textBox.isSecureTextEntry {
+                    textBox.textAlignment = .center
+                }
             }
             if view.subviews.count > 0 {
-                setTextFieldAlignments(in: view)
+                setupTextFields(in: view)
             }
         }
     }
@@ -95,13 +114,13 @@ class FormViewController: UIViewController, UITextFieldDelegate {
     private func roundButtons(in view: UIView) {
         view.subviews.forEach { (view) in
             if let button = view as? UIButton {
-                button.roundConrners(masks: .allCorners, radius: 16)
+                button.roundConrners(masks: .allCorners, radius: 10)
             }
             if view.subviews.count > 0 {
                 roundButtons(in: view)
             }
         }
     }
-    
+        
 }
 

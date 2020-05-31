@@ -7,22 +7,23 @@
 //
 
 import UIKit
-import SkyFloatingLabelTextField
 
 
 class RegisterViewController: FormViewController {
     
-    @IBOutlet weak var name: SkyFloatingLabelTextField!
-    @IBOutlet weak var email: SkyFloatingLabelTextField!
-    @IBOutlet weak var phoneNumber: SkyFloatingLabelTextField!
-    @IBOutlet weak var password: SkyFloatingLabelTextField!
-    @IBOutlet weak var confirmPassword: SkyFloatingLabelTextField!
+    @IBOutlet weak var firstName: TitleBarTextField!
+    @IBOutlet weak var lastName: TitleBarTextField!
+    @IBOutlet weak var email: TitleBarTextField!
+    @IBOutlet weak var phoneNumber: TitleBarTextField!
+    @IBOutlet weak var password: TitleBarTextField!
+//    @IBOutlet weak var confirmPassword: SkyFloatingLabelTextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScrollView(scrollView, contentView: contentView)
+        view.viewWithTag(99)?.roundConrners(masks: .allCorners, radius: 8)
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
@@ -38,18 +39,23 @@ class RegisterViewController: FormViewController {
     private func validateFields() -> Bool {
         var validation = true
         
-        if (name.text ?? "").isEmpty {
-            name.errorMessage = "نام خود را وارد کنید"
+        if (firstName.text ?? "").isEmpty {
+            firstName.errorMessage = "نام خود را وارد کنید"
+            validation = false
+        }
+        
+        if (lastName.text ?? "").isEmpty {
+            lastName.errorMessage = "نام خانوادگی خود را وارد کنید"
             validation = false
         }
         
         if let phoneNumber = phoneNumber.text, !phoneNumber.isEmpty, phoneNumber.digits != phoneNumber {
-            self.phoneNumber.errorMessage = "شماره موبایل نامعتبر است"
+            self.phoneNumber.errorMessage = "شماره تلفن همراه نامعتبر است"
             validation = false
         }
         
         if (email.text ?? "").isEmpty {
-            email.errorMessage = "آدرس ایمیل معتبر نیست"
+            email.errorMessage = "پست الکترونیک معتبر نیست"
             validation = false
         }
         
@@ -60,12 +66,12 @@ class RegisterViewController: FormViewController {
             }
         }
         
-        if let password = password.text, let confirm = confirmPassword.text {
-            if password != confirm {
-                confirmPassword.errorMessage = "تکرار رمز عبور با رمز عبور وارد شده یکسان نیست"
-                validation = false
-            }
-        }
+//        if let password = password.text, let confirm = confirmPassword.text {
+//            if password != confirm {
+//                confirmPassword.errorMessage = "تکرار رمز عبور با رمز عبور وارد شده یکسان نیست"
+//                validation = false
+//            }
+//        }
         return validation
     }
     
