@@ -11,7 +11,9 @@ import UIKit
 class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var colors = [UIColor]()
-    var selectedIndex = 0
+    var selectedIndices: [Int] = []
+    var multiSelect: Bool = false
+    
     let cellSize = CGSize(width: 40, height: 40)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count
@@ -24,7 +26,7 @@ class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColorPickerCell.cellId, for: indexPath) as! ColorPickerCell
         
-        cell.selectedCell = (indexPath.item == selectedIndex) ? true : false
+        cell.selectedCell = selectedIndices.contains(indexPath.item) ? true : false
         cell.color = colors[indexPath.item]
         
         return cell
@@ -42,7 +44,17 @@ class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedIndex = indexPath.item
+        if multiSelect {
+            if selectedIndices.contains(indexPath.item) {
+                selectedIndices.remove(object: indexPath.item)
+            } else {
+                selectedIndices.append(indexPath.item)
+            }
+        } else {
+            selectedIndices.removeAll()
+            selectedIndices.append(indexPath.item)
+        }
+        
         reloadData()
     }
     
