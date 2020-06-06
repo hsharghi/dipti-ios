@@ -67,7 +67,7 @@ class Product: Models {
 class Category: Models, Equatable {
     
     static func == (lhs: Category, rhs: Category) -> Bool {
-        lhs.name == rhs.name && lhs.parent == lhs.parent
+        lhs.name == rhs.name && lhs.parent == rhs.parent
     }
     
     var name: String
