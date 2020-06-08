@@ -1,5 +1,5 @@
 //
-//  ColorPickerCollectionView.swift
+//  SizePickerCollectionView.swift
 //  Dipti
 //
 //  Created by Hadi Sharghi on 3/10/20.
@@ -8,34 +8,34 @@
 
 import UIKit
 
-class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class SizePickerCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var colors = [UIColor]()
+    var sizes = [String]()
     var selectedIndices: [Int] = []
     var multiSelect: Bool = false
     
-    let cellSize = CGSize(width: 40, height: 40)
+    let cellSize = CGSize(width: 60, height: 40)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return sizes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 40, height: 40)
+        return CGSize(width: 60, height: 40)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColorPickerCell.cellId, for: indexPath) as! ColorPickerCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SizePickerCell.cellId, for: indexPath) as! SizePickerCell
         
-        cell.selectedCell = selectedIndices.contains(indexPath.item) ? true : false
-        cell.color = colors[indexPath.item]
+        cell.selectedCell = selectedIndices.contains(indexPath.item)
+        cell.size = sizes[indexPath.item]
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 
-        let totalCellWidth: CGFloat = cellSize.width * CGFloat(colors.count)
-        let totalSpacingWidth: CGFloat = 10 * CGFloat(colors.count - 1)
+        let totalCellWidth: CGFloat = cellSize.width * CGFloat(sizes.count)
+        let totalSpacingWidth: CGFloat = 10 * CGFloat(sizes.count - 1)
 
         let leftInset = (self.bounds.width - (totalCellWidth + totalSpacingWidth)) / 2
         let rightInset = leftInset
@@ -62,28 +62,31 @@ class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UIC
     
 }
 
-class ColorPickerCell: UICollectionViewCell {
+class SizePickerCell: UICollectionViewCell {
     
-    static let cellId = "colorCell"
+    static let cellId = "sizeCell"
     @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var sizeLabel: UILabel!
+    
     var selectedCell = false
     
-    var color: UIColor? {
+    var size: String? {
         didSet {
-            if let color = color {
-                setupCell(with: color)
+            if let size = size {
+                setupCell(with: size)
             }
         }
     }
     
-    private func setupCell(with color: UIColor) {
-        contentView.layer.borderColor = AppData.color.yellow.cgColor
+    private func setupCell(with size: String) {
+        contentView.layer.borderColor = AppData.color.darkBlue.cgColor
         colorView.layer.cornerRadius = 17
         contentView.layer.cornerRadius = 20
         contentView.layer.borderWidth = self.selectedCell ? 3 : 0
-        colorView.backgroundColor = color
+        colorView.backgroundColor = AppData.color.yellow
         contentView.backgroundColor = UIColor.clear
         colorView.layer.masksToBounds = true;
+        sizeLabel.text = size
     }
 }
 
