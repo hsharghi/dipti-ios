@@ -11,6 +11,8 @@
 		0F0BD2FE24682E7B00B6B618 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */; };
 		0F0BD30024682F2200B6B618 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD2FF24682F2200B6B618 /* FormViewController.swift */; };
 		0F0BD3072468392100B6B618 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */; };
+		0F201573248BD1C900A069E1 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F201572248BD1C900A069E1 /* RoundedCornerView.swift */; };
+		0F201576248E448B00A069E1 /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F201575248E448B00A069E1 /* SearchFilter.swift */; };
 		0F2C20102483F3CD009A163C /* CategoryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2C200F2483F3CD009A163C /* CategoryWidget.swift */; };
 		0F3492AB23D83EB8001BD150 /* IRANSansWeb_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A523D83EB7001BD150 /* IRANSansWeb_Bold.ttf */; };
 		0F3492AC23D83EB8001BD150 /* IRANSansWeb_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3492A623D83EB7001BD150 /* IRANSansWeb_Medium.ttf */; };
@@ -69,6 +71,9 @@
 		0FB62D252483BC1B00DB68B1 /* TitleBarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB62D242483BC1B00DB68B1 /* TitleBarTextField.swift */; };
 		0FCDC47C24010C9B001FEAB4 /* UIStroyboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCDC47B24010C9B001FEAB4 /* UIStroyboard+Extension.swift */; };
 		0FCDC47E2401232C001FEAB4 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCDC47D2401232C001FEAB4 /* Cart.swift */; };
+		0FD5C2B8248B89E9006C05BF /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD5C2B7248B89E9006C05BF /* SearchFilterViewController.swift */; };
+		0FD5C2BB248B8EB7006C05BF /* MultiSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD5C2BA248B8EB7006C05BF /* MultiSlider */; };
+		0FD5C2BD248BC78B006C05BF /* SizePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD5C2BC248BC78B006C05BF /* SizePickerCollectionView.swift */; };
 		0FDD2C3523DEF1F5006EE934 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDD2C3423DEF1F5006EE934 /* ProductDetail.swift */; };
 		0FDD2C3823E02011006EE934 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FDD2C3723E02011006EE934 /* Product.storyboard */; };
 		0FEB3D4C24840F6E008DC4B9 /* AdvancedSearchCategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB3D4B24840F6E008DC4B9 /* AdvancedSearchCategoryTableView.swift */; };
@@ -96,6 +101,8 @@
 		0F0BD2FD24682E7B00B6B618 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		0F0BD2FF24682F2200B6B618 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		0F0BD3062468392100B6B618 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		0F201572248BD1C900A069E1 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		0F201575248E448B00A069E1 /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
 		0F2C200F2483F3CD009A163C /* CategoryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWidget.swift; sourceTree = "<group>"; };
 		0F3492A523D83EB7001BD150 /* IRANSansWeb_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb_Bold.ttf; sourceTree = "<group>"; };
 		0F3492A623D83EB7001BD150 /* IRANSansWeb_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansWeb_Medium.ttf; sourceTree = "<group>"; };
@@ -153,6 +160,8 @@
 		0FB62D242483BC1B00DB68B1 /* TitleBarTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarTextField.swift; sourceTree = "<group>"; };
 		0FCDC47B24010C9B001FEAB4 /* UIStroyboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStroyboard+Extension.swift"; sourceTree = "<group>"; };
 		0FCDC47D2401232C001FEAB4 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		0FD5C2B7248B89E9006C05BF /* SearchFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
+		0FD5C2BC248BC78B006C05BF /* SizePickerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePickerCollectionView.swift; sourceTree = "<group>"; };
 		0FDD2C3423DEF1F5006EE934 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		0FDD2C3723E02011006EE934 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		0FEB3D4B24840F6E008DC4B9 /* AdvancedSearchCategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchCategoryTableView.swift; sourceTree = "<group>"; };
@@ -179,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF8254223D99D19001F61D5 /* Cachy in Frameworks */,
+				0FD5C2BB248B8EB7006C05BF /* MultiSlider in Frameworks */,
 				0F5881A3244B4BAD0027C329 /* SkyFloatingLabelTextField in Frameworks */,
 				0F3492B523D84006001BD150 /* UIImageColors in Frameworks */,
 				0FF8254723D99F00001F61D5 /* SwiftHash in Frameworks */,
@@ -189,6 +199,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F201574248BD32C00A069E1 /* CustomUIControlls */ = {
+			isa = PBXGroup;
+			children = (
+				0F506BF123D740DA00303A1C /* CustomTabbar */,
+				0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */,
+				0FD5C2BC248BC78B006C05BF /* SizePickerCollectionView.swift */,
+				0F201572248BD1C900A069E1 /* RoundedCornerView.swift */,
+			);
+			path = CustomUIControlls;
+			sourceTree = "<group>";
+		};
 		0F460E7B23D480EA0052434F /* SettingsData */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,10 +320,9 @@
 				0FEF90B023D4AC8100D98060 /* Extensions */,
 				0F460E7B23D480EA0052434F /* SettingsData */,
 				0F506BEE23D73A5500303A1C /* Helpers */,
+				0F201574248BD32C00A069E1 /* CustomUIControlls */,
 				0F65DC8323D0A99B001E1CA9 /* AppDelegate.swift */,
-				0F99640B2417B214004DF118 /* ColorPickerCollectionView.swift */,
 				0F65DC8723D0A99B001E1CA9 /* ViewController.swift */,
-				0F506BF123D740DA00303A1C /* CustomTabbar */,
 				0F506BF223D7410200303A1C /* SideMenu */,
 				0F58819E244B43460027C329 /* Auth */,
 				0F506BF423D7412D00303A1C /* Intro */,
@@ -362,6 +382,8 @@
 				0FFFCA8E243DCDF40084AAE0 /* SearchResultTableViewCells.swift */,
 				0F67ED1C243C72E700C28C3A /* Search.storyboard */,
 				0FEB3D4B24840F6E008DC4B9 /* AdvancedSearchCategoryTableView.swift */,
+				0FD5C2B7248B89E9006C05BF /* SearchFilterViewController.swift */,
+				0F201575248E448B00A069E1 /* SearchFilter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -440,6 +462,7 @@
 				0FF8254123D99D19001F61D5 /* Cachy */,
 				0FF8254623D99F00001F61D5 /* SwiftHash */,
 				0F5881A2244B4BAD0027C329 /* SkyFloatingLabelTextField */,
+				0FD5C2BA248B8EB7006C05BF /* MultiSlider */,
 			);
 			productName = Dipti;
 			productReference = 0F65DC8023D0A99B001E1CA9 /* Dipti.app */;
@@ -475,6 +498,7 @@
 				0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */,
 				0FF8254523D99F00001F61D5 /* XCRemoteSwiftPackageReference "SwiftHash" */,
 				0F5881A1244B4BAD0027C329 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */,
+				0FD5C2B9248B8EB7006C05BF /* XCRemoteSwiftPackageReference "MultiSlider" */,
 			);
 			productRefGroup = 0F65DC8123D0A99B001E1CA9 /* Products */;
 			projectDirPath = "";
@@ -523,6 +547,7 @@
 				0F7DEEA5243DEA39002CA8B1 /* RoundShadowView.swift in Sources */,
 				0F506BED23D73A4700303A1C /* Embedder.swift in Sources */,
 				0F0BD2FC246827BF00B6B618 /* AuthNavigationController.swift in Sources */,
+				0FD5C2B8248B89E9006C05BF /* SearchFilterViewController.swift in Sources */,
 				0FEF90BB23D5E29300D98060 /* MainViewController.swift in Sources */,
 				0F0BD2FE24682E7B00B6B618 /* UINavigationController+Extensions.swift in Sources */,
 				0FF8255123DDB78F001F61D5 /* Date+Extensions.swift in Sources */,
@@ -533,6 +558,7 @@
 				0F460E8423D48E730052434F /* RightSideMenuViewController.swift in Sources */,
 				0F7DEEAB243E04D6002CA8B1 /* UIAlertController+Extensions.swift in Sources */,
 				0F99640C2417B214004DF118 /* ColorPickerCollectionView.swift in Sources */,
+				0F201576248E448B00A069E1 /* SearchFilter.swift in Sources */,
 				0FEF90B223D4AC9000D98060 /* UIView+Extensions.swift in Sources */,
 				0F3492BB23D853FE001BD150 /* BrandCollectionViewController.swift in Sources */,
 				0F5881A5245595E10027C329 /* LoginViewController.swift in Sources */,
@@ -544,6 +570,7 @@
 				0FFB10522407F21A000A6DA6 /* CustomCartView.swift in Sources */,
 				0F5881A924559F620027C329 /* RegisterViewController.swift in Sources */,
 				0F460E7F23D481690052434F /* SideMenuData.swift in Sources */,
+				0FD5C2BD248BC78B006C05BF /* SizePickerCollectionView.swift in Sources */,
 				0FDD2C3523DEF1F5006EE934 /* ProductDetail.swift in Sources */,
 				0F460E8123D4818C0052434F /* SideMenuFactory.swift in Sources */,
 				0FCDC47C24010C9B001FEAB4 /* UIStroyboard+Extension.swift in Sources */,
@@ -563,6 +590,7 @@
 				0F67ED13243B571600C28C3A /* Double+Extension.swift in Sources */,
 				0FA1CC4523E6A1B9002F0F8E /* ScrollableViewController.swift in Sources */,
 				0F59B4E723FC02A5008A9E13 /* ScrollableNavigationController.swift in Sources */,
+				0F201573248BD1C900A069E1 /* RoundedCornerView.swift in Sources */,
 				0F65DC9C23D0A9BF001E1CA9 /* IntroMainPageViewController.swift in Sources */,
 				0F67ED15243B577F00C28C3A /* UIPicker+Extensions.swift in Sources */,
 				0FFFCA8F243DCDF40084AAE0 /* SearchResultTableViewCells.swift in Sources */,
@@ -804,6 +832,14 @@
 				minimumVersion = 3.8.0;
 			};
 		};
+		0FD5C2B9248B8EB7006C05BF /* XCRemoteSwiftPackageReference "MultiSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yonat/MultiSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.10;
+			};
+		};
 		0FF8254023D99D18001F61D5 /* XCRemoteSwiftPackageReference "CachyKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Sadmansamee/CachyKit";
@@ -837,6 +873,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F5881A1244B4BAD0027C329 /* XCRemoteSwiftPackageReference "SkyFloatingLabelTextField" */;
 			productName = SkyFloatingLabelTextField;
+		};
+		0FD5C2BA248B8EB7006C05BF /* MultiSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FD5C2B9248B8EB7006C05BF /* XCRemoteSwiftPackageReference "MultiSlider" */;
+			productName = MultiSlider;
 		};
 		0FF8254123D99D19001F61D5 /* Cachy */ = {
 			isa = XCSwiftPackageProductDependency;
