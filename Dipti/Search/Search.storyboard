@@ -624,6 +624,8 @@
                     <connections>
                         <outlet property="categoryTableView" destination="DIr-tB-fbL" id="WR7-2w-Qjv"/>
                         <outlet property="colorCollectionView" destination="brk-hn-flH" id="Nw5-xu-fMe"/>
+                        <outlet property="maxPriceLabel" destination="a88-fs-XM5" id="EbX-Fa-BCy"/>
+                        <outlet property="minPriceLabel" destination="7qF-OA-k3R" id="f3o-je-dKy"/>
                         <outlet property="selectAllCategoriesButton" destination="J7T-UI-iaH" id="nWe-Sc-6nd"/>
                         <outlet property="sizeCollectionView" destination="Qkb-Lj-AFV" id="tTb-qK-aCC"/>
                         <outlet property="slider" destination="ikJ-RV-mjD" id="b8g-bE-u98"/>

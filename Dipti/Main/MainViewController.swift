@@ -36,6 +36,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        print(123450.wordifyFa)
+        
         AppData.main = self
         setupView()
         

@@ -114,6 +114,7 @@ class AdvancedSearchCategoryTableViewCell: UITableViewCell {
         bgView.roundConrners(masks: .allCorners, radius: 14)
         selectButton.roundConrners(masks: .allCorners, radius: 4)
         selectButton.setImage(UIImage(named: "check-button"), for: .selected)
+        selectButton.tintColor = AppData.color.yellow
     }
     
     

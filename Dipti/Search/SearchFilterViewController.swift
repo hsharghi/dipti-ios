@@ -20,7 +20,9 @@ class SearchFilterViewController: UIViewController {
     @IBOutlet weak var colorCollectionView: ColorPickerCollectionView!
     @IBOutlet weak var sizeCollectionView: SizePickerCollectionView!
     @IBOutlet weak var selectAllCategoriesButton: UIButton!
-
+    @IBOutlet weak var minPriceLabel: UILabel!
+    @IBOutlet weak var maxPriceLabel: UILabel!
+    
     weak var delegate: CateogryTableViewDelegate?
     
     override func viewDidLoad() {
@@ -46,6 +48,7 @@ class SearchFilterViewController: UIViewController {
     }
     
     @IBAction private func clearFilters() {
+        AppData.filter.clear()
         setupView()
     }
     
@@ -70,6 +73,9 @@ class SearchFilterViewController: UIViewController {
         slider.valueLabelFormatter.positiveSuffix = " تومان"
         slider.addTarget(self, action: #selector(sliderChanged(slider:)), for: .valueChanged)
         slider.addTarget(self, action: #selector(sliderDragEnded(slider:)), for: . touchUpInside)
+        minPriceLabel.text = AppData.filter.minPrice.wordifyFa
+        maxPriceLabel.text = AppData.filter.maxPrice.wordifyFa
+        slider.valueLabels.forEach({$0.font = UIFont(name: "IRANSansWeb", size: 12)})
 
     }
     
@@ -102,15 +108,20 @@ class SearchFilterViewController: UIViewController {
      }
 
     @objc func sliderChanged(slider: MultiSlider) {
-        print("thumb \(slider.draggedThumbIndex) moved")
-        print("now thumbs are at \(slider.value)") // e.g., [1.0, 4.5, 5.0]
+        if slider.draggedThumbIndex == 0 {
+            minPriceLabel.text = Int(slider.value[0]).wordifyFa
+        } else {
+            maxPriceLabel.text = Int(slider.value[1]).wordifyFa
+        }
     }
 
     @objc func sliderDragEnded(slider: MultiSlider) {
         if slider.draggedThumbIndex == 0 {
             AppData.filter.setPriceFilter(min: slider.value[0])
+            minPriceLabel.text = Int(slider.value[0]).wordifyFa
         } else {
             AppData.filter.setPriceFilter(max: slider.value[1])
+            maxPriceLabel.text = Int(slider.value[1]).wordifyFa
         }
         print("thumb \(slider.draggedThumbIndex) moved")
         print("now thumbs are at \(slider.value)") // e.g., [1.0, 4.5, 5.0]
