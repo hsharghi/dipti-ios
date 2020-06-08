@@ -10,18 +10,18 @@ import UIKit
 
 @IBDesignable class RoundedCornerView: UIView {
     
-        
+    
     /// A UIColor value that determines the color of the bottom line when in the normal state
     @IBInspectable dynamic open var cornerRadius: CGFloat = 0 {
         didSet {
             self.roundConrners(masks: .allCorners, radius: cornerRadius)
         }
     }
-
+    
     
     override func prepareForInterfaceBuilder() {
-      self.layer.cornerRadius = cornerRadius
-      self.layer.masksToBounds = true
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = true
     }
     
 }

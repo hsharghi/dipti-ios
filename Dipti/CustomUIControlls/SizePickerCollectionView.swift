@@ -8,11 +8,25 @@
 
 import UIKit
 
+protocol SizePickerCollectionViewDelegate: class {
+    func selectionChanged(selected: [String])
+}
+
+extension SizePickerCollectionView: SizePickerCollectionViewDelegate {
+    func selectionChanged(selected: [String]) { }
+}
+
+
 class SizePickerCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var sizes = [String]()
-    var selectedIndices: [Int] = []
+    var selectedIndices: [Int] = [] {
+        didSet {
+            reloadData()
+        }
+    }
     var multiSelect: Bool = false
+    var pickerDelegate: SizePickerCollectionViewDelegate?
     
     let cellSize = CGSize(width: 60, height: 40)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,11 +65,9 @@ class SizePickerCollectionView: UICollectionView, UICollectionViewDelegate, UICo
                 selectedIndices.append(indexPath.item)
             }
         } else {
-            selectedIndices.removeAll()
-            selectedIndices.append(indexPath.item)
+            selectedIndices = [indexPath.item]
         }
-        
-        reloadData()
+        pickerDelegate?.selectionChanged(selected: sizes.filter { selectedIndices.contains(sizes.firstIndex(of: $0)!) })
     }
     
     

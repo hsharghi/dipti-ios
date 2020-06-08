@@ -8,11 +8,26 @@
 
 import UIKit
 
+
+protocol ColorPickerCollectionViewDelegate: class {
+    func selectionChanged(selected: [UIColor])
+}
+
+extension ColorPickerCollectionView: ColorPickerCollectionViewDelegate {
+    func selectionChanged(selected: [UIColor]) { }
+}
+
+
 class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var colors = [UIColor]()
-    var selectedIndices: [Int] = []
+    var selectedIndices: [Int] = [] {
+        didSet {
+            reloadData()
+        }
+    }
     var multiSelect: Bool = false
+    var pickerDelegate: ColorPickerCollectionViewDelegate?
     
     let cellSize = CGSize(width: 40, height: 40)
 
@@ -53,11 +68,9 @@ class ColorPickerCollectionView: UICollectionView, UICollectionViewDelegate, UIC
                 selectedIndices.append(indexPath.item)
             }
         } else {
-            selectedIndices.removeAll()
-            selectedIndices.append(indexPath.item)
+            selectedIndices = [indexPath.item]
         }
-        
-        reloadData()
+        pickerDelegate?.selectionChanged(selected: colors.filter { selectedIndices.contains(colors.firstIndex(of: $0)!) })
     }
     
     
