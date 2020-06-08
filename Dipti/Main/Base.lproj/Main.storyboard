@@ -119,7 +119,7 @@
                                     <outlet property="delegate" destination="x5p-O7-vvn" id="1wa-xI-qsU"/>
                                 </connections>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advance-search" translatesAutoresizingMaskIntoConstraints="NO" id="GER-Pc-e9L">
+                            <imageView clipsSubviews="YES" tag="999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="advance-search" translatesAutoresizingMaskIntoConstraints="NO" id="GER-Pc-e9L">
                                 <rect key="frame" x="358" y="123" width="28" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="UkU-H0-Y4U"/>
@@ -223,6 +223,7 @@
                         <outlet property="cartButton" destination="jLm-Y6-lI4" id="vGz-PG-DcD"/>
                         <outlet property="containerView" destination="aZ1-QF-5x9" id="yWQ-lJ-JDa"/>
                         <outlet property="safeFixView" destination="mZf-kR-PM2" id="0Km-7A-3lR"/>
+                        <outlet property="searchFilterImageView" destination="GER-Pc-e9L" id="oVy-na-M8Z"/>
                         <outlet property="searchTextField" destination="sKO-2h-VCq" id="AF1-fW-4f6"/>
                         <outlet property="searchViewTopConstraint" destination="LDd-ei-Z5T" id="S8c-Q0-DAI"/>
                     </connections>

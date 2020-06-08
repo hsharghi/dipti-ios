@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var searchViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchTextField: PaddedTextField!
     @IBOutlet weak var cartButton: CustomCartButton!
+    @IBOutlet weak var searchFilterImageView: UIImageView!
+    
     //    @IBOutlet weak var searchContainer: UIView!
     //    @IBOutlet weak var searchContainerHeightConstraint: NSLayoutConstraint!
     
@@ -35,35 +37,50 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         AppData.main = self
-        
-        searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 50))
-        setupCartButton()
-        
-        safeFixView.backgroundColor = AppData.color.yellow
-        setupSideMenu()
-        toggleBackButton()
+        setupView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(searchFilterStatusChanged), name: NSNotification.Name(rawValue: AppData.searchFilterNotificationKey), object: nil)
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: AppData.searchFilterNotificationKey), object: nil)
     }
     
+    
+    private func setupView() {
+        searchTextField.setInset(insets: UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 50))
+        setupCartButton()
+        
+        safeFixView.backgroundColor = AppData.color.yellow
+        setupSideMenu()
+        toggleBackButton()
+
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(showSearchFilterVC))
+        searchFilterImageView.addGestureRecognizer(tapGR)
+        searchFilterStatusChanged()
+    }
+    
+    @objc private func searchFilterStatusChanged() {
+        if AppData.filter.isClear() {
+            searchFilterImageView.tintColor = AppData.color.gray
+        } else {
+            searchFilterImageView.tintColor = AppData.color.yellow
+        }
+    }
     
     private func setupCartButton() {
         let cartView = CustomCartView.instanceFromNib(frame: cartButton.frame)
         cartButton.setup(view: cartView, target: self)
         cartButton.badgeValue = 0
     }
-    
-    
-    
     
     @objc func keyboardWillShow(notification:NSNotification){
         
@@ -189,6 +206,13 @@ class MainViewController: UIViewController {
                                 vc.delegate = self
                                 vc.setSearchTerm(term: searchTerm)
                             }
+        }
+    }
+    
+    @objc private func showSearchFilterVC() {
+        if let filterView = UIStoryboard(name: "Search", bundle: nil)
+            .instantiateViewController(identifier: String(describing: SearchFilterViewController.self)) as? SearchFilterViewController {
+            self.present(filterView, animated: true)
         }
     }
 }
