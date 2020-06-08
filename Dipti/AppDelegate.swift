@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var alertWindow: UIWindow?
     var loginToken: String?
-    
+    var searchFilter = SearchFilter()
     
     var mainViewController: MainViewController? {
         didSet {

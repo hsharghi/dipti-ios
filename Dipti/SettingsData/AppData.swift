@@ -91,4 +91,13 @@ final class AppData {
         }
     }
     
+    static var filter: SearchFilter {
+        get {
+            return appDelegate.searchFilter
+        }
+        
+        set(newFilter) {
+            appDelegate.searchFilter = newFilter
+        }
+    }
 }
