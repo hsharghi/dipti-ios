@@ -35,7 +35,7 @@ class SearchFilterViewController: UIViewController {
         selectAllCategoriesButton.roundConrners(masks: .allCorners, radius: 10)
         self.delegate = categoryTableView
     }
-
+    
     private func setupView() {
         
         [100, 101].forEach({view.viewWithTag($0)?.roundConrners(masks: .allCorners, radius: 10)})
@@ -46,11 +46,7 @@ class SearchFilterViewController: UIViewController {
     }
     
     @IBAction private func clearFilters() {
-        AppData.filter.clear()
-        setupSlider()
-        setupColorCollection()
-        setupSizeCollection()
-        setupTableView()
+        setupView()
     }
     
     @IBAction private func assignFilters() {
