@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol CategoryTableViewDelegate {
+    func selectionChanged(selected: [Category])
+}
+
+extension AdvancedSearchCategoryTableView: CategoryTableViewDelegate {
+    func selectionChanged(selected: [Category]) { }
+}
+
 class AdvancedSearchCategoryTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -17,8 +25,13 @@ class AdvancedSearchCategoryTableView: UITableView, UITableViewDelegate, UITable
         }
     }
     
-    var selectedCategories: [Category] = []
+    var selectedCategories: [Category] = [] {
+        didSet {
+            reloadData()
+        }
+    }
     var countOfCategories: [Int] = []
+    var tableViewDelegate: CategoryTableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,7 +75,7 @@ extension AdvancedSearchCategoryTableView: CategoryCellDelegate {
             } else {
                 selectedCategories.append(categories[indexPath.row])
             }
-            reloadData()
+            tableViewDelegate?.selectionChanged(selected: selectedCategories)
         }
     }
 }
@@ -71,7 +84,6 @@ extension AdvancedSearchCategoryTableView: CateogryTableViewDelegate {
     func selectAllCategories() {
         selectedCategories.removeAll()
         selectedCategories.append(contentsOf: categories)
-        reloadData()
     }
 }
 
