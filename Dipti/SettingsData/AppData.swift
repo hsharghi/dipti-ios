@@ -14,7 +14,8 @@ final class AppData {
     static let loginStatusNotificationKey = "loginStatusNotificationKey"
     static let loginTokenDataKey = "loginTokenDataKey"
     static let sideMenuSelectNotificationKey = "sideMenuSelectNotificationKey"
-    
+    static let searchFilterNotificationKey = "searchFilterNotificationKey"
+
     ////////////////////////
     /// HomeViewController
     ////////////////////////
