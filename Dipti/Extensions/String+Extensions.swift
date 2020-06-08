@@ -80,6 +80,8 @@ extension String {
     var nsRange: NSRange {
         return NSRange(self.startIndex..., in: self)
     }
-
-    
+ 
+    var isNumeric : Bool {
+        return Double(self) != nil
+    }
 }
