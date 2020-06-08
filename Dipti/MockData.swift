@@ -61,6 +61,48 @@ class Product: Models {
         
     ]
     
+    static var allColors: [UIColor] {
+        var colors = [UIColor]()
+        _ = Product.mockedProducts.forEach { (product) in
+            product.options?.forEach({ (option) in
+                switch option {
+                case .color(let colorOptions):
+                    colors.append(contentsOf: colorOptions)
+                default: break
+                }
+            })
+        }
+        return colors
+    }
+    
+    static var allClothSizes: [String] {
+        var sizes = [String]()
+        _ = Product.mockedProducts.forEach { (product) in
+            product.options?.forEach({ (option) in
+                switch option {
+                case .size(let sizeOptions):
+                    sizes.append(contentsOf: sizeOptions.filter({!$0.isNumeric}))
+                default: break
+                }
+            })
+        }
+        return sizes
+    }
+
+    static var allShoeSizes: [String] {
+        var sizes = [String]()
+        _ = Product.mockedProducts.forEach { (product) in
+            product.options?.forEach({ (option) in
+                switch option {
+                case .size(let sizeOptions):
+                    sizes.append(contentsOf: sizeOptions.filter({$0.isNumeric}))
+                default: break
+                }
+            })
+        }
+        return sizes
+    }
+
 }
 
 
