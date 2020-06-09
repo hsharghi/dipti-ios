@@ -94,7 +94,9 @@ class Cart {
     
     
     func createOrder() -> Order {
-        return Order(id: Int.random(in: 100_000...999_999), checkoutCompletedAt: Date(), number: Models.generateID(), items: createItems(), itemsTotal: totalCount, total: totalValue, state: .new, currencyCode: "TMN", localeCode: "fa_IR", checkoutState: .completed)
+        let order = Order(id: Int.random(in: 100_000...999_999), checkoutCompletedAt: Date(), number: Models.generateID(), items: createItems(), itemsTotal: totalCount, total: totalValue, state: .new, currencyCode: "TMN", localeCode: "fa_IR", checkoutState: .completed)
+        clear()
+        return order
     }
     
     private func createItems() -> [OrderItem] {
