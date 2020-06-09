@@ -17,8 +17,8 @@ final class AppData {
     static let searchFilterNotificationKey = "searchFilterNotificationKey"
     
     // temporary
-    static let orderPaidNotificationKey = "searchFilterNotificationKey"
-    static let orderCanceledNotificationKey = "searchFilterNotificationKey"
+    static let orderPaidNotificationKey = "orderPaidNotificationKey"
+    static let orderCanceledNotificationKey = "orderCanceledNotificationKey"
     static let ordersDataKey = "ordersDataKey"
 
     ////////////////////////
@@ -102,7 +102,7 @@ final class AppData {
             if let arrayOfJson  = UserDefaults.standard.array(forKey: ordersDataKey) as? [String]
             {
                 do {
-                    return try arrayOfJson.compactMap({try Order($0)})
+                    return try arrayOfJson.compactMap({try Order($0)}).sorted(by: {$0.checkoutCompletedAt > $1.checkoutCompletedAt})
                 } catch {
                     print(error)
                     return []
