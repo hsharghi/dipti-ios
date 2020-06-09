@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pbZ-FN-K0N">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansWeb_Bold.ttf">
+            <string>IRANSansWeb-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Payment View Controller-->
+        <scene sceneID="QOS-mg-iqK">
+            <objects>
+                <viewController id="pbZ-FN-K0N" customClass="PaymentViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="er3-FM-gZu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="7AO-ft-fhC">
+                                <rect key="frame" x="60" y="361" width="294" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeT-Eq-UzM">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.66799625880281688" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HTR-Y4-XA7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                        <state key="normal" title="پرداخت با درگاه اینترنتی">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="payButtonTapped:" destination="pbZ-FN-K0N" eventType="touchUpInside" id="ktN-fB-CII"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP9-BI-c9m">
+                                        <rect key="frame" x="0.0" y="114" width="294" height="60"/>
+                                        <color key="backgroundColor" red="0.92957746478873238" green="0.28386953349718308" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="uVr-9l-oAd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                        <state key="normal" title="انصراف از پرداخت">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="pbZ-FN-K0N" eventType="touchUpInside" id="IAb-lA-Cef"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7AO-ft-fhC" firstAttribute="leading" secondItem="qBn-z2-d2S" secondAttribute="leading" constant="60" id="5u6-vZ-Srm"/>
+                            <constraint firstItem="qBn-z2-d2S" firstAttribute="trailing" secondItem="7AO-ft-fhC" secondAttribute="trailing" constant="60" id="7G7-Tg-eXH"/>
+                            <constraint firstItem="7AO-ft-fhC" firstAttribute="centerX" secondItem="er3-FM-gZu" secondAttribute="centerX" id="Bow-zm-rKc"/>
+                            <constraint firstItem="7AO-ft-fhC" firstAttribute="centerY" secondItem="er3-FM-gZu" secondAttribute="centerY" id="Ybg-G6-vZO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qBn-z2-d2S"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcP-kT-Qwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.43478260869566" y="163.39285714285714"/>
+        </scene>
+    </scenes>
+</document>
