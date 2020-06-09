@@ -29,6 +29,17 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
     }
     
+    
+    @IBAction func payButtonTapped(_ sender: Any) {
+        if let vc = UIStoryboard(name: "Payment", bundle: nil).instantiateInitialViewController() as? PaymentViewController {
+            let order = AppData.cart.createOrder()
+            AppHelper.addOrder(order: order)
+            vc.order = order
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppData.cart.uniqueCount
     }
