@@ -42,6 +42,21 @@ class AppHelper {
     }
 
     
+    static func addOrder(order: Order) {
+        var orders = AppData.orders
+        orders.append(order)
+        AppData.orders = orders
+    }
+    
+    static func updateOrder(order: Order) {
+        var orders = AppData.orders
+        if let theOrder = orders.filter({$0.id == order.id}).first {
+            orders.replace(object: theOrder, with: order)
+        }
+        AppData.orders = orders
+    }
+
+    
     static func showAlert(_ title: String, message: String?, dismissButtonTitle: String = "OK", actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
         AppData.appDelegate.showAlert(title, message: message ?? "", dismissButtonTitle: dismissButtonTitle, actions: actions, completion: completion)
     }
@@ -53,6 +68,15 @@ class AppHelper {
     
     class func showLogin(in viewController: UIViewController, completion: (() -> Void)? = nil) {
         let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateInitialViewController() as! AuthNavigationController
+        viewController.present(vc, animated: true) {
+            if let completion = completion {
+                completion()
+            }
+        }
+    }
+
+    class func showOrders(in viewController: UIViewController, completion: (() -> Void)? = nil) {
+        let vc = UIStoryboard(name: "Order", bundle: nil).instantiateInitialViewController() as! OrderListTableViewController
         viewController.present(vc, animated: true) {
             if let completion = completion {
                 completion()
