@@ -8,10 +8,16 @@
 
 import Foundation
 
-class Models: Codable {
+class Models {
     class func generateID(length: Int = 10) -> String {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890-"
         return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
+    class func generateID(length: Int = 10) -> Int {
+        let letters = "1234567890"
+        let stringId = String((0..<length).map{ _ in letters.randomElement()! })
+        return Int(stringId)!
     }
     
 }
