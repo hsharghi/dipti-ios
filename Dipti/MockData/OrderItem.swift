@@ -1,5 +1,5 @@
 //
-//  Models.swift
+//  OrderItem.swift
 //  Dipti
 //
 //  Created by Hadi Sharghi on 6/9/20.
@@ -8,18 +8,19 @@
 
 import Foundation
 
-// MARK: - Item
-class Item: Codable {
-    var id, quantity, unitPrice, total: Int
+// MARK: - OrderItem
+class OrderItem: Codable {
+    var id: String
+    var quantity, unitPrice, total: Int
     var adjustments: [Adjustment]?
-    var adjustmentsTotal: Int
+    var adjustmentsTotal: Int?
     var variant: Variant?
     
     enum CodingKeys: String, CodingKey {
         case id, quantity, unitPrice, total, adjustments, adjustmentsTotal, variant
     }
     
-    init(id: Int, quantity: Int, unitPrice: Int, total: Int, adjustments: [Adjustment]? = nil, adjustmentsTotal: Int, variant: Variant? = nil) {
+    init(id: String, quantity: Int, unitPrice: Int, total: Int, adjustments: [Adjustment]? = nil, adjustmentsTotal: Int? = nil, variant: Variant? = nil) {
         self.id = id
         self.quantity = quantity
         self.unitPrice = unitPrice
@@ -30,11 +31,11 @@ class Item: Codable {
     }
 }
 
-// MARK: Item convenience initializers and mutators
+// MARK: OrderItem convenience initializers and mutators
 
-extension Item {
+extension OrderItem {
     convenience init(data: Data) throws {
-        let me = try newJSONDecoder().decode(Item.self, from: data)
+        let me = try newJSONDecoder().decode(OrderItem.self, from: data)
         self.init(id: me.id, quantity: me.quantity, unitPrice: me.unitPrice, total: me.total, adjustments: me.adjustments, adjustmentsTotal: me.adjustmentsTotal, variant: me.variant)
     }
     
@@ -51,15 +52,15 @@ extension Item {
     
     
     func with(
-        id: Int? = nil,
+        id: String? = nil,
         quantity: Int? = nil,
         unitPrice: Int? = nil,
         total: Int? = nil,
         adjustments: [Adjustment]? = nil,
         adjustmentsTotal: Int? = nil,
         variant: Variant? = nil
-    ) -> Item {
-        return Item(
+    ) -> OrderItem {
+        return OrderItem(
             id: id ?? self.id,
             quantity: quantity ?? self.quantity,
             unitPrice: unitPrice ?? self.unitPrice,
