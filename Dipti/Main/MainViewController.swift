@@ -48,6 +48,10 @@ class MainViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(searchFilterStatusChanged), name: NSNotification.Name(rawValue: AppData.searchFilterNotificationKey), object: nil)
 
+        // temporary
+        NotificationCenter.default.addObserver(self, selector: #selector(paymentCallback(notification:)), name: NSNotification.Name(rawValue: AppData.orderPaidNotificationKey), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(paymentCallback(notification:)), name: NSNotification.Name(rawValue: AppData.orderCanceledNotificationKey), object: nil)
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,6 +59,10 @@ class MainViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: AppData.searchFilterNotificationKey), object: nil)
+
+        // temporary
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: AppData.orderPaidNotificationKey), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: AppData.orderCanceledNotificationKey), object: nil)
     }
     
     
@@ -70,6 +78,18 @@ class MainViewController: UIViewController {
         searchFilterImageView.addGestureRecognizer(tapGR)
         searchFilterStatusChanged()
     }
+    
+    
+    @objc private func paymentCallback(notification: Notification) {
+        if let order = notification.userInfo?["order"] as? Order {
+            if notification.name.rawValue == AppData.orderPaidNotificationKey {
+                order.state = .fulfilled
+                AppHelper.updateOrder(order: order)
+            }
+        }
+        self.dismiss(animated: true)
+    }
+    
     
     @objc private func searchFilterStatusChanged() {
         if AppData.filter.isClear() {
