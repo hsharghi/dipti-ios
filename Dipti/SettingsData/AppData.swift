@@ -15,6 +15,11 @@ final class AppData {
     static let loginTokenDataKey = "loginTokenDataKey"
     static let sideMenuSelectNotificationKey = "sideMenuSelectNotificationKey"
     static let searchFilterNotificationKey = "searchFilterNotificationKey"
+    
+    // temporary
+    static let orderPaidNotificationKey = "searchFilterNotificationKey"
+    static let orderCanceledNotificationKey = "searchFilterNotificationKey"
+    static let ordersDataKey = "ordersDataKey"
 
     ////////////////////////
     /// HomeViewController
@@ -92,6 +97,31 @@ final class AppData {
         }
     }
     
+    static var orders: [Order] {
+        get {
+            if let arrayOfJson  = UserDefaults.standard.array(forKey: ordersDataKey) as? [String]
+            {
+                do {
+                    return try arrayOfJson.compactMap({try Order($0)})
+                } catch {
+                    print(error)
+                    return []
+                }
+            }
+            return []
+        }
+        
+        set(orders) {
+            do {
+                let arrayOfJson = try orders.compactMap({try $0.jsonString()})
+                UserDefaults.standard.set(arrayOfJson, forKey: ordersDataKey)
+                UserDefaults.standard.synchronize()
+            } catch {
+                print(error)
+            }
+        }
+    }
+
     static var filter: SearchFilter {
         get {
             return appDelegate.searchFilter
