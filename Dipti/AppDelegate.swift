@@ -55,7 +55,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     @objc private func sideMenuItemTapped(notification: Notification) {
+        if let selector = notification.userInfo?["selector"] as? String {
+            switch selector {
+            case "login":
+                showLogin()
+            case "logout":
+                logout()
+            case "orders":
+                showOrders()
+            default:
+                break
+            }
+        }
         print(notification.userInfo)
+    }
+
+    private func showOrders() {
+        if let vc = window?.rootViewController {
+            vc.dismiss(animated: true) {
+                AppHelper.showOrders(in: vc) {
+                        print("completed!")
+                }
+            }
+        }
+    }
+    
+    private func showLogin() {
         if let vc = window?.rootViewController {
             vc.dismiss(animated: true) {
                 AppHelper.showLogin(in: vc) {
@@ -65,6 +90,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    private func logout() {
+        AppData.loginToken = nil
+    }
     
     func showAlert(_ title: String, titleFont: UIFont? = nil, message: String, messageFont: UIFont? = nil, dismissButtonTitle: String = "OK", actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
