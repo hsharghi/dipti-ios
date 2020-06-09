@@ -51,7 +51,7 @@ class Cart {
             return value + item.count * item.item.price
         }
         return value
-
+        
     }
     
     func add(item: Product, count: Int = 1) {
@@ -90,6 +90,18 @@ class Cart {
     
     private func itemsChanged() {
         delegate?.cartItemsChanged(count: self.totalCount)
+    }
+    
+    
+    func createOrder() -> Order {
+        return Order(id: Int.random(in: 100_000...999_999), checkoutCompletedAt: Date(), number: Models.generateID(), items: createItems(), itemsTotal: totalCount, total: totalValue, state: .new, currencyCode: "TMN", localeCode: "fa_IR", checkoutState: .completed)
+    }
+    
+    private func createItems() -> [OrderItem] {
+        return items.compactMap { (item) -> OrderItem in
+            let product = item.item
+            return OrderItem(id: product.id , quantity: item.count, unitPrice: product.price, total: item.count * product.price)
+        }
     }
 }
 
