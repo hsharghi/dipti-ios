@@ -9,32 +9,60 @@
 import UIKit
 
 // MARK: - Order
-class Order: Codable {
+class Order: Models, Codable {
+    
+    enum OrderState: String, Codable {
+            case    cart    //Unconfirmed order, ready to add/remove items
+            case    new    //Confirmed order
+            case    cancelled    //Cancelled by customer or manager
+            case    fulfilled    //Order has been fulfilled
+    }
+    
+    enum CheckoutState: String, Codable {
+        case cart
+        case addressed
+        case shipping_selected
+        case payment_selected
+        case completed
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id, checkoutCompletedAt, number, items, itemsTotal, adjustments, adjustmentsTotal, total, customer, channel, shippingAddress, billingAddress, payments, shipments, currencyCode, localeCode
+        case state = "__state"  // unused key
+        case checkoutState = "__checkoutState"  // unused key
+        case stateString = "state"
+        case checkoutStateString = "checkoutState"
+    }
+    
     var id: Int
     var checkoutCompletedAt: Date
     var number: String
-    var items: [Item]
+    var items: [OrderItem]
     var itemsTotal: Int
-    var adjustments: [Adjustment]
+    var adjustments: [Adjustment]?
     var adjustmentsTotal, total: Int
-    var state: String
-    var customer: Customer
-    var channel: Channel
-    var shippingAddress, billingAddress: Address
-    var payments: [Payment]
-    var shipments: [Shipment]
-    var currencyCode, localeCode, checkoutState: String
+    var state: OrderState
+    var stateString: String
+    var checkoutState: CheckoutState
+    var checkoutStateString: String
+    var customer: Customer?
+    var channel: Channel?
+    var shippingAddress, billingAddress: Address?
+    var payments: [Payment]?
+    var shipments: [Shipment]?
+    var currencyCode, localeCode: String
 
-    init(id: Int, checkoutCompletedAt: Date, number: String, items: [Item], itemsTotal: Int, adjustments: [Adjustment], adjustmentsTotal: Int, total: Int, state: String, customer: Customer, channel: Channel, shippingAddress: Address, billingAddress: Address, payments: [Payment], shipments: [Shipment], currencyCode: String, localeCode: String, checkoutState: String) {
+    init(id: Int, checkoutCompletedAt: Date, number: String, items: [OrderItem], itemsTotal: Int, adjustments: [Adjustment]? = nil, adjustmentsTotal: Int? = nil, total: Int, state: OrderState, customer: Customer? = nil, channel: Channel? = nil, shippingAddress: Address? = nil, billingAddress: Address? = nil, payments: [Payment]? = nil, shipments: [Shipment]? = nil, currencyCode: String, localeCode: String, checkoutState: CheckoutState) {
         self.id = id
         self.checkoutCompletedAt = checkoutCompletedAt
         self.number = number
         self.items = items
         self.itemsTotal = itemsTotal
         self.adjustments = adjustments
-        self.adjustmentsTotal = adjustmentsTotal
+        self.adjustmentsTotal = adjustments == nil ? total : (adjustmentsTotal ?? total)
         self.total = total
         self.state = state
+        self.stateString = state.rawValue
         self.customer = customer
         self.channel = channel
         self.shippingAddress = shippingAddress
@@ -44,6 +72,7 @@ class Order: Codable {
         self.currencyCode = currencyCode
         self.localeCode = localeCode
         self.checkoutState = checkoutState
+        self.checkoutStateString = checkoutState.rawValue
     }
 }
 
@@ -70,12 +99,12 @@ extension Order {
         id: Int? = nil,
         checkoutCompletedAt: Date? = nil,
         number: String? = nil,
-        items: [Item]? = nil,
+        items: [OrderItem]? = nil,
         itemsTotal: Int? = nil,
         adjustments: [Adjustment]? = nil,
         adjustmentsTotal: Int? = nil,
         total: Int? = nil,
-        state: String? = nil,
+        state: OrderState? = nil,
         customer: Customer? = nil,
         channel: Channel? = nil,
         shippingAddress: Address? = nil,
@@ -84,7 +113,7 @@ extension Order {
         shipments: [Shipment]? = nil,
         currencyCode: String? = nil,
         localeCode: String? = nil,
-        checkoutState: String? = nil
+        checkoutState: CheckoutState? = nil
     ) -> Order {
         return Order(
             id: id ?? self.id,
