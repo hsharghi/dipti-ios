@@ -147,3 +147,8 @@ extension Order {
 }
 
 
+extension Order: Equatable {
+    static func == (lhs: Order, rhs: Order) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
