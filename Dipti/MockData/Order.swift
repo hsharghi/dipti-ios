@@ -74,6 +74,19 @@ class Order: Models, Codable {
         self.checkoutState = checkoutState
         self.checkoutStateString = checkoutState.rawValue
     }
+    
+    func statusToText() -> String {
+        switch self.state {
+        case .cancelled:
+            return "کنسل شده"
+        case .cart:
+            return "منتظر پرداخت"
+        case .fulfilled:
+            return "پرداخت شده"
+        case .new:
+            return "جدید"
+        }
+    }
 }
 
 // MARK: Order convenience initializers and mutators
