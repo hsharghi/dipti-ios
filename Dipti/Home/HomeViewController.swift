@@ -64,7 +64,7 @@ extension HomeViewController: CollectionWidgetDelegate {
         if let vc = UIStoryboard(name: "Product", bundle: nil).instantiateInitialViewController() as? ProductListViewController {
             AppData.main?.pushViewController(viewController: vc) { vc in
                 if let vc = vc as? ProductListViewController {
-                    vc.products = ProductMockFactory.mockProducts(count: 20)
+                    vc.products = AppData.appDelegate.mockFactory.products
                 }
             }
         }
