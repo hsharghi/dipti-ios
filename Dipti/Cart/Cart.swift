@@ -102,7 +102,7 @@ class Cart {
     private func createItems() -> [OrderItem] {
         return items.compactMap { (item) -> OrderItem in
             let product = item.item
-            return OrderItem(id: product.id , quantity: item.count, unitPrice: product.price, total: item.count * product.price)
+            return OrderItem(id: product.id , quantity: item.count, unitPrice: product.price, total: item.count * product.price, designer: product.designer, productName: product.title, imageName: product.image)
         }
     }
 }
