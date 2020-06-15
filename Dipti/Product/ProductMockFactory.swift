@@ -11,9 +11,13 @@ import Foundation
 class ProductMockFactory {
     
     var count: Int
+    var products: [Product]
+    var categories: [Category]
     
     init(count: Int) {
         self.count = count
+        self.products = Self.mockProducts(count: count)
+        self.categories = Self.mockCategories()
     }
     
     
