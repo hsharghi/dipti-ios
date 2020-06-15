@@ -37,7 +37,7 @@ class Product: Models {
     var category: Category
     var options: [ProductOption.Option]?
     lazy var priceLabel: String  = { [unowned self] in
-        return AppHelper.formatNumber(number: self.price, withLocale: "fa_IR", addSuffix: "تومان")
+        return AppHelper.formatNumber(self.price, withLocale: "fa_IR", addSuffix: "تومان ")
         }()
     
     static let mockedProducts = [
