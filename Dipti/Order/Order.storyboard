@@ -156,7 +156,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="USp-8X-UTP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="سفارش ها" id="fV7-ex-d6W"/>
+                    <navigationItem key="navigationItem" title="سفارش ها" id="fV7-ex-d6W">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Jpd-V7-Dj8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="orderType" destination="d9g-2o-jA9" id="IEg-xc-vDn"/>
                         <outlet property="tableView" destination="tAk-tR-24I" id="iey-Gr-QFb"/>
@@ -192,26 +194,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qOe-BU-jOL">
-                                                    <rect key="frame" x="294" y="20" width="80" height="80"/>
+                                                    <rect key="frame" x="294" y="10" width="100" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="VRv-Nr-rX5"/>
-                                                        <constraint firstAttribute="width" constant="80" id="xvU-3J-g2n"/>
+                                                        <constraint firstAttribute="height" constant="100" id="VRv-Nr-rX5"/>
+                                                        <constraint firstAttribute="width" constant="100" id="xvU-3J-g2n"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ps1-tu-Av1">
-                                                    <rect key="frame" x="254" y="79.5" width="32" height="16.5"/>
+                                                    <rect key="frame" x="254" y="89.5" width="32" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWn-QS-awV">
-                                                    <rect key="frame" x="256" y="24" width="30" height="19"/>
+                                                    <rect key="frame" x="256" y="14" width="30" height="19"/>
                                                     <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Y-GZ-Pv0">
-                                                    <rect key="frame" x="258.5" y="41" width="27.5" height="12"/>
+                                                    <rect key="frame" x="258.5" y="31" width="27.5" height="12"/>
                                                     <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="10"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -260,7 +262,7 @@
                                                 <constraint firstItem="h2Y-GZ-Pv0" firstAttribute="top" secondItem="QWn-QS-awV" secondAttribute="bottom" constant="-2" id="iPh-k6-VmW"/>
                                                 <constraint firstAttribute="bottom" secondItem="irY-r4-I8C" secondAttribute="bottom" id="ryJ-QH-adB"/>
                                                 <constraint firstItem="JV9-c3-rb3" firstAttribute="leading" secondItem="kh3-QI-jkO" secondAttribute="leading" id="tSC-Js-TCY"/>
-                                                <constraint firstItem="qOe-BU-jOL" firstAttribute="trailing" secondItem="kh3-QI-jkO" secondAttribute="trailingMargin" id="u67-LD-ilW"/>
+                                                <constraint firstItem="qOe-BU-jOL" firstAttribute="trailing" secondItem="kh3-QI-jkO" secondAttribute="trailing" id="u67-LD-ilW"/>
                                                 <constraint firstItem="ps1-tu-Av1" firstAttribute="trailing" secondItem="QWn-QS-awV" secondAttribute="trailing" id="vxJ-i5-fox"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -290,7 +292,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SPA-zR-7DE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="سفارش شماره ۰۰۰۰۰" id="jNz-p4-in1"/>
+                    <navigationItem key="navigationItem" title="سفارش شماره ۰۰۰۰۰" id="jNz-p4-in1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Es2-7j-wfU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="orderDate" destination="eJO-yq-w5U" id="3Fz-Vh-sTL"/>
                         <outlet property="tableView" destination="8MT-dZ-gYY" id="LD2-U7-XOW"/>

@@ -67,13 +67,19 @@ class OrderListTableViewCell: UITableViewCell {
     var order: Order? {
         didSet {
             if let order = order {
-//                thumbnail = CollageImage.collage(rect: thumbnail.bounds, images: order.items)
+                thumbnail.image = CollageImage.collage(rect: thumbnail.bounds, images: order.images())
                 orderNumber.text = order.number
                 orderStatus.text = order.statusToText()
-                orderTotal.text = "\(order.total)".toFa() + "تومان"
+                orderTotal.text = AppHelper.formatNumber(order.total, withLocale: "fa_IR", addSuffix: " تومان")
             }
         }
     }
  
     
+}
+
+extension Order {
+    func images() -> [UIImage] {
+        return self.items.compactMap({UIImage(named: $0.imageName ?? "")})
+    }
 }

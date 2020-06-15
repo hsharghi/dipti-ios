@@ -91,10 +91,10 @@ class OrderItemTableViewCell: UITableViewCell {
         didSet {
             if let item = item {
                 productTitle.text = item.id
-                price.text = AppHelper.formatNumber(item.unitPrice, withLocale: "fa_IR", addSuffix: "تومان ")
+                price.text = AppHelper.formatNumber(item.unitPrice, withLocale: "fa_IR", addSuffix: " تومان")
                 countLabel.text =  AppHelper.formatNumber(item.quantity, withLocale: "fa_IR", addSuffix: " عدد")
                 statusLabel.text = ["درحال بررسی", "درحال آماده سازی", "آماده ارسال"].randomElement()
-                productImage.image = Product.mockedProducts.filter({$0.id == item.id}).first?.uiImage()
+                productImage.image = UIImage(named: item.imageName ?? "")
             }
         }
     }
