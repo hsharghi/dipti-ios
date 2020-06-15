@@ -16,11 +16,16 @@ class OrderItem: Codable {
     var adjustmentsTotal: Int?
     var variant: Variant?
     
+    // temporary
+    var designer: String?
+    var productName: String?
+    var imageName: String?
+    
     enum CodingKeys: String, CodingKey {
-        case id, quantity, unitPrice, total, adjustments, adjustmentsTotal, variant
+        case id, quantity, unitPrice, total, adjustments, adjustmentsTotal, variant, designer, productName, imageName
     }
     
-    init(id: String, quantity: Int, unitPrice: Int, total: Int, adjustments: [Adjustment]? = nil, adjustmentsTotal: Int? = nil, variant: Variant? = nil) {
+    init(id: String, quantity: Int, unitPrice: Int, total: Int, adjustments: [Adjustment]? = nil, adjustmentsTotal: Int? = nil, variant: Variant? = nil, designer: String? = nil, productName: String? = nil, imageName: String? = nil) {
         self.id = id
         self.quantity = quantity
         self.unitPrice = unitPrice
@@ -28,6 +33,9 @@ class OrderItem: Codable {
         self.adjustments = adjustments
         self.adjustmentsTotal = adjustments == nil ? total : adjustmentsTotal
         self.variant = variant
+        self.designer = designer
+        self.productName = productName
+        self.imageName = imageName
     }
 }
 
@@ -36,7 +44,7 @@ class OrderItem: Codable {
 extension OrderItem {
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(OrderItem.self, from: data)
-        self.init(id: me.id, quantity: me.quantity, unitPrice: me.unitPrice, total: me.total, adjustments: me.adjustments, adjustmentsTotal: me.adjustmentsTotal, variant: me.variant)
+        self.init(id: me.id, quantity: me.quantity, unitPrice: me.unitPrice, total: me.total, adjustments: me.adjustments, adjustmentsTotal: me.adjustmentsTotal, variant: me.variant, designer: me.designer, productName: me.productName, imageName: me.imageName)
     }
     
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -58,7 +66,10 @@ extension OrderItem {
         total: Int? = nil,
         adjustments: [Adjustment]? = nil,
         adjustmentsTotal: Int? = nil,
-        variant: Variant? = nil
+        variant: Variant? = nil,
+        designer: String? = nil,
+        productName: String? = nil,
+        imageName: String? = nil
     ) -> OrderItem {
         return OrderItem(
             id: id ?? self.id,
@@ -67,7 +78,10 @@ extension OrderItem {
             total: total ?? self.total,
             adjustments: adjustments ?? self.adjustments,
             adjustmentsTotal: adjustmentsTotal ?? self.adjustmentsTotal,
-            variant: variant ?? self.variant
+            variant: variant ?? self.variant,
+            designer: designer ?? self.designer,
+            productName: productName ?? self.productName,
+            imageName: imageName ?? self.imageName
         )
     }
     
@@ -78,5 +92,9 @@ extension OrderItem {
     
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
         return String(data: try self.jsonData(), encoding: encoding)
+    }
+    
+    func relatedProduct() -> Product? {
+        return AppData.appDelegate.mockFactory.products.filter({$0.id == self.id}).first
     }
 }
