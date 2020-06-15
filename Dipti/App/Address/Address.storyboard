@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rcI-yY-Le1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansWeb.ttf">
+            <string>IRANSansWeb</string>
+        </array>
+        <array key="IRANSansWeb_Bold.ttf">
+            <string>IRANSansWeb-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rS0-wJ-8Q8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rcI-yY-Le1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a4P-Tb-5vL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xhL-mA-LK3" kind="relationship" relationship="rootViewController" id="rCS-2H-BzZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVs-A4-SZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30120" y="-273"/>
+        </scene>
+        <!--آدرس های پستی-->
+        <scene sceneID="E2h-iY-Xzd">
+            <objects>
+                <tableViewController storyboardIdentifier="AddressListTableViewController" id="xhL-mA-LK3" customClass="AddressListTableViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UB7-Ap-kfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="addressListCell" textLabel="aR3-u6-hZs" detailTextLabel="w1D-q0-QgH" rowHeight="87" style="IBUITableViewCellStyleSubtitle" id="biX-Kq-dxP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="biX-Kq-dxP" id="ise-8N-0Gr">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aR3-u6-hZs">
+                                            <rect key="frame" x="20" y="23" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w1D-q0-QgH">
+                                            <rect key="frame" x="20" y="46.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tWz-A5-XcI" kind="show" identifier="showAddressDetail" id="dTH-VD-6M4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xhL-mA-LK3" id="QG5-MJ-H6P"/>
+                            <outlet property="delegate" destination="xhL-mA-LK3" id="XwG-zf-hFK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="آدرس های پستی" id="DbH-cc-YSd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="vJi-mQ-am0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="63S-Nl-kbG">
+                            <color key="tintColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addNewButtonTapped:" destination="xhL-mA-LK3" id="SBV-s2-0Oi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jiu-Fy-IZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31030" y="-273"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="0rK-6E-Vpp">
+            <objects>
+                <viewController storyboardIdentifier="AddressViewController" id="tWz-A5-XcI" customClass="AddressViewController" customModule="Dipti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRx-Hv-Gjh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tT-Y4-c5p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RlK-VB-UJG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <view tag="99" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDU-QE-p42" customClass="RoundedCornerView" customModule="Dipti" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="80" width="374" height="451.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hix-6E-C72">
+                                                        <rect key="frame" x="10" y="50" width="354" height="381.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1M6-49-9Ml">
+                                                                <rect key="frame" x="0.0" y="0.0" width="354" height="53.5"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="nNc-aC-ygH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="172" height="53.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام خانوادگی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9e-Bo-a2L">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="16.5"/>
+                                                                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbO-jw-qi2" userLabel="نام" customClass="TitleBarTextField" customModule="Dipti" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="19.5" width="172" height="34"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rtl" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="NkF-da-ouf">
+                                                                        <rect key="frame" x="182" y="0.0" width="172" height="53.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qN-24-FPL">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="16.5"/>
+                                                                                <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91e-is-FDy" userLabel="نام" customClass="TitleBarTextField" customModule="Dipti" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="19.5" width="172" height="34"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                        <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                                        <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rtl" value="YES"/>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </textField>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rtf-Ca-cH1">
+                                                                <rect key="frame" x="0.0" y="65.5" width="354" height="53.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهر" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-Xf-1td">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gME-Xp-26H" customClass="TitleBarTextField" customModule="Dipti" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="address-level2"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                                <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                                <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rtl" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mPL-kq-Nwi">
+                                                                <rect key="frame" x="0.0" y="131" width="354" height="119.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آدرس" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYE-do-upv">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-79-Yp5">
+                                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="100"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="100" id="d1a-iI-fYc"/>
+                                                                        </constraints>
+                                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="rIx-z9-Dah">
+                                                                <rect key="frame" x="0.0" y="262.5" width="354" height="53.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="کدپستی" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdU-eX-pud">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPP-Yd-GpN" userLabel="رمز" customClass="TitleBarTextField" customModule="Dipti" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" textContentType="postal-code"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                                <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                                <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rtl" value="NO"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="IuU-5y-bpn">
+                                                                <rect key="frame" x="0.0" y="328" width="354" height="53.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تلفن" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-Jn-lG3">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="16.5"/>
+                                                                        <fontDescription key="fontDescription" name="IRANSansWeb" family="IRANSansWeb" pointSize="14"/>
+                                                                        <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q5k-ET-DZQ" userLabel="رمز" customClass="TitleBarTextField" customModule="Dipti" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="19.5" width="354" height="34"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" textContentType="postal-code"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                                                                <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                                                <color key="value" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rtl" value="NO"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="hix-6E-C72" firstAttribute="top" secondItem="xDU-QE-p42" secondAttribute="top" constant="50" id="G5Z-6r-8SM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hix-6E-C72" secondAttribute="trailing" constant="10" id="MhJ-rJ-dcf"/>
+                                                    <constraint firstItem="hix-6E-C72" firstAttribute="leading" secondItem="xDU-QE-p42" secondAttribute="leading" constant="10" id="TS8-Gn-lh0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="hix-6E-C72" secondAttribute="bottom" constant="20" id="lSi-ML-Rn7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address-icon" translatesAutoresizingMaskIntoConstraints="NO" id="mxO-iI-yPf">
+                                                <rect key="frame" x="170" y="43" width="74" height="74"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="74" id="7Rt-k6-m7r"/>
+                                                    <constraint firstAttribute="height" constant="74" id="hdK-oc-Dbh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-jc-01e">
+                                                <rect key="frame" x="20" y="539.5" width="374" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dJ-Zv-t7N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
+                                                        <color key="backgroundColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="8TQ-6h-kdA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                                        <color key="tintColor" red="0.31764705879999999" green="0.36078431370000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="حذف">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="removeButtonTapped:" destination="tWz-A5-XcI" eventType="touchUpInside" id="klF-By-zME"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cta-T6-5mZ">
+                                                        <rect key="frame" x="197" y="0.0" width="177" height="40"/>
+                                                        <color key="backgroundColor" red="0.96862745100000003" green="0.76078431369999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="tYD-VT-QuH"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IRANSansWeb-Bold" family="IRANSansWeb" pointSize="18"/>
+                                                        <state key="normal" title="ذخیره">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="saveButtonTapped:" destination="tWz-A5-XcI" eventType="touchUpInside" id="Ijb-cm-rAo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="WuG-jc-01e" firstAttribute="trailing" secondItem="xDU-QE-p42" secondAttribute="trailing" id="0e7-JC-DH2"/>
+                                            <constraint firstItem="mxO-iI-yPf" firstAttribute="centerY" secondItem="xDU-QE-p42" secondAttribute="top" id="5rv-rY-BSe"/>
+                                            <constraint firstItem="WuG-jc-01e" firstAttribute="top" secondItem="xDU-QE-p42" secondAttribute="bottom" constant="8" id="Cgw-s6-8wD"/>
+                                            <constraint firstItem="mxO-iI-yPf" firstAttribute="centerX" secondItem="RlK-VB-UJG" secondAttribute="centerX" id="JbF-ID-HaR"/>
+                                            <constraint firstAttribute="trailing" secondItem="xDU-QE-p42" secondAttribute="trailing" constant="20" id="O6F-yG-Mym"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WuG-jc-01e" secondAttribute="bottom" constant="40" id="Vie-5V-hfI"/>
+                                            <constraint firstItem="xDU-QE-p42" firstAttribute="top" secondItem="RlK-VB-UJG" secondAttribute="top" constant="80" id="ZRa-jY-3qo"/>
+                                            <constraint firstItem="xDU-QE-p42" firstAttribute="leading" secondItem="RlK-VB-UJG" secondAttribute="leading" constant="20" id="hH1-lA-233"/>
+                                            <constraint firstItem="WuG-jc-01e" firstAttribute="leading" secondItem="xDU-QE-p42" secondAttribute="leading" id="xhS-Za-qnL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RlK-VB-UJG" secondAttribute="bottom" id="9ds-zp-RJg"/>
+                                    <constraint firstItem="RlK-VB-UJG" firstAttribute="top" secondItem="1tT-Y4-c5p" secondAttribute="top" id="FMF-eH-jju"/>
+                                    <constraint firstAttribute="trailing" secondItem="RlK-VB-UJG" secondAttribute="trailing" id="Ops-7n-5s9"/>
+                                    <constraint firstItem="RlK-VB-UJG" firstAttribute="height" secondItem="1tT-Y4-c5p" secondAttribute="height" priority="250" id="Qif-ln-n0F"/>
+                                    <constraint firstItem="RlK-VB-UJG" firstAttribute="width" secondItem="1tT-Y4-c5p" secondAttribute="width" id="Zp1-V2-HfI"/>
+                                    <constraint firstItem="RlK-VB-UJG" firstAttribute="leading" secondItem="1tT-Y4-c5p" secondAttribute="leading" id="rf5-RA-53I"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="CAC-oQ-GEW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="e8C-sm-8fF"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1tT-Y4-c5p" secondAttribute="bottom" id="0zj-tg-9tJ"/>
+                            <constraint firstItem="1tT-Y4-c5p" firstAttribute="top" secondItem="PRx-Hv-Gjh" secondAttribute="top" id="6Iq-je-7DB"/>
+                            <constraint firstItem="1tT-Y4-c5p" firstAttribute="leading" secondItem="hLn-kP-dmN" secondAttribute="leading" id="ZZY-GS-aDS"/>
+                            <constraint firstItem="1tT-Y4-c5p" firstAttribute="trailing" secondItem="hLn-kP-dmN" secondAttribute="trailing" id="z8j-xp-LSa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hLn-kP-dmN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="NcC-Oz-97Z">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FtA-ZU-iXa"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="city" destination="gME-Xp-26H" id="dW2-zq-aKV"/>
+                        <outlet property="contentView" destination="RlK-VB-UJG" id="B7q-PX-vLN"/>
+                        <outlet property="firstName" destination="91e-is-FDy" id="zzq-uq-RZI"/>
+                        <outlet property="lastName" destination="LbO-jw-qi2" id="got-6J-UHS"/>
+                        <outlet property="phoneNumber" destination="q5k-ET-DZQ" id="Pcm-qZ-EHc"/>
+                        <outlet property="postalCode" destination="oPP-Yd-GpN" id="hG4-mM-EGF"/>
+                        <outlet property="removeButton" destination="6dJ-Zv-t7N" id="7jx-Lo-IsT"/>
+                        <outlet property="saveButton" destination="cta-T6-5mZ" id="xs0-W3-r12"/>
+                        <outlet property="scrollView" destination="1tT-Y4-c5p" id="ial-sT-w9g"/>
+                        <outlet property="street" destination="nMa-79-Yp5" id="742-hJ-iky"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JY-8M-fv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31801" y="-273"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="address-icon" width="25" height="25"/>
+    </resources>
+</document>

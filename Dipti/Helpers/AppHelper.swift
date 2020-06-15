@@ -104,4 +104,17 @@ class AppHelper {
         }
     }
 
+    class func showAddresses(in viewController: UIViewController, completion: (() -> Void)? = nil) {
+        if let vc = UIStoryboard(name: "Address", bundle: nil).instantiateInitialViewController() {
+            viewController.present(vc, animated: true) {
+                if let completion = completion {
+                    completion()
+                }
+            }
+        }
+    }
+
+    class func logout() {
+        AppData.loginToken = nil
+    }
 }

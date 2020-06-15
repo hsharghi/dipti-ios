@@ -64,6 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 logout()
             case "orders":
                 showOrders()
+            case "address":
+                showAddresses()
             default:
                 break
             }
@@ -91,8 +93,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    
+    private func showAddresses() {
+        if let vc = window?.rootViewController {
+            vc.dismiss(animated: true) {
+                AppHelper.showAddresses(in: vc) {
+                        print("completed!")
+                }
+            }
+        }
+    }
+    
     private func logout() {
-        AppData.loginToken = nil
+        AppHelper.logout()
     }
     
     func showAlert(_ title: String, titleFont: UIFont? = nil, message: String, messageFont: UIFont? = nil, dismissButtonTitle: String = "OK", actions: [UIAlertAction]? = nil, completion: (() -> Void)? = nil) -> Void {

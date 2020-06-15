@@ -12,10 +12,11 @@ import Foundation
 class Address: Codable {
     var id: Int
     var firstName, lastName, countryCode, street: String
+    var phoneNumber: String?
     var city, postcode: String
     var createdAt, updatedAt: Date
 
-    init(id: Int, firstName: String, lastName: String, countryCode: String, street: String, city: String, postcode: String, createdAt: Date, updatedAt: Date) {
+    init(id: Int, firstName: String, lastName: String, countryCode: String, street: String, city: String, postcode: String, phoneNumber: String? = nil, createdAt: Date? = nil, updatedAt: Date? = nil) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
@@ -23,8 +24,9 @@ class Address: Codable {
         self.street = street
         self.city = city
         self.postcode = postcode
-        self.createdAt = createdAt
-        self.updatedAt = updatedAt
+        self.phoneNumber = phoneNumber
+        self.createdAt = createdAt ?? Date()
+        self.updatedAt = updatedAt ?? Date()
     }
 }
 
@@ -33,7 +35,7 @@ class Address: Codable {
 extension Address {
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(Address.self, from: data)
-        self.init(id: me.id, firstName: me.firstName, lastName: me.lastName, countryCode: me.countryCode, street: me.street, city: me.city, postcode: me.postcode, createdAt: me.createdAt, updatedAt: me.updatedAt)
+        self.init(id: me.id, firstName: me.firstName, lastName: me.lastName, countryCode: me.countryCode, street: me.street, city: me.city, postcode: me.postcode, phoneNumber: me.phoneNumber, createdAt: me.createdAt, updatedAt: me.updatedAt)
     }
 
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -55,6 +57,7 @@ extension Address {
         street: String? = nil,
         city: String? = nil,
         postcode: String? = nil,
+        phoneNumber: String? = nil,
         createdAt: Date? = nil,
         updatedAt: Date? = nil
     ) -> Address {
@@ -66,6 +69,7 @@ extension Address {
             street: street ?? self.street,
             city: city ?? self.city,
             postcode: postcode ?? self.postcode,
+            phoneNumber: phoneNumber ?? self.phoneNumber,
             createdAt: createdAt ?? self.createdAt,
             updatedAt: updatedAt ?? self.updatedAt
         )
@@ -80,3 +84,11 @@ extension Address {
     }
 }
 
+
+extension Address: Equatable {
+    static func == (lhs: Address, rhs: Address) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+}

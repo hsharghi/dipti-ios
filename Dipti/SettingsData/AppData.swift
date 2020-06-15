@@ -20,6 +20,7 @@ final class AppData {
     static let orderPaidNotificationKey = "orderPaidNotificationKey"
     static let orderCanceledNotificationKey = "orderCanceledNotificationKey"
     static let ordersDataKey = "ordersDataKey"
+    static let addressesDataKey = "addressesDataKey"
 
     ////////////////////////
     /// HomeViewController
@@ -131,4 +132,32 @@ final class AppData {
             appDelegate.searchFilter = newFilter
         }
     }
+    
+    
+    static var addresses: [Address] {
+        get {
+            if let arrayOfJson  = UserDefaults.standard.array(forKey: addressesDataKey) as? [String]
+            {
+                do {
+                    return try arrayOfJson.compactMap({try Address($0)})
+                } catch {
+                    print(error)
+                    return []
+                }
+            }
+            return []
+        }
+        
+        set(addresses) {
+            do {
+                let arrayOfJson = try addresses.compactMap({try $0.jsonString()})
+                UserDefaults.standard.set(arrayOfJson, forKey: addressesDataKey)
+                UserDefaults.standard.synchronize()
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+    
 }
