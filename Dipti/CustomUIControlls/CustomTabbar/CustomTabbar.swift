@@ -45,7 +45,9 @@ class CustomTabbar: UIViewController {
     private func highlightButton(for index: Int) {
         highlighterView.isHidden = false
         if let selectedButton = tabbarButtons.filter({$0.tag == index}).first {
-            highlighterView.frame = selectedButton.frame
+            UIView.animate(withDuration: 0.2) {
+                self.highlighterView.frame = selectedButton.frame
+            }
         }
     }
     
