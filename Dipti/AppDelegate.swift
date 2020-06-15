@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var alertWindow: UIWindow?
     var loginToken: String?
     var searchFilter = SearchFilter()
+    var mockFactory = ProductMockFactory(count: 20)
     
     var mainViewController: MainViewController? {
         didSet {
