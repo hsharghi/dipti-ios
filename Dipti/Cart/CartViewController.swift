@@ -25,7 +25,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func updateTotalValue() {
         let total = AppData.cart.totalValue
-        cartTotalLabel.text = AppHelper.formatNumber(number: total, withLocale: "fa_IR", addSuffix: "تومان")
+        cartTotalLabel.text = AppHelper.formatNumber(total, withLocale: "fa_IR", addSuffix: "تومان")
         tableView.reloadData()
     }
     
@@ -149,7 +149,7 @@ class CartItemCell: UITableViewCell {
                 productTitle.text = cart.item.title
                 designer.text = cart.item.designer
                 price.text = cart.item.priceLabel
-                countLabel.text =  AppHelper.formatNumber(number: cart.count, withLocale: "fa_IR", addSuffix: " عدد")
+                countLabel.text =  AppHelper.formatNumber(cart.count, withLocale: "fa_IR", addSuffix: " عدد")
             }
         }
     }

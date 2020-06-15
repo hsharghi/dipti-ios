@@ -19,7 +19,7 @@ class AppHelper {
     
     
 
-    class func formatNumber(number: Int, withLocale locale: String? = nil, addPrefix prefix: String? = nil, addSuffix suffix: String? = nil) -> String {
+    class func formatNumber(_ number: Int, withLocale locale: String? = nil, addPrefix prefix: String? = nil, addSuffix suffix: String? = nil) -> String {
         let numberFormatter = NumberFormatter()
         if locale != nil {
             numberFormatter.locale = Locale(identifier: locale!)
@@ -38,6 +38,25 @@ class AppHelper {
         }
 
         return formattedPrice ?? ""
+
+    }
+
+    
+
+    class func formatDate(_ date: Date, format: String, timezone: TimeZone? = TimeZone(identifier: "IRST"), withLocale locale: String? = "fa_IR", addPrefix prefix: String? = nil, addSuffix suffix: String? = nil) -> String {
+
+        let dateFormatter = DateFormatter(format: format, timeZone: timezone ?? TimeZone.current, locale: locale ?? Locale.current.identifier)
+        
+        var formattedDate = dateFormatter.string(from: date)
+        
+        if prefix != nil {
+            formattedDate = prefix! + formattedDate
+        }
+        if suffix != nil {
+            formattedDate = formattedDate + suffix!
+        }
+
+        return formattedDate
 
     }
 
@@ -74,12 +93,13 @@ class AppHelper {
             }
         }
     }
-
+    
     class func showOrders(in viewController: UIViewController, completion: (() -> Void)? = nil) {
-        let vc = UIStoryboard(name: "Order", bundle: nil).instantiateInitialViewController() as! OrderListTableViewController
-        viewController.present(vc, animated: true) {
-            if let completion = completion {
-                completion()
+        if let vc = UIStoryboard(name: "Order", bundle: nil).instantiateInitialViewController() {
+            viewController.present(vc, animated: true) {
+                if let completion = completion {
+                    completion()
+                }
             }
         }
     }
