@@ -35,7 +35,7 @@ class RegisterViewController: FormViewController {
                 self.dismiss(animated: true, completion: nil)
             }
             AppData.loginToken = "token"
-            AppData.customer = CustomerRepository.register(email: self.email.text!, firstName: self.firstName.text!, lastName: self.lastName.text!, gender: self.gender.selectedSegmentIndex == 0 ? "f" : "m")
+            AppData.customer = CustomerRepository.register(email: self.email.text!, firstName: self.firstName.text!, lastName: self.lastName.text!, gender: self.gender.selectedSegmentIndex == 0 ? "f" : "m", phoneNumber: self.phoneNumber.text!)
         }
     }
     
