@@ -266,7 +266,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W32-qs-lka" customClass="TitleBarTextField" customModule="Dipti" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="25" width="354" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="tel"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                                                 <color key="value" cocoaTouchSystemColor="darkTextColor"/>

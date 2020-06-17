@@ -31,11 +31,11 @@ class RegisterViewController: FormViewController {
         guard validateFields() else { return }
         
         flashLoading(for: 1.5) {
-            AppHelper.showAlert("ثبت نام", message: "ثبت نام شما در سایت دیپ‌تی با موفقیت انجام شد.", dismissButtonTitle: "باشه")
+            AppHelper.showAlert("ثبت نام", message: "ثبت نام شما در سایت دیپ‌تی با موفقیت انجام شد.", dismissButtonTitle: "باشه") {
+                self.dismiss(animated: true, completion: nil)
+            }
             AppData.loginToken = "token"
-            let customer = Customer(id: 1, email: self.email.text!, emailCanonical: self.email.text!, firstName: self.firstName.text!, lastName: self.lastName.text!, gender: self.gender.selectedSegmentIndex == 0 ? "f" : "m")
-            AppData.customer = customer
-            self.dismiss(animated: true, completion: nil)
+            AppData.customer = CustomerRepository.register(email: self.email.text!, firstName: self.firstName.text!, lastName: self.lastName.text!, gender: self.gender.selectedSegmentIndex == 0 ? "f" : "m")
         }
     }
     
@@ -59,6 +59,11 @@ class RegisterViewController: FormViewController {
         
         if (email.text ?? "").isEmpty {
             email.errorMessage = "پست الکترونیک معتبر نیست"
+            validation = false
+        }
+        
+        if AppData.registeredCustomers.filter({$0.email == email.text!}).first != nil {
+            email.errorMessage = "این ایمیل قبلا در سایت ثبت شده است."
             validation = false
         }
         

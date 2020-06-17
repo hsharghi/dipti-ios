@@ -37,8 +37,14 @@ class LoginViewController: FormViewController {
         guard validateFields() else { return }
         
         flashLoading(for: 1.0) {
-            AppData.loginToken = "token"
-            self.dismiss(animated: true)
+            if let customer = CustomerRepository.login(email: self.email.text!) {
+                AppData.loginToken = "token"
+                AppData.customer = customer
+                self.dismiss(animated: true)
+            }
+            
+            self.email.errorMessage = "نام کاربری اشتباه است"
+            return
         }
         
         
