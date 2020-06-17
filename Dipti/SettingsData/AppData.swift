@@ -101,7 +101,7 @@ final class AppData {
     
     static var customer: Customer? {
         get {
-            if let data  = UserDefaults.standard.data(forKey: ordersDataKey)
+            if let data  = UserDefaults.standard.data(forKey: customerDataKey)
             {
                 do {
                     return try Customer(data: data)
