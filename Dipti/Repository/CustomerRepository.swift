@@ -11,8 +11,8 @@ import Foundation
 
 class CustomerRepository {
     
-    class func register(email: String, firstName: String, lastName: String, gender: String) -> Customer {
-        let customer = Customer(id: Int.random(in: 100_000...999_999), email: email, emailCanonical: email, firstName: firstName, lastName: lastName, gender: gender)
+    class func register(email: String, firstName: String, lastName: String, gender: String, phoneNumber: String) -> Customer {
+        let customer = Customer(id: Int.random(in: 100_000...999_999), email: email, emailCanonical: email, firstName: firstName, lastName: lastName, gender: gender, phoneNumber: phoneNumber)
         var customers = AppData.registeredCustomers
         customers.append(customer)
         AppData.registeredCustomers = customers

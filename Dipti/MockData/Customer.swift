@@ -11,21 +11,22 @@ import Foundation
 // MARK: - Customer
 class Customer: Codable {
     var id: Int
-    var email, emailCanonical, firstName, lastName: String
+    var email, emailCanonical, firstName, lastName, phoneNumber: String
     var gender: String
     var user: User?
 
     enum CodingKeys: String, CodingKey {
-        case id, email, emailCanonical, firstName, lastName, gender, user
+        case id, email, emailCanonical, firstName, lastName, gender, user, phoneNumber
     }
 
-    init(id: Int, email: String, emailCanonical: String, firstName: String, lastName: String, gender: String, user: User? = nil) {
+    init(id: Int, email: String, emailCanonical: String, firstName: String, lastName: String, gender: String, phoneNumber: String, user: User? = nil) {
         self.id = id
         self.email = email
         self.emailCanonical = emailCanonical
         self.firstName = firstName
         self.lastName = lastName
         self.gender = gender
+        self.phoneNumber = phoneNumber
         self.user = user
     }
 }
@@ -35,7 +36,7 @@ class Customer: Codable {
 extension Customer {
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(Customer.self, from: data)
-        self.init(id: me.id, email: me.email, emailCanonical: me.emailCanonical, firstName: me.firstName, lastName: me.lastName, gender: me.gender, user: me.user)
+        self.init(id: me.id, email: me.email, emailCanonical: me.emailCanonical, firstName: me.firstName, lastName: me.lastName, gender: me.gender, phoneNumber: me.phoneNumber, user: me.user)
     }
 
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -56,6 +57,7 @@ extension Customer {
         firstName: String? = nil,
         lastName: String? = nil,
         gender: String? = nil,
+        phoneNumber: String? = nil,
         user: User? = nil
     ) -> Customer {
         return Customer(
@@ -65,6 +67,7 @@ extension Customer {
             firstName: firstName ?? self.firstName,
             lastName: lastName ?? self.lastName,
             gender: gender ?? self.gender,
+            phoneNumber: phoneNumber ?? self.phoneNumber,
             user: user ?? self.user
         )
     }
