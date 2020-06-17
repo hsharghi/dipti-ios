@@ -124,6 +124,31 @@ final class AppData {
         }
     }
     
+    static var registeredCustomers: [Customer] {
+        get {
+            if let arrayOfJson  = UserDefaults.standard.array(forKey: customerDataKey + "s") as? [String]
+            {
+                do {
+                    return try arrayOfJson.compactMap({try Customer($0)})
+                } catch {
+                    print(error)
+                    return []
+                }
+            }
+            return []
+        }
+        
+        set(customers) {
+            do {
+                let arrayOfJson = try customers.compactMap({try $0.jsonString()})
+                UserDefaults.standard.set(arrayOfJson, forKey: customerDataKey + "s")
+                UserDefaults.standard.synchronize()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     static var orders: [Order] {
         get {
             if let arrayOfJson  = UserDefaults.standard.array(forKey: ordersDataKey) as? [String]
