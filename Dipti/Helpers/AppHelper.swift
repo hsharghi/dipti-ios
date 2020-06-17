@@ -116,5 +116,6 @@ class AppHelper {
 
     class func logout() {
         AppData.loginToken = nil
+        AppData.customer = nil
     }
 }
