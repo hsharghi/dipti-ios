@@ -17,7 +17,7 @@ class MainViewControlelrsFactory {
         viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
         viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
         viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
-        viewControllers.append(UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()!)
+        viewControllers.append(UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController()!)
 
         return viewControllers
 
