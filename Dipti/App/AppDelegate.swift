@@ -116,24 +116,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alertTitleFont = titleFont
         }
         alert.setTitle(font: alertTitleFont, color: nil)
-
+        
         if let messageFont = messageFont {
             alertMessageFont = messageFont
         }
         alert.setMessage(font: alertMessageFont, color: nil)
-//        // Change background color of UIAlertController
-//        alertController.setBackgroudColor(color: UIColor.black)
-
+        //        // Change background color of UIAlertController
+        //        alertController.setBackgroudColor(color: UIColor.black)
+        
         if let actions = actions {
             actions.forEach { (action) in
                 alert.addAction(action)
             }
+            GlobalAlert.displayAlert(alert: alert, completion: completion)
         } else {
-            alert.addAction(UIAlertAction(title: dismissButtonTitle, style: .default))
+            alert.addAction(UIAlertAction(title: dismissButtonTitle, style: .default) { (action) in
+                completion?()
+            })
+            GlobalAlert.displayAlert(alert: alert)
         }
         
-        GlobalAlert.displayAlert(alert: alert, completion: completion)
-
+        
     }
 
     func showShareControl(items: [Any], in viewController: UIViewController, completion: (() -> Void)? = nil) -> Void {
