@@ -18,6 +18,8 @@ class EditProfileViewController: FormViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    weak var delegate: UpdateProfile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScrollView(scrollView, contentView: contentView)
@@ -42,6 +44,7 @@ class EditProfileViewController: FormViewController {
             if let customer = AppData.customer?.with(firstName: firstName.text!, lastName: lastName.text!, gender: gender.selectedSegmentIndex == 0 ? "f" : "m") {
                 flashLoading(for: 1.5) {
                     CustomerRepository.update(customer: customer)
+                    self.delegate?.profileUpdated()
                     self.dismiss(animated: true, completion: nil)
                 }
             }

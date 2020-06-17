@@ -8,14 +8,24 @@
 
 import UIKit
 
+protocol UpdateProfile: class {
+    func profileUpdated()
+}
+
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        populateProfileData()
+        AppData.main?.hideSearch()
+    }
+    
+    private func populateProfileData() {
         nameLabel.text = (AppData.customer?.firstName ?? "") + " " + (AppData.customer?.lastName ?? "")
+
     }
     
     @IBAction func editProfileTapped(_ sender: Any) {
@@ -32,6 +42,19 @@ class ProfileViewController: UIViewController {
     
     @IBAction func showFavorites(_ sender: Any) {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? EditProfileViewController {
+            vc.delegate = self
+        }
+    }
+    
+}
+
+extension ProfileViewController: UpdateProfile {
+    func profileUpdated() {
+        populateProfileData()
     }
     
 }
