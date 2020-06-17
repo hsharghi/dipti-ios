@@ -12,15 +12,16 @@ final class AppData {
     
     static let showIntroKey = "showIntro"
     static let loginStatusNotificationKey = "loginStatusNotificationKey"
-    static let loginTokenDataKey = "loginTokenDataKey"
+    private static let loginTokenDataKey = "loginTokenDataKey"
     static let sideMenuSelectNotificationKey = "sideMenuSelectNotificationKey"
     static let searchFilterNotificationKey = "searchFilterNotificationKey"
     
     // temporary
     static let orderPaidNotificationKey = "orderPaidNotificationKey"
     static let orderCanceledNotificationKey = "orderCanceledNotificationKey"
-    static let ordersDataKey = "ordersDataKey"
-    static let addressesDataKey = "addressesDataKey"
+    private static let customerDataKey = "customerDataKey"
+    private static let ordersDataKey = "ordersDataKey"
+    private static let addressesDataKey = "addressesDataKey"
 
     ////////////////////////
     /// HomeViewController
@@ -95,6 +96,31 @@ final class AppData {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: AppData.loginStatusNotificationKey),
                                             object: nil,
                                             userInfo: nil)
+        }
+    }
+    
+    static var customer: Customer? {
+        get {
+            if let data  = UserDefaults.standard.data(forKey: ordersDataKey)
+            {
+                do {
+                    return try Customer(data: data)
+                } catch {
+                    print(error)
+                    return nil
+                }
+            }
+            return nil
+        }
+        
+        set(customer) {
+            do {
+                let data = try customer?.jsonData()
+                UserDefaults.standard.set(data, forKey: customerDataKey)
+                UserDefaults.standard.synchronize()
+            } catch {
+                print(error)
+            }
         }
     }
     
