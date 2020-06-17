@@ -13,6 +13,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cartTotalLabel: UILabel!
+    @IBOutlet weak var payButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func updateTotalValue() {
         let total = AppData.cart.totalValue
+        setupPayButton(enabled: total > 0)
         cartTotalLabel.text = AppHelper.formatNumber(total, withLocale: "fa_IR", addSuffix: "تومان")
         tableView.reloadData()
     }
@@ -39,6 +41,14 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    private func setupPayButton(enabled: Bool) {
+        payButton.isEnabled = enabled
+        if enabled {
+            payButton.backgroundColor = AppData.color.yellow.withAlphaComponent(1)
+        } else {
+            payButton.backgroundColor = AppData.color.yellow.withAlphaComponent(0.5)
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppData.cart.uniqueCount

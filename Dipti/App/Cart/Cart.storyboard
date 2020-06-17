@@ -192,6 +192,7 @@
                     <connections>
                         <outlet property="cartTotalLabel" destination="44J-zF-XsC" id="ZFn-gK-Vdd"/>
                         <outlet property="checkoutButton" destination="d3K-YQ-qP8" id="tya-jM-nM5"/>
+                        <outlet property="payButton" destination="d3K-YQ-qP8" id="tNb-Qa-K1w"/>
                         <outlet property="tableView" destination="Jeo-eu-lMz" id="d2T-31-6pH"/>
                     </connections>
                 </viewController>
