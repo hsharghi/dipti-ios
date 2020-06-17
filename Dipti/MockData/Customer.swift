@@ -78,3 +78,10 @@ extension Customer {
     }
 }
 
+extension Customer: Equatable {
+    static func == (lhs: Customer, rhs: Customer) -> Bool {
+        return lhs.email == rhs.email
+    }
+    
+    
+}
