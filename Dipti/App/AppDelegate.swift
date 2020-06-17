@@ -132,11 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alert.addAction(UIAlertAction(title: dismissButtonTitle, style: .default))
         }
         
-        alert.presentGlobally(animated: true) {
-            if let closure = completion {
-                closure()
-            }
-        }
+        GlobalAlert.displayAlert(alert: alert, completion: completion)
 
     }
 
