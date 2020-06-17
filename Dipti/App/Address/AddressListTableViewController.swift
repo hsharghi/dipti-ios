@@ -19,6 +19,8 @@ class AddressListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableFooterView = UIView()
+        
         let attributes = [NSAttributedString.Key.font: UIFont(name: "IRANSansWeb-Bold", size: 18)!]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
 
@@ -28,11 +30,6 @@ class AddressListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         addresses = AddressRepository.list()
         tableView.reloadData()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(#function)
     }
     
     @IBAction func addNewButtonTapped(_ sender: Any) {

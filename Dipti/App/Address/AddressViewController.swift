@@ -62,7 +62,7 @@ class AddressViewController: FormViewController {
         AppHelper.showAlert("حذف", message: "آیا این آدرس حذف شود؟", actions: [
             UIAlertAction(title: "بله", style: .destructive, handler: { (action) in
                 AddressRepository.remove(id: id)
-                self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
             }),
             UIAlertAction(title: "خیر", style: .cancel)
         ])
@@ -134,7 +134,7 @@ class AddressViewController: FormViewController {
             }
             
             if let postcode = postalCode.text {
-                if postcode.isEmpty || postcode.count != 10 {
+                if postcode.isEmpty /*|| postcode.count != 10 */{
                     self.postalCode.errorMessage = "کدپستی نامعتبر است"
                     validation = false
                 }
