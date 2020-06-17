@@ -13,13 +13,13 @@ class Customer: Codable {
     var id: Int
     var email, emailCanonical, firstName, lastName: String
     var gender: String
-    var user: User
+    var user: User?
 
     enum CodingKeys: String, CodingKey {
         case id, email, emailCanonical, firstName, lastName, gender, user
     }
 
-    init(id: Int, email: String, emailCanonical: String, firstName: String, lastName: String, gender: String, user: User) {
+    init(id: Int, email: String, emailCanonical: String, firstName: String, lastName: String, gender: String, user: User? = nil) {
         self.id = id
         self.email = email
         self.emailCanonical = emailCanonical
