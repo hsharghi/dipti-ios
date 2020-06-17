@@ -16,7 +16,8 @@ class RegisterViewController: FormViewController {
     @IBOutlet weak var email: TitleBarTextField!
     @IBOutlet weak var phoneNumber: TitleBarTextField!
     @IBOutlet weak var password: TitleBarTextField!
-//    @IBOutlet weak var confirmPassword: SkyFloatingLabelTextField!
+    @IBOutlet weak var gender: UISegmentedControl!
+    //    @IBOutlet weak var confirmPassword: SkyFloatingLabelTextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
@@ -32,6 +33,8 @@ class RegisterViewController: FormViewController {
         flashLoading(for: 1.5) {
             AppHelper.showAlert("ثبت نام", message: "ثبت نام شما در سایت دیپ‌تی با موفقیت انجام شد.", dismissButtonTitle: "باشه")
             AppData.loginToken = "token"
+            let customer = Customer(id: 1, email: self.email.text!, emailCanonical: self.email.text!, firstName: self.firstName.text!, lastName: self.lastName.text!, gender: self.gender.selectedSegmentIndex == 0 ? "f" : "m")
+            AppData.customer = customer
             self.dismiss(animated: true, completion: nil)
         }
     }
